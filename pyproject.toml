@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ca1-boundary-geometry"
+version = "0.1.0"
+description = "Cross-validated local geometry of CA1 spatial population codes"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=2.0,<3",
+  "scipy>=1.14,<2",
+  "matplotlib>=3.8,<4",
+]
+
+[project.optional-dependencies]
+data = ["h5py>=3.10,<4"]
+test = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

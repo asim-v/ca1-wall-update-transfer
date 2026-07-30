@@ -1,0 +1,93 @@
+{
+  "status": "exact_eligibility_match",
+  "question": "Are target query/session/seam identities and the counts of original common cells and target/source strip bins the same between the stored-map and behavior-adjusted transports?",
+  "settings": {
+    "minimum_seconds": 0.5,
+    "minimum_bins": 6,
+    "minimum_cells": 20,
+    "source_midpoint_distance_cm": 25.0,
+    "orientation_relation": "same_signed_normal"
+  },
+  "animals_expected": 7,
+  "animals_audited": 7,
+  "all_animals_exact_match": true,
+  "animals": [
+    {
+      "animal": "QLAK-CA1-08",
+      "exact_match": true,
+      "stored_map_target_queries": 81,
+      "adjusted_target_queries": 81,
+      "stored_map_source_pairs": 136,
+      "adjusted_source_pairs": 136,
+      "missing_adjusted_queries": [],
+      "extra_adjusted_queries": [],
+      "support_mismatch_queries": []
+    },
+    {
+      "animal": "QLAK-CA1-30",
+      "exact_match": true,
+      "stored_map_target_queries": 82,
+      "adjusted_target_queries": 82,
+      "stored_map_source_pairs": 138,
+      "adjusted_source_pairs": 138,
+      "missing_adjusted_queries": [],
+      "extra_adjusted_queries": [],
+      "support_mismatch_queries": []
+    },
+    {
+      "animal": "QLAK-CA1-50",
+      "exact_match": true,
+      "stored_map_target_queries": 82,
+      "adjusted_target_queries": 82,
+      "stored_map_source_pairs": 138,
+      "adjusted_source_pairs": 138,
+      "missing_adjusted_queries": [],
+      "extra_adjusted_queries": [],
+      "support_mismatch_queries": []
+    },
+    {
+      "animal": "QLAK-CA1-51",
+      "exact_match": true,
+      "stored_map_target_queries": 41,
+      "adjusted_target_queries": 41,
+      "stored_map_source_pairs": 69,
+      "adjusted_source_pairs": 69,
+      "missing_adjusted_queries": [],
+      "extra_adjusted_queries": [],
+      "support_mismatch_queries": []
+    },
+    {
+      "animal": "QLAK-CA1-56",
+      "exact_match": true,
+      "stored_map_target_queries": 82,
+      "adjusted_target_queries": 82,
+      "stored_map_source_pairs": 138,
+      "adjusted_source_pairs": 138,
+      "missing_adjusted_queries": [],
+      "extra_adjusted_queries": [],
+      "support_mismatch_queries": []
+    },
+    {
+      "animal": "QLAK-CA1-74",
+      "exact_match": true,
+      "stored_map_target_queries": 10,
+      "adjusted_target_queries": 10,
+      "stored_map_source_pairs": 10,
+      "adjusted_source_pairs": 10,
+      "missing_adjusted_queries": [],
+      "extra_adjusted_queries": [],
+      "support_mismatch_queries": []
+    },
+    {
+      "animal": "QLAK-CA1-75",
+      "exact_match": true,
+      "stored_map_target_queries": 27,
+      "adjusted_target_queries": 27,
+      "stored_map_source_pairs": 29,
+      "adjusted_source_pairs": 29,
+      "missing_adjusted_queries": [],
+      "extra_adjusted_queries": [],
+      "support_mismatch_queries": []
+    }
+  ]
+}

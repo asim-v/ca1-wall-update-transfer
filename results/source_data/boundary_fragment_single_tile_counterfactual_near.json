@@ -1,0 +1,2936 @@
+{
+  "status": "exploratory_single_tile_counterfactual_cross_exposure_holdout",
+  "question": "Does a focal wall profile learned from two training geometries that differ only by one blocked partition transfer to the same wall in a different held-out global geometry?",
+  "design": {
+    "target_neural_rates_excluded_from_template_fitting": true,
+    "target_wall_label_used_to_select_test_queries": true,
+    "target_occupancy_and_registration_used_for_support": true,
+    "training_pair_match": "blocked-partition vectors identical after removing the focal source partition",
+    "target_local_context_match": "all other grid-neighbor states of the accessible target partition exactly match both training profiles",
+    "training_pair_observed": "u wall versus o open, differing only by blocked partition 5",
+    "target_geometry_excluded_from_training": true,
+    "training_and_test_exposures_nonoverlapping": true,
+    "fixed_environment_order_confounded": true,
+    "wall_and_inaccessible_tile_confounded": true,
+    "predicted_object": "one square-residual local strip rate per registered cell",
+    "rate_modes": [
+      "raw_local_rate",
+      "global_rate_demeaned"
+    ],
+    "inferential_unit": "animal"
+  },
+  "settings": {
+    "minimum_seconds_per_common_bin": 0.5,
+    "minimum_common_bins": 4,
+    "minimum_common_cells": 20,
+    "strip_depths_cm": [
+      2.5,
+      7.5
+    ]
+  },
+  "support": {
+    "eligible_local_predictions": 46,
+    "animal_values": {
+      "QLAK-CA1-08": 8,
+      "QLAK-CA1-30": 8,
+      "QLAK-CA1-50": 8,
+      "QLAK-CA1-51": 4,
+      "QLAK-CA1-56": 8,
+      "QLAK-CA1-74": 2,
+      "QLAK-CA1-75": 8
+    },
+    "median_matching_wall_environments": 1.0,
+    "median_matching_open_environments": 1.0,
+    "target_environments": [
+      "i",
+      "l",
+      "t"
+    ]
+  },
+  "cohort": {
+    "raw_local_rate": {
+      "animals": 7,
+      "positive_animals": 7,
+      "animal_mean_wall_minus_open": 0.27306830366735757,
+      "animal_median_wall_minus_open": 0.2028731537032994,
+      "animal_mean_matching_wall_r": 0.22096999697780725,
+      "animal_mean_matching_open_r": -0.05209830668955029,
+      "animal_values": {
+        "QLAK-CA1-08": 0.17114789187915208,
+        "QLAK-CA1-30": 0.2028731537032994,
+        "QLAK-CA1-50": 0.17893747650826725,
+        "QLAK-CA1-51": 0.3427149385721468,
+        "QLAK-CA1-56": 0.23236729932984243,
+        "QLAK-CA1-74": 0.5818614386382532,
+        "QLAK-CA1-75": 0.20157592704054172
+      },
+      "orientation": {
+        "vertical_wall": {
+          "animals": 0,
+          "positive_animals": 0,
+          "animal_mean_wall_minus_open": null,
+          "animal_values": {
+            "QLAK-CA1-08": null,
+            "QLAK-CA1-30": null,
+            "QLAK-CA1-50": null,
+            "QLAK-CA1-51": null,
+            "QLAK-CA1-56": null,
+            "QLAK-CA1-74": null,
+            "QLAK-CA1-75": null
+          }
+        },
+        "horizontal_wall": {
+          "animals": 7,
+          "positive_animals": 7,
+          "animal_mean_wall_minus_open": 0.27306830366735757,
+          "animal_values": {
+            "QLAK-CA1-08": 0.17114789187915208,
+            "QLAK-CA1-30": 0.2028731537032994,
+            "QLAK-CA1-50": 0.17893747650826725,
+            "QLAK-CA1-51": 0.3427149385721468,
+            "QLAK-CA1-56": 0.23236729932984243,
+            "QLAK-CA1-74": 0.5818614386382532,
+            "QLAK-CA1-75": 0.20157592704054172
+          }
+        }
+      }
+    },
+    "global_rate_demeaned": {
+      "animals": 7,
+      "positive_animals": 7,
+      "animal_mean_wall_minus_open": 0.23265253314568865,
+      "animal_median_wall_minus_open": 0.1840607628959691,
+      "animal_mean_matching_wall_r": 0.1888766648970517,
+      "animal_mean_matching_open_r": -0.04377586824863695,
+      "animal_values": {
+        "QLAK-CA1-08": 0.1840607628959691,
+        "QLAK-CA1-30": 0.1462965037727843,
+        "QLAK-CA1-50": 0.17179083071417728,
+        "QLAK-CA1-51": 0.39134319575496046,
+        "QLAK-CA1-56": 0.24535705879747177,
+        "QLAK-CA1-74": 0.34675441151877084,
+        "QLAK-CA1-75": 0.14296496856568686
+      },
+      "orientation": {
+        "vertical_wall": {
+          "animals": 0,
+          "positive_animals": 0,
+          "animal_mean_wall_minus_open": null,
+          "animal_values": {
+            "QLAK-CA1-08": null,
+            "QLAK-CA1-30": null,
+            "QLAK-CA1-50": null,
+            "QLAK-CA1-51": null,
+            "QLAK-CA1-56": null,
+            "QLAK-CA1-74": null,
+            "QLAK-CA1-75": null
+          }
+        },
+        "horizontal_wall": {
+          "animals": 7,
+          "positive_animals": 7,
+          "animal_mean_wall_minus_open": 0.23265253314568865,
+          "animal_values": {
+            "QLAK-CA1-08": 0.1840607628959691,
+            "QLAK-CA1-30": 0.1462965037727843,
+            "QLAK-CA1-50": 0.17179083071417728,
+            "QLAK-CA1-51": 0.39134319575496046,
+            "QLAK-CA1-56": 0.24535705879747177,
+            "QLAK-CA1-74": 0.34675441151877084,
+            "QLAK-CA1-75": 0.14296496856568686
+          }
+        }
+      }
+    }
+  },
+  "animals": [
+    {
+      "animal": "QLAK-CA1-08",
+      "repetitions": 3,
+      "summaries": {
+        "raw_local_rate": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.13406004825649973,
+          "matching_open_mean_r": -0.037087843622652335,
+          "wall_minus_open_mean": 0.17114789187915208,
+          "positive_local_predictions": 8,
+          "median_cells": 69.5,
+          "median_bins": 8.5,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.17114789187915208
+            }
+          }
+        },
+        "global_rate_demeaned": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.12261142926801788,
+          "matching_open_mean_r": -0.06144933362795121,
+          "wall_minus_open_mean": 0.1840607628959691,
+          "positive_local_predictions": 7,
+          "median_cells": 69.5,
+          "median_bins": 8.5,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.1840607628959691
+            }
+          }
+        }
+      },
+      "exposure_pairs": {
+        "1_to_2": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.10896903534751695,
+            "matching_open_mean_r": -0.02420378191156161,
+            "wall_minus_open_mean": 0.13317281725907856,
+            "positive_local_predictions": 4,
+            "median_cells": 61.0,
+            "median_bins": 9.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.13317281725907856
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.0616988248570498,
+            "matching_open_mean_r": -0.012497348427131794,
+            "wall_minus_open_mean": 0.0741961732841816,
+            "positive_local_predictions": 3,
+            "median_cells": 61.0,
+            "median_bins": 9.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.0741961732841816
+              }
+            }
+          }
+        },
+        "2_to_3": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.15915106116548253,
+            "matching_open_mean_r": -0.04997190533374306,
+            "wall_minus_open_mean": 0.20912296649922557,
+            "positive_local_predictions": 4,
+            "median_cells": 81.5,
+            "median_bins": 8.5,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.20912296649922557
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.18352403367898598,
+            "matching_open_mean_r": -0.11040131882877062,
+            "wall_minus_open_mean": 0.29392535250775664,
+            "positive_local_predictions": 4,
+            "median_cells": 81.5,
+            "median_bins": 8.5,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.29392535250775664
+              }
+            }
+          }
+        }
+      },
+      "records": [
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "t",
+          "withheld_training_session": 3,
+          "test_session": 13,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 60,
+          "bins": 8,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.0394407564363437,
+              "matching_open_r": -0.029045607762992132,
+              "wall_minus_open": 0.06848636419933583
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.04751319811058626,
+              "matching_open_r": 0.160655737704918,
+              "wall_minus_open": -0.11314253959433174
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 7,
+          "test_session": 17,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 62,
+          "bins": 8,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.013140650316579985,
+              "matching_open_r": -0.046658463270132754,
+              "wall_minus_open": 0.059799113586712735
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": -0.023948024476845207,
+              "matching_open_r": -0.2170935005414117,
+              "wall_minus_open": 0.19314547606456647
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 7,
+          "test_session": 17,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 62,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.14574739025037364,
+              "matching_open_r": -0.07908848625701696,
+              "wall_minus_open": 0.22483587650739062
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": -0.054569262924630456,
+              "matching_open_r": -0.07446299513988568,
+              "wall_minus_open": 0.01989373221525522
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "l",
+          "withheld_training_session": 8,
+          "test_session": 18,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 60,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.23754734438677047,
+              "matching_open_r": 0.05797742964389541,
+              "wall_minus_open": 0.17956991474287506
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2777993887190886,
+              "matching_open_r": 0.08091136426785217,
+              "wall_minus_open": 0.19688802445123643
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "t",
+          "withheld_training_session": 13,
+          "test_session": 23,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 77,
+          "bins": 8,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.10870551281208937,
+              "matching_open_r": -0.0207282187293878,
+              "wall_minus_open": 0.12943373154147716
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.10878595089121405,
+              "matching_open_r": -0.13412902886587097,
+              "wall_minus_open": 0.24291497975708504
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 17,
+          "test_session": 27,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 82,
+          "bins": 8,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.20328683907838682,
+              "matching_open_r": -0.03587053019609367,
+              "wall_minus_open": 0.2391573692744805
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.09380611878407942,
+              "matching_open_r": -0.10973977209651617,
+              "wall_minus_open": 0.2035458908805956
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 17,
+          "test_session": 27,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 82,
+          "bins": 9,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.1507906959766573,
+              "matching_open_r": -0.07090694390607082,
+              "wall_minus_open": 0.22169763988272811
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2971996386630533,
+              "matching_open_r": -0.09197766676461946,
+              "wall_minus_open": 0.3891773054276728
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "l",
+          "withheld_training_session": 18,
+          "test_session": 28,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 81,
+          "bins": 9,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.17382119679479655,
+              "matching_open_r": -0.07238192850341994,
+              "wall_minus_open": 0.24620312529821647
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2343044263775971,
+              "matching_open_r": -0.10575880758807588,
+              "wall_minus_open": 0.34006323396567295
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-30",
+      "repetitions": 3,
+      "summaries": {
+        "raw_local_rate": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.2847711783421853,
+          "matching_open_mean_r": 0.08189802463888592,
+          "wall_minus_open_mean": 0.2028731537032994,
+          "positive_local_predictions": 8,
+          "median_cells": 160.5,
+          "median_bins": 10.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.2028731537032994
+            }
+          }
+        },
+        "global_rate_demeaned": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.22014386038715517,
+          "matching_open_mean_r": 0.07384735661437088,
+          "wall_minus_open_mean": 0.1462965037727843,
+          "positive_local_predictions": 8,
+          "median_cells": 160.5,
+          "median_bins": 10.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.1462965037727843
+            }
+          }
+        }
+      },
+      "exposure_pairs": {
+        "1_to_2": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.330746629835018,
+            "matching_open_mean_r": 0.1527286205291805,
+            "wall_minus_open_mean": 0.1780180093058375,
+            "positive_local_predictions": 4,
+            "median_cells": 144.5,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.1780180093058375
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.2884724121856707,
+            "matching_open_mean_r": 0.11457417656912691,
+            "wall_minus_open_mean": 0.17389823561654383,
+            "positive_local_predictions": 4,
+            "median_cells": 144.5,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.17389823561654383
+              }
+            }
+          }
+        },
+        "2_to_3": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.2387957268493526,
+            "matching_open_mean_r": 0.011067428748591318,
+            "wall_minus_open_mean": 0.22772829810076128,
+            "positive_local_predictions": 4,
+            "median_cells": 184.0,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.22772829810076128
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.15181530858863965,
+            "matching_open_mean_r": 0.03312053665961484,
+            "wall_minus_open_mean": 0.1186947719290248,
+            "positive_local_predictions": 4,
+            "median_cells": 184.0,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.1186947719290248
+              }
+            }
+          }
+        }
+      },
+      "records": [
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "l",
+          "withheld_training_session": 4,
+          "test_session": 14,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 144,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.31183198575124643,
+              "matching_open_r": 0.12701972085148555,
+              "wall_minus_open": 0.18481226489976088
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2255083996463307,
+              "matching_open_r": 0.09582027168234065,
+              "wall_minus_open": 0.12968812796399004
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 6,
+          "test_session": 16,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 145,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.31669960577728107,
+              "matching_open_r": 0.07748528355501803,
+              "wall_minus_open": 0.23921432222226302
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.3646236813100299,
+              "matching_open_r": 0.07503149110376318,
+              "wall_minus_open": 0.28959219020626675
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 6,
+          "test_session": 16,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 145,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.4323089237734005,
+              "matching_open_r": 0.31284226601084475,
+              "wall_minus_open": 0.11946665776255577
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.3076838293182176,
+              "matching_open_r": 0.1860258227050858,
+              "wall_minus_open": 0.12165800661313178
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "t",
+          "withheld_training_session": 10,
+          "test_session": 20,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 143,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.2621460040381439,
+              "matching_open_r": 0.09356721169937367,
+              "wall_minus_open": 0.16857879233877027
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2560737384681047,
+              "matching_open_r": 0.10141912078531798,
+              "wall_minus_open": 0.15465461768278674
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "l",
+          "withheld_training_session": 14,
+          "test_session": 24,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 176,
+          "bins": 5,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.039286987658951784,
+              "matching_open_r": -0.0637666755433527,
+              "wall_minus_open": 0.1030536632023045
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.02888399735857363,
+              "matching_open_r": -0.05966548499396635,
+              "wall_minus_open": 0.08854948235253998
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 16,
+          "test_session": 26,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 186,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.30362715376292726,
+              "matching_open_r": -0.05139900835325206,
+              "wall_minus_open": 0.3550261621161793
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.26448081928718065,
+              "matching_open_r": 0.004679960277683238,
+              "wall_minus_open": 0.2598008590094974
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 16,
+          "test_session": 26,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 186,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.26213299317862393,
+              "matching_open_r": 0.1135632885442039,
+              "wall_minus_open": 0.14856970463442004
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.08380387050333118,
+              "matching_open_r": 0.04891814914432,
+              "wall_minus_open": 0.03488572135901118
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "t",
+          "withheld_training_session": 20,
+          "test_session": 30,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 182,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.35013577279690744,
+              "matching_open_r": 0.04587211034676614,
+              "wall_minus_open": 0.3042636624501413
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.23009254720547312,
+              "matching_open_r": 0.13854952221042247,
+              "wall_minus_open": 0.09154302499505065
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-50",
+      "repetitions": 3,
+      "summaries": {
+        "raw_local_rate": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.32320906161616136,
+          "matching_open_mean_r": 0.1442715851078941,
+          "wall_minus_open_mean": 0.17893747650826725,
+          "positive_local_predictions": 8,
+          "median_cells": 105.5,
+          "median_bins": 10.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.17893747650826725
+            }
+          }
+        },
+        "global_rate_demeaned": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.3031730193360505,
+          "matching_open_mean_r": 0.1313821886218732,
+          "wall_minus_open_mean": 0.17179083071417728,
+          "positive_local_predictions": 8,
+          "median_cells": 105.5,
+          "median_bins": 10.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.17179083071417728
+            }
+          }
+        }
+      },
+      "exposure_pairs": {
+        "1_to_2": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.33855919984168337,
+            "matching_open_mean_r": 0.12828378706608135,
+            "wall_minus_open_mean": 0.21027541277560205,
+            "positive_local_predictions": 4,
+            "median_cells": 87.5,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.21027541277560205
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.3211399264011462,
+            "matching_open_mean_r": 0.15056772103521515,
+            "wall_minus_open_mean": 0.170572205365931,
+            "positive_local_predictions": 4,
+            "median_cells": 87.5,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.170572205365931
+              }
+            }
+          }
+        },
+        "2_to_3": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.30785892339063925,
+            "matching_open_mean_r": 0.16025938314970684,
+            "wall_minus_open_mean": 0.14759954024093247,
+            "positive_local_predictions": 4,
+            "median_cells": 130.0,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.14759954024093247
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.2852061122709548,
+            "matching_open_mean_r": 0.11219665620853125,
+            "wall_minus_open_mean": 0.17300945606242357,
+            "positive_local_predictions": 4,
+            "median_cells": 130.0,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.17300945606242357
+              }
+            }
+          }
+        }
+      },
+      "records": [
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "t",
+          "withheld_training_session": 6,
+          "test_session": 16,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 71,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.4583878246708386,
+              "matching_open_r": 0.20083191273658152,
+              "wall_minus_open": 0.2575559119342571
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.3627431254191817,
+              "matching_open_r": 0.1879610999329309,
+              "wall_minus_open": 0.1747820254862508
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 9,
+          "test_session": 19,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 89,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.3429216018296712,
+              "matching_open_r": 0.17644684677399844,
+              "wall_minus_open": 0.16647475505567275
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.4374361593462717,
+              "matching_open_r": 0.28152877085461353,
+              "wall_minus_open": 0.1559073884916582
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 9,
+          "test_session": 19,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 89,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.290934751624315,
+              "matching_open_r": 0.0870176728284898,
+              "wall_minus_open": 0.20391707879582519
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2186414708886619,
+              "matching_open_r": 0.02480422199523323,
+              "wall_minus_open": 0.19383724889342868
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "l",
+          "withheld_training_session": 10,
+          "test_session": 20,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 86,
+          "bins": 5,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.26199262124190864,
+              "matching_open_r": 0.04883871592525553,
+              "wall_minus_open": 0.21315390531665313
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.26573894995046937,
+              "matching_open_r": 0.10797679135808294,
+              "wall_minus_open": 0.15776215859238643
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "t",
+          "withheld_training_session": 16,
+          "test_session": 26,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 122,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.34513787785209565,
+              "matching_open_r": 0.19874534330474053,
+              "wall_minus_open": 0.14639253454735512
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.3038156638171177,
+              "matching_open_r": 0.10757019506247086,
+              "wall_minus_open": 0.19624546875464688
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 19,
+          "test_session": 29,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 130,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.20428243806462718,
+              "matching_open_r": 0.19107076433765258,
+              "wall_minus_open": 0.013211673726974599
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.28088598779172186,
+              "matching_open_r": 0.11786860396837319,
+              "wall_minus_open": 0.16301738382334868
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 19,
+          "test_session": 29,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 130,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.32369387819822,
+              "matching_open_r": 0.09587231182750158,
+              "wall_minus_open": 0.2278215663707184
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2128200576274427,
+              "matching_open_r": 0.08435182782777315,
+              "wall_minus_open": 0.12846822979966954
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "l",
+          "withheld_training_session": 20,
+          "test_session": 30,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 132,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.3583214994476144,
+              "matching_open_r": 0.15534911312893265,
+              "wall_minus_open": 0.20297238631868172
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.34330273984753695,
+              "matching_open_r": 0.13899599797550782,
+              "wall_minus_open": 0.20430674187202913
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-51",
+      "repetitions": 2,
+      "summaries": {
+        "raw_local_rate": {
+          "local_predictions": 4,
+          "matching_wall_mean_r": 0.24196103981819017,
+          "matching_open_mean_r": -0.10075389875395663,
+          "wall_minus_open_mean": 0.3427149385721468,
+          "positive_local_predictions": 4,
+          "median_cells": 35.5,
+          "median_bins": 10.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 4,
+              "mean_wall_minus_open": 0.3427149385721468
+            }
+          }
+        },
+        "global_rate_demeaned": {
+          "local_predictions": 4,
+          "matching_wall_mean_r": 0.32780559398206455,
+          "matching_open_mean_r": -0.0635376017728959,
+          "wall_minus_open_mean": 0.39134319575496046,
+          "positive_local_predictions": 4,
+          "median_cells": 35.5,
+          "median_bins": 10.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 4,
+              "mean_wall_minus_open": 0.39134319575496046
+            }
+          }
+        }
+      },
+      "exposure_pairs": {
+        "1_to_2": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.24196103981819017,
+            "matching_open_mean_r": -0.10075389875395663,
+            "wall_minus_open_mean": 0.3427149385721468,
+            "positive_local_predictions": 4,
+            "median_cells": 35.5,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.3427149385721468
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.32780559398206455,
+            "matching_open_mean_r": -0.0635376017728959,
+            "wall_minus_open_mean": 0.39134319575496046,
+            "positive_local_predictions": 4,
+            "median_cells": 35.5,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.39134319575496046
+              }
+            }
+          }
+        }
+      },
+      "records": [
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "l",
+          "withheld_training_session": 3,
+          "test_session": 13,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 35,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.308551847836679,
+              "matching_open_r": -0.08099617614530404,
+              "wall_minus_open": 0.389548023981983
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2635854341736695,
+              "matching_open_r": -0.18711484593837535,
+              "wall_minus_open": 0.4507002801120448
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 9,
+          "test_session": 19,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 36,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.4042863825282212,
+              "matching_open_r": 0.025875615494737766,
+              "wall_minus_open": 0.3784107670334834
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.4978120978120978,
+              "matching_open_r": 0.17966537966537965,
+              "wall_minus_open": 0.31814671814671813
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 9,
+          "test_session": 19,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 36,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.04153509453588922,
+              "matching_open_r": -0.2456745594496095,
+              "wall_minus_open": 0.28720965398549875
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.013384813384813385,
+              "matching_open_r": -0.2712998712998713,
+              "wall_minus_open": 0.2846846846846847
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "t",
+          "withheld_training_session": 10,
+          "test_session": 20,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 34,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.21347083437197137,
+              "matching_open_r": -0.10222047491565073,
+              "wall_minus_open": 0.3156913092876221
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.5364400305576776,
+              "matching_open_r": 0.02459893048128342,
+              "wall_minus_open": 0.5118411000763943
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-56",
+      "repetitions": 3,
+      "summaries": {
+        "raw_local_rate": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.16949543823925856,
+          "matching_open_mean_r": -0.06287186109058387,
+          "wall_minus_open_mean": 0.23236729932984243,
+          "positive_local_predictions": 8,
+          "median_cells": 120.5,
+          "median_bins": 9.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.23236729932984243
+            }
+          }
+        },
+        "global_rate_demeaned": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.14772892620724357,
+          "matching_open_mean_r": -0.09762813259022822,
+          "wall_minus_open_mean": 0.24535705879747177,
+          "positive_local_predictions": 8,
+          "median_cells": 120.5,
+          "median_bins": 9.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.24535705879747177
+            }
+          }
+        }
+      },
+      "exposure_pairs": {
+        "1_to_2": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.06554505282941206,
+            "matching_open_mean_r": -0.08524446483675022,
+            "wall_minus_open_mean": 0.15078951766616228,
+            "positive_local_predictions": 4,
+            "median_cells": 112.0,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.15078951766616228
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.05561962065804638,
+            "matching_open_mean_r": -0.15075643357535684,
+            "wall_minus_open_mean": 0.20637605423340322,
+            "positive_local_predictions": 4,
+            "median_cells": 112.0,
+            "median_bins": 10.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.20637605423340322
+              }
+            }
+          }
+        },
+        "2_to_3": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.2734458236491051,
+            "matching_open_mean_r": -0.040499257344417526,
+            "wall_minus_open_mean": 0.3139450809935226,
+            "positive_local_predictions": 4,
+            "median_cells": 130.5,
+            "median_bins": 7.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.3139450809935226
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.2398382317564407,
+            "matching_open_mean_r": -0.0444998316050996,
+            "wall_minus_open_mean": 0.2843380633615403,
+            "positive_local_predictions": 4,
+            "median_cells": 130.5,
+            "median_bins": 7.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.2843380633615403
+              }
+            }
+          }
+        }
+      },
+      "records": [
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "l",
+          "withheld_training_session": 2,
+          "test_session": 12,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 114,
+          "bins": 5,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.16879764441668244,
+              "matching_open_r": 0.14460592441763778,
+              "wall_minus_open": 0.024191719999044653
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.22049371215649746,
+              "matching_open_r": 0.06472529920414735,
+              "wall_minus_open": 0.1557684129523501
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 6,
+          "test_session": 16,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 111,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.06382336278531514,
+              "matching_open_r": -0.23570853456245278,
+              "wall_minus_open": 0.2995318973477679
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.030466830466830467,
+              "matching_open_r": -0.2493155493155493,
+              "wall_minus_open": 0.2797823797823798
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 6,
+          "test_session": 16,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 111,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": -0.009078159527370509,
+              "matching_open_r": -0.06149201731479766,
+              "wall_minus_open": 0.05241385778742715
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": -0.021437346437346436,
+              "matching_open_r": -0.08455598455598455,
+              "wall_minus_open": 0.06311863811863812
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "t",
+          "withheld_training_session": 10,
+          "test_session": 20,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 113,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.03863736364302116,
+              "matching_open_r": -0.18838323188738823,
+              "wall_minus_open": 0.22702059553040937
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": -0.0070447135537959945,
+              "matching_open_r": -0.33387949963404084,
+              "wall_minus_open": 0.32683478608024485
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "l",
+          "withheld_training_session": 12,
+          "test_session": 22,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 134,
+          "bins": 6,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.20273203608958645,
+              "matching_open_r": -0.006441002831428707,
+              "wall_minus_open": 0.20917303892101516
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.09899624683599546,
+              "matching_open_r": 0.022925472886195588,
+              "wall_minus_open": 0.07607077394979987
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 16,
+          "test_session": 26,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 127,
+          "bins": 8,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.3338435831538367,
+              "matching_open_r": -0.044755671515983454,
+              "wall_minus_open": 0.3785992546698202
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.3505167322834646,
+              "matching_open_r": -0.06069553805774278,
+              "wall_minus_open": 0.4112122703412074
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 16,
+          "test_session": 26,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 127,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.2830308388373825,
+              "matching_open_r": -0.10943049226249503,
+              "wall_minus_open": 0.3924613310998775
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.2387865579302587,
+              "matching_open_r": -0.0593539088863892,
+              "wall_minus_open": 0.2981404668166479
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "t",
+          "withheld_training_session": 20,
+          "test_session": 30,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 137,
+          "bins": 4,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.27417683651561464,
+              "matching_open_r": -0.001369862767762899,
+              "wall_minus_open": 0.27554669928337755
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.27105338997604417,
+              "matching_open_r": -0.08087535236246197,
+              "wall_minus_open": 0.35192874233850613
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-74",
+      "repetitions": 3,
+      "summaries": {
+        "raw_local_rate": {
+          "local_predictions": 2,
+          "matching_wall_mean_r": 0.2206621026681473,
+          "matching_open_mean_r": -0.361199335970106,
+          "wall_minus_open_mean": 0.5818614386382532,
+          "positive_local_predictions": 2,
+          "median_cells": 94.0,
+          "median_bins": 6.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 2,
+              "mean_wall_minus_open": 0.5818614386382532
+            }
+          }
+        },
+        "global_rate_demeaned": {
+          "local_predictions": 2,
+          "matching_wall_mean_r": 0.09220945153222479,
+          "matching_open_mean_r": -0.2545449599865461,
+          "wall_minus_open_mean": 0.34675441151877084,
+          "positive_local_predictions": 2,
+          "median_cells": 94.0,
+          "median_bins": 6.0,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 2,
+              "mean_wall_minus_open": 0.34675441151877084
+            }
+          }
+        }
+      },
+      "exposure_pairs": {
+        "1_to_2": {
+          "raw_local_rate": {
+            "local_predictions": 0,
+            "matching_wall_mean_r": null,
+            "matching_open_mean_r": null,
+            "wall_minus_open_mean": null,
+            "positive_local_predictions": 0,
+            "median_cells": null,
+            "median_bins": null,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 0,
+            "matching_wall_mean_r": null,
+            "matching_open_mean_r": null,
+            "wall_minus_open_mean": null,
+            "positive_local_predictions": 0,
+            "median_cells": null,
+            "median_bins": null,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              }
+            }
+          }
+        },
+        "2_to_3": {
+          "raw_local_rate": {
+            "local_predictions": 2,
+            "matching_wall_mean_r": 0.2206621026681473,
+            "matching_open_mean_r": -0.361199335970106,
+            "wall_minus_open_mean": 0.5818614386382532,
+            "positive_local_predictions": 2,
+            "median_cells": 94.0,
+            "median_bins": 6.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 2,
+                "mean_wall_minus_open": 0.5818614386382532
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 2,
+            "matching_wall_mean_r": 0.09220945153222479,
+            "matching_open_mean_r": -0.2545449599865461,
+            "wall_minus_open_mean": 0.34675441151877084,
+            "positive_local_predictions": 2,
+            "median_cells": 94.0,
+            "median_bins": 6.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 2,
+                "mean_wall_minus_open": 0.34675441151877084
+              }
+            }
+          }
+        }
+      },
+      "records": [
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 16,
+          "test_session": 26,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 97,
+          "bins": 6,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.19445067300000654,
+              "matching_open_r": -0.3575188944629787,
+              "wall_minus_open": 0.5519695674629852
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.09400641699978961,
+              "matching_open_r": -0.22184672838207448,
+              "wall_minus_open": 0.3158531453818641
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "l",
+          "withheld_training_session": 17,
+          "test_session": 27,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 91,
+          "bins": 6,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.24687353233628806,
+              "matching_open_r": -0.36487977747723327,
+              "wall_minus_open": 0.6117533098135213
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.09041248606465997,
+              "matching_open_r": -0.2872431915910177,
+              "wall_minus_open": 0.37765567765567765
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-75",
+      "repetitions": 3,
+      "summaries": {
+        "raw_local_rate": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.17263110990420855,
+          "matching_open_mean_r": -0.02894481713633318,
+          "wall_minus_open_mean": 0.20157592704054172,
+          "positive_local_predictions": 8,
+          "median_cells": 94.5,
+          "median_bins": 6.5,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.20157592704054172
+            }
+          }
+        },
+        "global_rate_demeaned": {
+          "local_predictions": 8,
+          "matching_wall_mean_r": 0.10846437356660557,
+          "matching_open_mean_r": -0.03450059499908129,
+          "wall_minus_open_mean": 0.14296496856568686,
+          "positive_local_predictions": 8,
+          "median_cells": 94.5,
+          "median_bins": 6.5,
+          "orientation": {
+            "vertical_wall": {
+              "eligible_local_predictions": 0,
+              "mean_wall_minus_open": null
+            },
+            "horizontal_wall": {
+              "eligible_local_predictions": 8,
+              "mean_wall_minus_open": 0.14296496856568686
+            }
+          }
+        }
+      },
+      "exposure_pairs": {
+        "1_to_2": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.17246694947948246,
+            "matching_open_mean_r": -0.034937068850577194,
+            "wall_minus_open_mean": 0.20740401833005967,
+            "positive_local_predictions": 4,
+            "median_cells": 79.5,
+            "median_bins": 4.5,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.20740401833005967
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.10712095396940204,
+            "matching_open_mean_r": -0.0680545945025577,
+            "wall_minus_open_mean": 0.17517554847195974,
+            "positive_local_predictions": 4,
+            "median_cells": 79.5,
+            "median_bins": 4.5,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.17517554847195974
+              }
+            }
+          }
+        },
+        "2_to_3": {
+          "raw_local_rate": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.1727952703289346,
+            "matching_open_mean_r": -0.022952565422089163,
+            "wall_minus_open_mean": 0.19574783575102378,
+            "positive_local_predictions": 4,
+            "median_cells": 120.5,
+            "median_bins": 9.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.19574783575102378
+              }
+            }
+          },
+          "global_rate_demeaned": {
+            "local_predictions": 4,
+            "matching_wall_mean_r": 0.10980779316380909,
+            "matching_open_mean_r": -0.0009465954956049041,
+            "wall_minus_open_mean": 0.11075438865941399,
+            "positive_local_predictions": 4,
+            "median_cells": 120.5,
+            "median_bins": 9.0,
+            "orientation": {
+              "vertical_wall": {
+                "eligible_local_predictions": 0,
+                "mean_wall_minus_open": null
+              },
+              "horizontal_wall": {
+                "eligible_local_predictions": 4,
+                "mean_wall_minus_open": 0.11075438865941399
+              }
+            }
+          }
+        }
+      },
+      "records": [
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "l",
+          "withheld_training_session": 4,
+          "test_session": 14,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 79,
+          "bins": 5,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.14162518829477416,
+              "matching_open_r": -0.15070409041556676,
+              "wall_minus_open": 0.2923292787103409
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.06645569620253165,
+              "matching_open_r": -0.18293573515092507,
+              "wall_minus_open": 0.2493914313534567
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 5,
+          "test_session": 15,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 80,
+          "bins": 4,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.14949012379139145,
+              "matching_open_r": 0.07636803151319234,
+              "wall_minus_open": 0.07312209227819912
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.0857712142522269,
+              "matching_open_r": -0.0001640881387716831,
+              "wall_minus_open": 0.08593530239099859
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "i",
+          "withheld_training_session": 5,
+          "test_session": 15,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 80,
+          "bins": 5,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.3226580410300527,
+              "matching_open_r": 0.06652503679434207,
+              "wall_minus_open": 0.2561330042357106
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.18762306610407875,
+              "matching_open_r": -0.03075498567203346,
+              "wall_minus_open": 0.21837805177611222
+            }
+          }
+        },
+        {
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "target_environment": "t",
+          "withheld_training_session": 7,
+          "test_session": 17,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 74,
+          "bins": 4,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.07609444480171161,
+              "matching_open_r": -0.1319372532942764,
+              "wall_minus_open": 0.20803169809598804
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.08863383931877082,
+              "matching_open_r": -0.058363569048500555,
+              "wall_minus_open": 0.14699740836727138
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "l",
+          "withheld_training_session": 14,
+          "test_session": 24,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 113,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.28653489610966765,
+              "matching_open_r": 0.04612668622176671,
+              "wall_minus_open": 0.24040820988790093
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.1704953756071595,
+              "matching_open_r": 0.03285315057555393,
+              "wall_minus_open": 0.13764222503160556
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 15,
+          "test_session": 25,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 128,
+          "bins": 8,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.1825111609966586,
+              "matching_open_r": 0.008484093245811458,
+              "wall_minus_open": 0.17402706775084714
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.09613051638893975,
+              "matching_open_r": -0.04185938052126795,
+              "wall_minus_open": 0.1379898969102077
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "i",
+          "withheld_training_session": 15,
+          "test_session": 25,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            8
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              7,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 128,
+          "bins": 10,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.15978626045858388,
+              "matching_open_r": -0.015054261918366002,
+              "wall_minus_open": 0.1748405223769499
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.14974363669657573,
+              "matching_open_r": 0.025458936092290788,
+              "wall_minus_open": 0.12428470060428494
+            }
+          }
+        },
+        {
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "target_environment": "t",
+          "withheld_training_session": 17,
+          "test_session": 27,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "seam": [
+            5,
+            2
+          ],
+          "orientation": "horizontal_wall",
+          "nonfocal_context_matched": true,
+          "global_counterfactual_matched": true,
+          "target_nonfocal_context": [
+            [
+              1,
+              "accessible"
+            ]
+          ],
+          "matching_wall_environments": [
+            "u"
+          ],
+          "matching_open_environments": [
+            "o"
+          ],
+          "cells": 109,
+          "bins": 8,
+          "correlations": {
+            "raw_local_rate": {
+              "matching_wall_r": 0.06234876375082832,
+              "matching_open_r": -0.13136677923756881,
+              "wall_minus_open": 0.19371554298839713
+            },
+            "global_rate_demeaned": {
+              "matching_wall_r": 0.022861643962561393,
+              "matching_open_r": -0.020239088128996385,
+              "wall_minus_open": 0.04310073209155778
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

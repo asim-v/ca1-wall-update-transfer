@@ -1,0 +1,677 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[round,authoryear]{natbib}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[colorlinks=true,allcolors=blue!55!black]{hyperref}
+\usepackage{xurl}
+
+\graphicspath{{figures/}{../reports/figures/}}
+
+\definecolor{navy}{HTML}{183B56}
+\definecolor{teal}{HTML}{147D92}
+\definecolor{pale}{HTML}{F2F7F8}
+\definecolor{warm}{HTML}{9A5B13}
+\definecolor{softgray}{HTML}{666666}
+
+\hypersetup{
+  pdftitle={Limited spatial transfer of a reusable CA1 wall-related population update},
+  pdfauthor={Javier Emilio Bazan Sanchez},
+  pdfsubject={Longitudinal CA1 population coding}
+}
+
+\newcommand{\meanrho}{\overline{\rho}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\stepbox}[2]{%
+  \fcolorbox{teal}{pale}{%
+    \parbox[c][2.15cm][c]{0.205\textwidth}{%
+      \centering\small\textbf{\color{navy}#1}\par\vspace{0.45em}#2}}}
+
+\title{\textbf{Limited spatial transfer of a reusable CA1 wall-related population update}\\
+\large An exploratory longitudinal reanalysis}
+\author{Javier Emilio Bazan Sanchez\\
+\small Facultad de Ciencias, Universidad Nacional Aut\'onoma de M\'exico
+(UNAM)\\
+\small\href{mailto:bazan@ciencias.unam.mx}{bazan@ciencias.unam.mx}}
+\date{Working manuscript -- July 30, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Environmental boundaries strongly influence hippocampal place fields, but it
+is unresolved whether a changed boundary evokes only a location-specific map
+change or also a neural population update that can be reused elsewhere. We
+reanalysed longitudinal calcium-imaging data from 5,413 dorsal CA1 neurons in
+seven mice across repeated exposure cycles containing a familiar square and
+nine internal-wall geometries. For each registered cell, we learned a local
+wall-minus-open response contrast from training geometries and asked whether
+that contrast predicted a later, held-out response. At the same physical seam,
+the learned contrast predicted held-out wall responses better than open
+responses across all animals (252 predictions; mean correlation advantage
+$0.184$). A single-tile counterfactual, in which two environments differed
+only at one lattice location, produced the same result (46 predictions; mean
+advantage $0.225$; seven of seven animals), including after adjustment for
+speed, heading, time, and sampling. More importantly, a contrast learned at a
+non-overlapping source seam predicted a later wall response at a target seam
+25 cm away ($\meanrho=0.148$; seven of seven animals). This shifted prediction
+was weaker than a query-matched exact-location benchmark
+($\meanrho=0.230$; transfer-minus-exact $=-0.082$) and remained positive after
+behavioral adjustment ($\meanrho=0.119$). A stringent same-session mirror-open
+control favored the wall target on its supported, demeaned tangential subset
+(mean advantage $0.114$; five of five eligible animals), but support exclusions
+and weaker raw correlations limit its scope. Cell-identity permutations,
+direction controls, and the small number of factorial wall combinations
+further constrained interpretation. We conclude that CA1 wall-related
+remapping contains a cell-resolved component that is reusable across global
+layouts and partially transferable across nearby locations, but is not a
+location-invariant or demonstrably compositional primitive. The result
+motivates a prospective experiment that independently randomizes wall
+location, orientation, order, and experience.
+\end{abstract}
+
+\noindent\textbf{Keywords:} hippocampus; CA1; place cells; boundaries;
+population code; transfer; remapping; cognitive map
+
+\section*{Significance statement}
+
+Mental maps are often described as reusable, but that phrase can mean
+anything from revisiting a familiar place to applying the same neural change
+at a new location. We test the stronger meaning directly. A cell-by-cell CA1
+response learned when a wall occupied one location carried information about
+a later wall response at a different, non-overlapping location. The transfer
+was reliable across animals but smaller than reuse at the original location,
+and available controls do not establish a fully portable or compositional
+``wall code.'' The contribution is therefore a quantitative boundary on
+reusability: hippocampal map updates can generalize beyond an exact coordinate,
+while retaining substantial location dependence.
+
+\section{Introduction}
+
+Place cells relate an animal's position to a distributed hippocampal activity
+pattern, yet the map is not a passive image of Euclidean space. Place fields
+are anchored by environmental geometry, shift when boundaries move, and can
+appear at characteristic distances and directions from walls
+\citep{OKeefeBurgess1996,HartleyEtAl2000,BarryEtAl2006}. Boundary-responsive
+inputs provide one mechanistic route by which local geometry could organize
+hippocampal representations \citep{LeverEtAl2009}. More generally, current
+accounts treat hippocampal-entorhinal codes as structured representations
+whose parts may be recombined or generalized across experiences
+\citep{StachenfeldEtAl2017,WernleEtAl2018,BakermansEtAl2025}.
+
+These observations leave an important distinction unresolved. A wall-related
+response may recur at the same coordinate despite changes elsewhere in the
+environment. That is \emph{exact-location reuse}: a local feature of an
+otherwise changing map remains stable. A stronger possibility is
+\emph{cross-location transfer}: the cell-resolved response contrast evoked by
+a wall at one seam predicts the response to a wall at a different seam. This
+second claim is not implied by ordinary place-field stability or by the
+existence of boundary-vector-like firing. It requires an out-of-sample test of
+whether the identities and signed response changes of individual cells carry
+across spatial coordinates.
+
+The distinction matters for theories of cognitive maps. A perfectly portable
+boundary operation would resemble a location-invariant representational
+primitive. A nonzero but attenuated transfer would instead suggest a reusable
+update embedded within a place-dependent code. Failure to transfer would be
+consistent with each wall response being reconstructed independently from
+position, behavior, or the full layout. These alternatives can agree on mean
+rate maps while differing in the cross-registered population structure.
+
+The dataset of \citet{LeeEtAl2025} is unusually useful for separating these
+possibilities. Seven mice were imaged longitudinally in dorsal CA1 while
+foraging in a familiar square and in nine environments made by placing
+internal walls on a common spatial lattice. Repeated exposure cycles provided
+registered cells, recurring local seams, and later held-out sessions. The
+design was not created for a transfer test, so the present work is exploratory
+and constrained by fixed environment order. Its geometry nevertheless permits
+three progressively stronger questions: does a learned wall-open contrast
+recur at the same seam across global contexts; does an especially clean
+single-tile contrast recur; and does a contrast learned at one seam predict a
+wall response at a neighboring, non-overlapping seam?
+
+We find affirmative answers to all three, with an important gradient.
+Exact-location reuse is strongest, cross-location transfer is smaller, and
+available composition and direction controls do not support a fully portable
+wall operator. The result is therefore neither a restatement that boundaries
+shape place fields nor evidence for an innate mental-map module. It is a
+specific population-level observation: part of a local CA1 wall update survives
+a change of spatial coordinate.
+
+\section{Results}
+
+\subsection{A held-out test of cell-resolved wall updates}
+
+We represented each candidate wall location as an oriented seam between two
+adjacent lattice tiles. For a registered cell, an environment, and a seam, we
+estimated activity in a narrow local strip and subtracted the corresponding
+estimate from a bracketing familiar-square session. This square residual
+reduced stable place preference while retaining the environment-specific local
+change.
+
+Training geometries supplied two cell-wise profiles at each seam: a mean
+residual when the seam was blocked by a wall and a mean residual when it was
+open. Their difference was the learned wall-related update. The neural outcome
+from the later target geometry was never used to form that source contrast.
+Prediction was scored by a rank correlation across held-out registered cells.
+We report animal-level means and sign counts rather than treating cells or
+queries as independent biological replicates.
+
+\begin{figure}[t]
+\centering
+\begin{tabularx}{\linewidth}{@{}XcXcX@{}}
+\stepbox{1. Learn}{Other geometries identify wall and open responses at a
+source seam.}
+&
+\raisebox{1.05cm}{$\boldsymbol{\longrightarrow}$}
+&
+\stepbox{2. Register}{The signed wall-minus-open contrast is retained for the
+same cells.}
+&
+\raisebox{1.05cm}{$\boldsymbol{\longrightarrow}$}
+&
+\stepbox{3. Test}{Predict a later wall response at the exact seam or a
+non-overlapping seam.}
+\end{tabularx}
+\vspace{0.8em}
+
+\begin{tabularx}{0.94\linewidth}{@{}>{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X@{}}
+\textbf{\color{navy}Exact-location reuse} &
+\textbf{\color{navy}Cross-location transfer}\\[0.25em]
+Same physical seam; different global layout &
+Source and target seams are 25 cm apart\\
+\emph{Does the local update recur?} &
+\emph{Does the update survive translation?}
+\end{tabularx}
+\caption{\textbf{Analysis logic.} All tests use registered-cell response
+vectors learned from training geometries and evaluated on later held-out
+neural outcomes. Exact reuse and shifted transfer are separate estimators:
+the cross-location result is not a transported version of the single-tile
+counterfactual.}
+\label{fig:design}
+\end{figure}
+
+\subsection{A local wall-open contrast recurs across global geometries}
+
+We first tested exact-location reuse while matching the broader wall context
+between training and held-out comparisons. Across 252 held-out predictions,
+the wall-derived profile correlated more strongly with later wall responses
+than did the open-derived profile. The mean wall-minus-open correlation
+advantage was $0.184$ and was positive in all seven animals
+(Fig.~\ref{fig:main}A). The sign was also positive in all animals when
+horizontal and vertical seams were evaluated separately.
+
+This analysis establishes more than a population-average increase near walls.
+The predictive object is a vector indexed by registered cell identity. Cells
+that contributed positively or negatively to the learned local update tended
+to do so again when the same seam was encountered in another global geometry.
+However, the seam itself was unchanged, so this result alone does not show
+that the update can move through space.
+
+\subsection{A one-tile counterfactual sharpens exact-location reuse}
+
+Two environments in the sequence, denoted \(u\) and \(o\), differed only in
+whether one lattice tile was blocked. Their contrast therefore isolates one
+local wall state more cleanly than comparisons among complex layouts. We
+learned the \(u-o\) cell-wise contrast at that focal seam and tested it in
+held-out \(i\), \(l\), and \(t\) geometries that independently instantiated
+wall or open states there.
+
+Across 46 held-out predictions, the learned vector correlated with wall
+outcomes (\(\meanrho=0.197\)) but not open outcomes
+(\(\meanrho=-0.028\)), giving an advantage of \(0.225\), positive in all seven
+animals (Fig.~\ref{fig:main}A). The raw-rate version gave a similar advantage
+(\(0.243\)). A model that adjusted local bin estimates for speed, heading,
+elapsed time, and occupancy retained the result, both with time included
+(\(0.225\)) and omitted (\(0.229\)).
+
+The effect was more evident in the nearest independently eligible distance
+band, 2.5--7.5 cm from the seam (mean advantage \(0.233\), seven of seven
+animals), than in a 17.5--22.5 cm band (\(0.069\), six of seven;
+Fig.~\ref{fig:main}D). These bands had separately defined supports and are
+therefore a descriptive localization comparison, not a paired inferential
+contrast.
+
+The fixed sequence imposes an important caveat: \(u\) always followed \(o\).
+A generic same-seam, unchanged-state later-minus-earlier placebo was opposite
+in sign (mean \(-0.042\), zero of seven positive), whereas the actual \(u-o\)
+contrast was positive (mean \(0.195\), seven of seven) and remained so after
+the nuisance adjustment (mean \(0.212\)). This argues against a generic drift
+explanation, but it cannot remove an environment-specific order effect because
+wall state and order were never randomized.
+
+\subsection{A learned wall update partially transfers to another location}
+
+We next asked the stronger question. For each eligible target, we learned a
+wall-minus-open vector at a distinct source seam with the same signed wall
+normal. The source and target seams were 25 cm apart, their local analysis bins
+did not overlap, and source training sessions were disjoint from the target
+session. The nearest source-target bins were 5 cm apart for tangential
+translations and 15 cm apart for normal-axis translations. The test used a
+separate multi-geometry estimator rather than the \(u-o\) contrast.
+
+The translated source vector predicted the later target-wall residual with
+mean correlation \(0.148\), positive in all seven animals
+(Fig.~\ref{fig:main}B). It also outperformed a source-open predictor by
+\(0.152\), and was more aligned with the target-wall response than with a
+training-derived target-open profile by \(0.216\), again positive in every
+animal. Thus the result cannot be summarized merely as two wall locations
+having high activity: a signed, cell-resolved update learned at one coordinate
+carried information about another.
+
+Transfer was incomplete. On exactly the same eligible queries, cells, and
+support, an exact-location effect predicted the target response with mean
+correlation \(0.230\). The shifted-minus-exact difference was \(-0.082\), and
+only one of seven animals favored the shifted predictor. The data therefore
+support a reusable but spatially biased population update, not a
+location-invariant wall template.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{local_wall_update_transfer.png}
+\caption{\textbf{Exact reuse, shifted transfer, and key controls.}
+\textbf{A}, wall-minus-open prediction advantages at the same seam, including
+the single-tile contrast and its behavior-adjusted estimate.
+\textbf{B}, the query-matched exact-location benchmark, the translated
+source-effect prediction, its behavior-adjusted estimate, and its specificity
+against a training-derived target-open profile.
+\textbf{C}, the same-session mirror-open control on its supported paired
+subset: correlations for the wall and mirror-open targets and their
+wall-minus-open advantage. Only five animals had eligible paired support.
+\textbf{D}, descriptive near and far bands for the single-tile test; the bands
+were separately eligible and should not be read as a paired estimate. Points
+are animal means; bars show the across-animal mean.}
+\label{fig:main}
+\end{figure}
+
+\subsection{Behavior and mirror-open controls constrain smooth-field explanations}
+
+Because animals may run differently near internal barriers, we re-estimated
+local neural response maps with covariates for speed, first and second circular
+harmonics of heading, elapsed time, and spatial sampling. The behavior-adjusted
+translated effect remained positive in all seven animals
+(\(\meanrho=0.119\)). Its specificity against the training-derived target-open
+profile was \(0.172\), and its advantage over a source-open predictor was
+\(0.138\), both seven of seven. Omitting elapsed time changed these values by
+less than \(0.003\).
+
+The registered-wall and target-wall strips could nevertheless share generic
+nearby place-field structure. We therefore defined a stricter within-session
+control before inspecting its neural endpoint in the project workflow. For
+each wall target, a mirror-open seam in the same target session was matched for
+translation distance, axis, signed normal, relative bins, and registered
+cells. The geometry permits this match only for tangential translations.
+Although 104 labeled configurations were feasible, paired-support gates
+retained 72 triplets in five animals; two animals had no admissible control.
+
+On this restricted subset, the globally demeaned source vector favored the
+wall target over the mirror-open target by \(0.114\), positive in all five
+eligible animals (Fig.~\ref{fig:main}C). Absolute source-to-wall correlation
+was positive in four of five animals (\(\meanrho=0.068\)), and a direct
+within-session wall-minus-open difference-vector score was positive in four of
+five (\(\meanrho=0.077\)). The raw-rate primary was positive in only three of
+five. The strongest justified reading is therefore narrow: for the covered
+demeaned tangential cases, purely symmetric nearby continuity is disfavored.
+The control does not establish the full seven-animal effect, normal-axis
+transfer, or raw-rate specificity. The design chronology is process-declared
+in version control, not an independently timestamped preregistration.
+
+\subsection{Identity, direction, and composition controls define the claim's ceiling}
+
+We tested whether cell identity contributed to the shifted prediction by
+coherently permuting source-cell labels 999 times within each animal while
+preserving the geometric queries. Descriptive upper-tail fractions were
+\(0.007, 0.001, 0.001, 0.069, 0.005, 0.002,\) and \(0.060\). Five animals
+therefore showed strong identity specificity under this randomization, while
+two did not. Because the available registered cells impose limited
+exchangeability, these fractions are diagnostics rather than a population
+\(p\)-value.
+
+Direction controls did not reveal a general, layout-matched normal-direction
+rule. Same- versus opposite-signed normals for tangential translation favored
+the same direction in three of six eligible animals. A normal-axis comparison
+against opposite-facing or overlapping alternatives was positive in four of
+seven. A less controlled same- versus opposite-away comparison was positive in
+all seven, but it also changed distance and layout. The reliable statement is
+therefore transfer between selected geometrically corresponding seams, not
+rotation- or direction-invariant transport.
+
+A portable representational primitive might also combine additively when two
+walls are present. The design matrix had rank 10 for 25 possible lattice
+states, and only two complete two-wall factorials were available; both
+involved the same bit and donut layouts. In five eligible animals, the
+demeaned additive predictor reached mean correlation \(0.153\), below an
+oracle best-single-component predictor at \(0.178\). The additive advantage
+was \(-0.024\) and positive in one of five animals; normalized prediction error
+was worse in all five. These data provide no positive evidence for linear
+two-wall composition, but the sparse and repetitive factorial support cannot
+establish general non-compositionality.
+
+\subsection{No support for learning, innateness, or a persistent scar}
+
+A transfer-by-experience difference-in-differences estimate was positive under
+one stored-map specification (mean \(0.045\), four of four eligible animals).
+Raw-rate and stricter sensitivity analyses were unstable, including one
+negative result. Environment order, exposure number, and geometry were not
+independently varied. We therefore do not infer that experience stabilized the
+transferred update. For the same reason, the data say nothing about whether the
+organization was innate rather than learned before imaging.
+
+Finally, we evaluated a prospectively defined former-barrier endpoint in an
+independent neutral-barrier dataset \citep{BlairEtAl2023}. The primary
+Pearson-active former-barrier center-minus-control contrast was negative in all
+leave-one-animal-out summaries (animal mean \(-0.183\); one of six individual
+animals positive). A Spearman sensitivity was near zero (mean \(0.001\); three
+of six positive). Thus we found no evidence that a removed neutral barrier left
+a persistent local representational scar under that endpoint.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Evidence ladder and claim boundary.} Values are means across
+animal-level estimates. Sign counts are descriptive consistency summaries.}
+\label{tab:evidence}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}
+  rr>{\raggedright\arraybackslash}X@{}}
+\toprule
+Test & Mean & Sign & Supported interpretation\\
+\midrule
+Context-matched exact seam & \(0.184\) & \(7/7\) &
+Local wall-open population contrast recurs across layouts.\\
+Single-tile exact seam & \(0.225\) & \(7/7\) &
+Exact-location reuse survives a cleaner local counterfactual.\\
+Behavior-adjusted single tile & \(0.225\) & \(7/7\) &
+Measured speed, heading, time, and sampling do not explain reuse.\\
+Shifted source effect & \(0.148\) & \(7/7\) &
+A cell-resolved wall update contains cross-location information.\\
+Query-matched exact effect & \(0.230\) & \(7/7\) &
+Exact reuse exceeds shifted transfer.\\
+Behavior-adjusted shifted effect & \(0.119\) & \(7/7\) &
+Measured behavior does not eliminate transfer.\\
+Mirror-open advantage & \(0.114\) & \(5/5\) &
+Demeaned tangential subset is not explained by symmetric nearby continuity.\\
+Additive two-wall minus best single & \(-0.024\) & \(1/5\) &
+No positive evidence for linear composition in sparse factorial support.\\
+Former-barrier scar & \(-0.183\) & \(1/6\) &
+No persistent scar under the independent locked endpoint.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Discussion}
+
+The central result is a graded form of reusability in a hippocampal spatial
+code. A cell-resolved wall-minus-open response learned from one group of
+geometries predicted a later response at the same seam, and a separately
+learned response at a different seam also predicted a later target-wall
+response. The cross-location prediction was positive in every animal but
+weaker than the matched exact-location prediction. This combination is the
+scientific contribution: local boundary-related remapping is neither wholly
+coordinate-bound nor freely portable.
+
+The finding goes beyond the established observation that boundaries influence
+place fields. Boundary-vector models explain how fields can arise from inputs
+tuned to distance and direction from boundaries
+\citep{HartleyEtAl2000,BarryEtAl2006}, and barrier manipulations have shown
+local field formation, duplication, and geometry-dependent remapping
+\citep{RivardEtAl2004,LeeEtAl2025}. Those results make some recurrence
+plausible. They do not by themselves demonstrate that a signed vector of
+responses, indexed by the identities of longitudinally registered CA1 cells,
+generalizes from one physical seam to another under held-out evaluation.
+
+The attenuation relative to exact reuse is equally informative. It argues
+against describing the result as a universal ``wall neuron'' vector or a
+coordinate-free operator. A useful conceptual model is a shared update gated
+by spatial context:
+\[
+  \Delta \mathbf r(s,c)
+  = \alpha(s,c)\,\mathbf u_{\mathrm{wall}}
+  + \mathbf v(s,c),
+\]
+where \(\mathbf u_{\mathrm{wall}}\) is a reusable population component,
+\(\alpha\) is a location- and context-dependent gain, and \(\mathbf v\)
+contains seam-specific changes. The present analyses establish neither the
+uniqueness nor the biological mechanism of this decomposition; the equation
+summarizes the empirical pattern that transfer is nonzero but incomplete.
+
+Several alternative explanations remain. First, smooth or repeated place
+fields can correlate at nearby seams without an explicit neural operation.
+The non-overlapping strips, square residuals, trained-open specificity, and
+mirror-open result constrain this account, but the mirror control is limited
+to five animals and demeaned tangential translations. Second, unmeasured
+behavior such as attention, wall inspection, acceleration, or route choice
+could contribute despite adjustment for measured kinematics. Third, the fixed
+environment sequence leaves environment-specific order confounded with the
+single-tile contrast. Fourth, registration and activity thresholds select
+cells stable enough to be observed across sessions. Fifth, the identity
+permutation is not an ideal exchangeability test for correlated place-cell
+populations.
+
+The negative and underpowered controls should not be converted into broad
+claims. The current design does not show linear wall composition, but it has
+too few independent factorials to rule composition out. It does not show
+experience-dependent stabilization, because experience and environment order
+are aliased. It does not test innateness: every animal had extensive prior
+experience with spatial boundaries before the recorded comparisons. The
+independent neutral-barrier analysis also failed to support a persistent
+former-barrier scar. These constraints make ``limited spatial transfer'' a
+more accurate description than a general reusable mental-map primitive.
+
+The decisive next experiment is compact. Use a symmetric lattice arena with
+four equivalent candidate wall seams. Randomly assign source and target
+locations, wall orientation, insertion or removal, and session order within
+animal. Measure a source wall-open update, then test exact reuse, translated
+reuse, rotated reuse, and a distance-matched open target in the same later
+session. Repeat each assignment across early and late exposure blocks, and
+include a balanced two-wall factorial. This design would independently
+identify spatial transfer, directional transport, composition, and learning.
+The present effect sizes provide realistic targets: an exact-location
+correlation near \(0.23\), shifted correlation near \(0.12\)--\(0.15\), and a
+shifted-minus-exact penalty near \(0.08\).
+
+\section{Materials and methods}
+
+\subsection{Dataset and analysis cohort}
+
+We reanalysed the public longitudinal dorsal-CA1 calcium-imaging dataset of
+\citet{LeeEtAl2025,LeeKeinathBrandon2024Dataset}. The tracked analysis cohort contains seven
+mice, 5,413 neurons, 207 sessions, a familiar outer square, and nine
+internal-wall geometries arranged on a common lattice. Cell identities were
+registered across sessions in the source dataset. The original study describes
+surgery, imaging, behavior, preprocessing, registration, and animal procedures.
+No new animal experiments were performed.
+
+\subsection{Spatial representation and oriented seams}
+
+The arena was expressed in a common allocentric coordinate system. A candidate
+internal-wall location was represented as an oriented seam \(s=(p\rightarrow
+q)\) between adjacent lattice tiles, with a signed normal from tile \(p\) to
+tile \(q\). The binary state \(z_{e,s}\) indicated whether environment \(e\)
+blocked that adjacency. Local strips were partitioned into 5 cm spatial bins
+at defined distances from the seam. Analyses used only bins and registered
+cells satisfying the relevant occupancy, activity, and common-support gates.
+Source and target strips in the cross-location analysis shared no 5 cm bin.
+
+\subsection{Local response vectors and square residuals}
+
+Let \(r_{i,e,s}\) denote the local response estimate for registered cell \(i\)
+in environment \(e\) at seam \(s\), averaged over eligible spatial bins after
+the analysis-specific preprocessing. The corresponding bracketing-square
+estimate was \(r_{i,\square(e),s}\). The primary environment-specific response
+was
+\[
+  \delta_{i,e,s}=r_{i,e,s}-r_{i,\square(e),s}.
+\]
+For globally demeaned variants, each vector's common-cell mean was removed
+before correlation. This suppresses population-wide rate shifts and makes the
+score depend on relative cell identities.
+
+\subsection{Training profiles and held-out scoring}
+
+For a target query \((e^\ast,s^\ast)\), training environments were selected
+without using the neural response of \(e^\ast\). At a source seam \(s\), the
+wall and open profiles were
+\[
+ \boldsymbol{\mu}_{W,s}
+   = \operatorname{mean}_{e\in\mathcal T:z_{e,s}=1}
+     \boldsymbol{\delta}_{e,s},
+ \qquad
+ \boldsymbol{\mu}_{O,s}
+   = \operatorname{mean}_{e\in\mathcal T:z_{e,s}=0}
+     \boldsymbol{\delta}_{e,s},
+\]
+computed on the common registered-cell support. The learned source effect was
+\(\mathbf d_s=\boldsymbol{\mu}_{W,s}-\boldsymbol{\mu}_{O,s}\).
+The held-out outcome was \(\boldsymbol{\delta}_{e^\ast,s^\ast}\).
+Scores were Spearman correlations across registered cells. Wall-open
+advantages compare correlations within the same query and cell support.
+
+The exact-location estimator set \(s=s^\ast\). Its context-matched version
+restricted training comparisons so the broader internal-wall context was
+balanced between the wall and open profiles. The reported exact-location
+benchmark for shifted transfer was recomputed on the exact queries, sessions,
+cells, and local supports eligible for the shifted analysis.
+
+\subsection{Single-tile counterfactual}
+
+The \(u\) and \(o\) geometries differed at one lattice tile: \(u\) blocked
+tiles \(\{4,5\}\), whereas \(o\) blocked only tile \(\{4\}\). We formed the
+cell-wise \(u-o\) contrast at the focal seam and evaluated wall and open
+outcomes at that seam in held-out \(i\), \(l\), and \(t\) geometries. Near
+(2.5--7.5 cm) and far (17.5--22.5 cm) bands were screened separately, so their
+difference is descriptive. For the order-placebo analysis, we formed
+later-minus-earlier contrasts at unchanged seams with the same processing and
+compared their signs with the actual \(u-o\) contrast.
+
+\subsection{Cross-location transfer}
+
+For each eligible target seam, the source seam was a non-overlapping lattice
+seam 25 cm away with the same signed wall normal and admissible wall/open
+training support. Source training and target outcome sessions were disjoint.
+The primary shifted score was
+\[
+  \rho_{\mathrm{shift}}
+  =\rho_{\mathrm S}
+    \left(\mathbf d_{s_{\mathrm{source}}},
+    \boldsymbol{\delta}_{e^\ast,s_{\mathrm{target}}}\right).
+\]
+Secondary specificity scores compared the source effect with a
+training-derived open profile at the target and compared source-wall with
+source-open predictors. The exact-location benchmark used
+\(\mathbf d_{s_{\mathrm{target}}}\) on the identical held-out query support.
+Stored-map and behavior-adjusted audits agreed on 405 target queries and 658
+source pairs, including their session and seam identities and their counts of
+common cells and bins. That audit did not hash the complete cell-ID or
+bin-coordinate arrays.
+
+\subsection{Behavior-adjusted response estimates}
+
+We estimated activity jointly with spatial-bin indicators and nuisance
+covariates for instantaneous speed, sine and cosine of heading, second heading
+harmonics, and elapsed time. Spatial effects were evaluated at a common
+reference covariate distribution calibrated from the first familiar-square
+session. The no-time sensitivity omitted elapsed time but retained the other
+covariates. Target-session activity was used to estimate nuisance coefficients
+for that target map, but target neural outcomes never entered source-profile
+training.
+
+\subsection{Same-session mirror-open control}
+
+Before inspecting the neural endpoint within the project workflow, we defined
+a mirror-open seam in the same target session as each target wall. It matched
+the source-wall pair in translation distance, translation axis, signed normal,
+relative spatial bins, and registered cells. Both source-to-target nearest-bin
+distances were 5 cm. Only tangential translations admitted this exact
+geometric pairing. Primary scoring used globally demeaned source and target
+vectors. Eligibility required a complete source, wall-target, and open-target
+triplet on common support.
+
+\subsection{Cell-identity permutation}
+
+For each animal, we generated 999 coherent random mappings of source-cell
+identities while preserving query geometry, target vectors, support sizes, and
+the mapping across all queries in that permutation. The descriptive upper-tail
+fraction was \((1+n_{\mathrm{null}\geq\mathrm{observed}})/(1000)\). Correlations
+and registration constraints limit exchangeability; the fractions were used
+as identity-specificity diagnostics rather than inferential population
+\(p\)-values.
+
+\subsection{Direction, composition, and experience analyses}
+
+Direction controls compared eligible source-target pairs with same or opposite
+signed wall normals while documenting translation axis, distance, overlap, and
+layout matching. No single comparison simultaneously matched all of these
+features across the full cohort.
+
+For composition, we identified complete wall-state factorials in which two
+single-wall effects and their joint state could be estimated. The additive
+prediction was the sum of the two single effects. It was compared with an
+oracle best-single-component predictor using correlation and normalized
+prediction error. Only two repetitive factorials and five eligible animals
+were available.
+
+Experience analyses contrasted transfer changes across exposure blocks using
+difference-in-differences variants. Because geometry, order, and exposure were
+not independently randomized, these estimates were treated as exploratory
+sensitivity analyses and not as evidence for learning.
+
+\subsection{Independent former-barrier analysis}
+
+We used the public neutral-barrier data from \citet{BlairEtAl2023}
+to test whether the former barrier center retained an excess neural similarity
+relative to matched control locations after removal. The primary endpoint was
+a Pearson correlation among active cells, averaged as a former-barrier
+center-minus-control contrast. Its definition was written before the neural
+endpoint was run in the local project workflow. Spearman scoring and
+leave-one-animal-out summaries were sensitivities.
+
+\subsection{Statistical reporting and reproducibility}
+
+Animals were treated as the biological units. We report animal-level means,
+sign counts, query counts, and explicitly labeled descriptive permutation
+fractions. No cell-level or query-level observation was presented as an
+independent animal replicate. The analyses are exploratory: neither the
+original experiment nor the present reanalysis was preregistered for the
+cross-location hypothesis.
+
+All figure values derive from tracked machine-readable source files. The
+repository contains scripts, eligibility ledgers, result summaries, design
+locks, and an inspectable Git history. The principal manuscript figure is
+generated from its tracked source-data CSV.
+
+\section*{Data and code availability}
+
+The CA1 source data are available through the archive cited by
+\citet{LeeKeinathBrandon2024Dataset}. The independent miniscope data are available through
+the archive cited by \citet{BlairData2023}. Analysis code, source tables,
+reports, and manuscript sources will be deposited in a public repository
+before submission; the working repository currently contains a verified Git
+bundle backup and tagged analysis milestones.
+
+\section*{Acknowledgments}
+
+We thank the authors of the source studies for making their longitudinal
+datasets available. Funding and author-specific acknowledgments will be added.
+
+\section*{Author contributions}
+
+To be completed using the CRediT taxonomy.
+
+\section*{Competing interests}
+
+The authors declare no competing interests, subject to author confirmation.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

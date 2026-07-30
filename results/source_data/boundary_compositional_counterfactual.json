@@ -1,0 +1,2744 @@
+{
+  "status": "stopped_underidentified_compositional_branch",
+  "question": "Can profiles from locally isolated wall states predict a held-out two-wall CA1 response without using target neural rates?",
+  "decision": {
+    "general_whole_shape_test_identified": false,
+    "limited_local_falsification_test_feasible": true,
+    "candidate_general_compositional_contribution": false,
+    "reason": "Every held-out deformation row lies outside the row span of the remaining additive wall design. Only two complete local 2x2 wall pairs exist, and both use the same WW target environment, so the neural check cannot establish a portable compositional primitive."
+  },
+  "design": {
+    "target_neural_rates_excluded_from_predictor_fitting": true,
+    "target_training_ww_session_excluded": true,
+    "target_geometry_labels_used_to_define_queries": true,
+    "target_occupancy_and_registration_used_for_common_support": true,
+    "training_and_test_exposures_nonoverlapping": true,
+    "training_baseline": "square at start of training cycle",
+    "test_baseline": "square after the test cycle",
+    "training_and_test_baselines_nonoverlapping": true,
+    "interaction_free_predictor": "(mean WO + mean OW - mean OO) - training square",
+    "test_target": "WW in next cycle - post-test square",
+    "best_single_comparator": "larger target-scored correlation of WO-square and OW-square; an oracle benchmark, not a fitted predictor",
+    "normalized_rmse": "RMSE divided by the RMS of the held-out test residual; no target-fitted intercept or scale",
+    "predicted_object": "registered-cell rate-change vector in the 3x3-bin intersection of two exact-location wall strips",
+    "rate_modes": [
+      "raw_local_rate",
+      "global_rate_demeaned"
+    ],
+    "inferential_unit": "animal"
+  },
+  "settings": {
+    "minimum_seconds_per_common_bin": 0.5,
+    "minimum_common_bins": 6,
+    "minimum_common_cells": 20
+  },
+  "geometry_identifiability": {
+    "unique_environment_geometries": 10,
+    "boundary_counts": {
+      "square": 0,
+      "+": 8,
+      "bit donut": 6,
+      "glenn": 4,
+      "i": 6,
+      "l": 4,
+      "o": 4,
+      "rectangle": 3,
+      "t": 6,
+      "u": 5
+    },
+    "globally_isolated_one_boundary_environments": [],
+    "minimum_nonzero_boundary_count": 3,
+    "oriented_wall_design": {
+      "representation": "oriented source-blocked-to-target-accessible walls",
+      "environments": [
+        "square",
+        "+",
+        "bit donut",
+        "glenn",
+        "i",
+        "l",
+        "o",
+        "rectangle",
+        "t",
+        "u"
+      ],
+      "seams": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "incidence_rows": {
+        "square": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "+": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "bit donut": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "glenn": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "i": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "l": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "o": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "rectangle": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "t": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "u": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "observations": 10,
+      "wall_parameters": 24,
+      "parameters_with_intercept": 25,
+      "rank_without_intercept": 9,
+      "rank_with_intercept": 10,
+      "nullity_with_intercept": 15,
+      "unique_column_patterns": 16,
+      "duplicate_column_patterns": [
+        {
+          "seams": [
+            [
+              3,
+              0
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          "environment_pattern": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seams": [
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              7,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "environment_pattern": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seams": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              6,
+              3
+            ]
+          ],
+          "environment_pattern": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seams": [
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "environment_pattern": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "never_present_seams": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "leave_one_deformed_shape_out": {
+        "+": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.861085987290406,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "bit donut": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 0.8381589707513998,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "glenn": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.0809284908017096,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "i": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.5145018478016248,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "l": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.4353127531609629,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "o": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 0.7144854865492444,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "rectangle": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.2603403904168817,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "t": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.3773798100897725,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "u": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.2514916473087554,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        }
+      },
+      "all_deformed_targets_estimable_from_other_shapes": false
+    },
+    "physical_boundary_design": {
+      "representation": "unoriented physical boundaries",
+      "environments": [
+        "square",
+        "+",
+        "bit donut",
+        "glenn",
+        "i",
+        "l",
+        "o",
+        "rectangle",
+        "t",
+        "u"
+      ],
+      "seams": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "incidence_rows": {
+        "square": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "+": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "bit donut": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "glenn": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "i": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "l": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "o": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "rectangle": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "t": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "u": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "observations": 10,
+      "wall_parameters": 12,
+      "parameters_with_intercept": 13,
+      "rank_without_intercept": 9,
+      "rank_with_intercept": 10,
+      "nullity_with_intercept": 3,
+      "unique_column_patterns": 12,
+      "duplicate_column_patterns": [],
+      "never_present_seams": [],
+      "leave_one_deformed_shape_out": {
+        "+": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.4643530642939961,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "bit donut": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 0.8498365855987977,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "glenn": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 0.8271701918685115,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "i": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.3627702877384937,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "l": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 0.7359800721939873,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "o": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 0.6160860684966186,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "rectangle": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 0.8439957151095543,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "t": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.0871146130092184,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        },
+        "u": {
+          "training_rank": 9,
+          "rank_after_adding_target": 10,
+          "target_row_in_training_row_span": false,
+          "target_sensitivity_to_training_nullspace_l2": 1.1261850127429456,
+          "training_equivalent_models_can_change_target_arbitrarily": true
+        }
+      },
+      "all_deformed_targets_estimable_from_other_shapes": false
+    },
+    "complete_local_two_wall_factorials": [
+      {
+        "query": "0_to_3__4_to_3",
+        "seam_a": [
+          0,
+          3
+        ],
+        "seam_b": [
+          4,
+          3
+        ],
+        "common_target_partition": 3,
+        "overlap_bins": [
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ]
+        ],
+        "state_environments": {
+          "OO": [
+            "square"
+          ],
+          "WO": [
+            "+",
+            "glenn"
+          ],
+          "OW": [
+            "l",
+            "o",
+            "u"
+          ],
+          "WW": [
+            "bit donut"
+          ]
+        }
+      },
+      {
+        "query": "0_to_1__4_to_1",
+        "seam_a": [
+          0,
+          1
+        ],
+        "seam_b": [
+          4,
+          1
+        ],
+        "common_target_partition": 1,
+        "overlap_bins": [
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "state_environments": {
+          "OO": [
+            "square",
+            "i",
+            "t"
+          ],
+          "WO": [
+            "+",
+            "glenn",
+            "rectangle"
+          ],
+          "OW": [
+            "o",
+            "u"
+          ],
+          "WW": [
+            "bit donut"
+          ]
+        }
+      }
+    ],
+    "complete_local_factorial_count": 2,
+    "distinct_ww_target_environments": [
+      "bit donut"
+    ]
+  },
+  "replication_scope": {
+    "complete_local_factorials": 2,
+    "distinct_ww_target_environments": 1,
+    "independent_global_shape_replication": false
+  },
+  "cohort": {
+    "raw_local_rate": {
+      "animals": 5,
+      "records": 14,
+      "animal_mean_additive_spearman_r": 0.17070313391561995,
+      "animal_mean_best_single_spearman_r": 0.14891168007894753,
+      "animal_mean_additive_minus_best_single_spearman_r": 0.021791453836672404,
+      "positive_animals": 4,
+      "animal_mean_additive_normalized_rmse": 1.6074618544011252,
+      "animal_mean_best_single_normalized_rmse": 1.2247524791983426,
+      "animal_mean_additive_minus_best_single_normalized_rmse": 0.3827093752027825,
+      "animals_with_lower_additive_normalized_rmse": 0,
+      "animal_values": {
+        "QLAK-CA1-08": -0.07649418136095887,
+        "QLAK-CA1-30": 0.03629076419677376,
+        "QLAK-CA1-50": 0.061022117363858035,
+        "QLAK-CA1-51": 0.06587652270578563,
+        "QLAK-CA1-56": 0.022262046277903458
+      },
+      "animal_normalized_rmse_values": {
+        "QLAK-CA1-08": 0.8795883196408603,
+        "QLAK-CA1-30": 0.41541403451556524,
+        "QLAK-CA1-50": 0.15572814193646578,
+        "QLAK-CA1-51": 0.15791372710806995,
+        "QLAK-CA1-56": 0.30490265281295126
+      }
+    },
+    "global_rate_demeaned": {
+      "animals": 5,
+      "records": 14,
+      "animal_mean_additive_spearman_r": 0.15345378337282004,
+      "animal_mean_best_single_spearman_r": 0.17764876957413273,
+      "animal_mean_additive_minus_best_single_spearman_r": -0.024194986201312725,
+      "positive_animals": 1,
+      "animal_mean_additive_normalized_rmse": 1.555003070390699,
+      "animal_mean_best_single_normalized_rmse": 1.2046273048950384,
+      "animal_mean_additive_minus_best_single_normalized_rmse": 0.3503757654956604,
+      "animals_with_lower_additive_normalized_rmse": 0,
+      "animal_values": {
+        "QLAK-CA1-08": -0.057734229481312384,
+        "QLAK-CA1-30": -0.0023966589230851564,
+        "QLAK-CA1-50": 0.053617480403660774,
+        "QLAK-CA1-51": -0.010225885225885245,
+        "QLAK-CA1-56": -0.1042356377799416
+      },
+      "animal_normalized_rmse_values": {
+        "QLAK-CA1-08": 0.7869219348012542,
+        "QLAK-CA1-30": 0.40393333340327553,
+        "QLAK-CA1-50": 0.13652422311321155,
+        "QLAK-CA1-51": 0.11868168161264792,
+        "QLAK-CA1-56": 0.305817654547913
+      }
+    }
+  },
+  "animals": [
+    {
+      "animal": "QLAK-CA1-08",
+      "exposure_cycles": 3,
+      "attempted_records": 4,
+      "eligible_records": 3,
+      "exclusion_counts": {
+        "insufficient_common_occupancy_bins": 1
+      },
+      "exclusions": [
+        {
+          "query": "0_to_1__4_to_1",
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 4,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 55
+        }
+      ],
+      "summaries": {
+        "raw_local_rate": {
+          "records": 3,
+          "mean_additive_spearman_r": -0.16393261519224364,
+          "mean_best_single_spearman_r": -0.08743843383128479,
+          "mean_additive_minus_best_single_spearman_r": -0.07649418136095887,
+          "positive_additive_minus_best_single_records": 0,
+          "mean_additive_normalized_rmse": 2.527381832161331,
+          "mean_best_single_normalized_rmse": 1.6477935125204708
+        },
+        "global_rate_demeaned": {
+          "records": 3,
+          "mean_additive_spearman_r": -0.14092213285394647,
+          "mean_best_single_spearman_r": -0.08318790337263411,
+          "mean_additive_minus_best_single_spearman_r": -0.057734229481312384,
+          "positive_additive_minus_best_single_records": 1,
+          "mean_additive_normalized_rmse": 2.419166184477756,
+          "mean_best_single_normalized_rmse": 1.6322442496765017
+        }
+      },
+      "records": [
+        {
+          "query": "0_to_3__4_to_3",
+          "seam_a": [
+            0,
+            3
+          ],
+          "seam_b": [
+            4,
+            3
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 19,
+          "target_training_session_excluded": 9,
+          "training_state_environments": {
+            "OO": [
+              "square"
+            ],
+            "WO": [
+              "+",
+              "glenn"
+            ],
+            "OW": [
+              "l",
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1
+            ],
+            "WO": [
+              6,
+              10
+            ],
+            "OW": [
+              8,
+              2,
+              4
+            ]
+          },
+          "cells": 51,
+          "candidate_bins": 9,
+          "common_bins": 8,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": -0.2357572356311211,
+                  "normalized_rmse": 1.926004309302582
+                },
+                "wall_a_only": {
+                  "spearman_r": -0.2414564514365148,
+                  "normalized_rmse": 1.6777881666237262
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.17536815546143425,
+                  "normalized_rmse": 1.252555126552605
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.06038908016968686,
+              "additive_minus_mean_single_spearman_r": -0.027344932182146564,
+              "additive_minus_best_single_normalized_rmse": 0.6734491827499771
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": -0.13276318472141632,
+                  "normalized_rmse": 1.7783347834794483
+                },
+                "wall_a_only": {
+                  "spearman_r": -0.15181682429069188,
+                  "normalized_rmse": 1.5646155594106903
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.13710717440555265,
+                  "normalized_rmse": 1.2272637739167889
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.0043439896841363235,
+              "additive_minus_mean_single_spearman_r": 0.011698814626705939,
+              "additive_minus_best_single_normalized_rmse": 0.5510710095626594
+            }
+          }
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "seam_a": [
+            0,
+            1
+          ],
+          "seam_b": [
+            4,
+            1
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 19,
+          "target_training_session_excluded": 9,
+          "training_state_environments": {
+            "OO": [
+              "square",
+              "i",
+              "t"
+            ],
+            "WO": [
+              "+",
+              "glenn",
+              "rectangle"
+            ],
+            "OW": [
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1,
+              7,
+              3
+            ],
+            "WO": [
+              6,
+              10,
+              5
+            ],
+            "OW": [
+              2,
+              4
+            ]
+          },
+          "cells": 43,
+          "candidate_bins": 9,
+          "common_bins": 9,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": -0.21285177607674796,
+                  "normalized_rmse": 3.166635571363756
+                },
+                "wall_a_only": {
+                  "spearman_r": -0.1038067902660252,
+                  "normalized_rmse": 2.7323332603552175
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.26912459188050736,
+                  "normalized_rmse": 2.3484264063921105
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.10904498581072276,
+              "additive_minus_mean_single_spearman_r": -0.02638608500348169,
+              "additive_minus_best_single_normalized_rmse": 0.8182091649716456
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": -0.19284204167925098,
+                  "normalized_rmse": 3.010251284769431
+                },
+                "wall_a_only": {
+                  "spearman_r": -0.09121111446692842,
+                  "normalized_rmse": 2.451930259240886
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.3403805496828753,
+                  "normalized_rmse": 2.3436089032363054
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.10163092721232256,
+              "additive_minus_mean_single_spearman_r": 0.022953790395650875,
+              "additive_minus_best_single_normalized_rmse": 0.6666423815331255
+            }
+          }
+        },
+        {
+          "query": "0_to_3__4_to_3",
+          "seam_a": [
+            0,
+            3
+          ],
+          "seam_b": [
+            4,
+            3
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "test_target_session": 29,
+          "target_training_session_excluded": 19,
+          "training_state_environments": {
+            "OO": [
+              "square"
+            ],
+            "WO": [
+              "+",
+              "glenn"
+            ],
+            "OW": [
+              "l",
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              11
+            ],
+            "WO": [
+              16,
+              20
+            ],
+            "OW": [
+              18,
+              12,
+              14
+            ]
+          },
+          "cells": 64,
+          "candidate_bins": 9,
+          "common_bins": 9,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": -0.04318883386886191,
+                  "normalized_rmse": 2.489505615817655
+                },
+                "wall_a_only": {
+                  "spearman_r": -0.03505527943935856,
+                  "normalized_rmse": 1.8294380776000976
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.016859644233605073,
+                  "normalized_rmse": 1.3423990046166971
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.06004847810246698,
+              "additive_minus_mean_single_spearman_r": -0.034091016265985166,
+              "additive_minus_best_single_normalized_rmse": 1.1471066112009578
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": -0.09716117216117215,
+                  "normalized_rmse": 2.468912485184388
+                },
+                "wall_a_only": {
+                  "spearman_r": -0.14368131868131867,
+                  "normalized_rmse": 1.8419676471168402
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.021245421245421243,
+                  "normalized_rmse": 1.3258600718764109
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.07591575091575091,
+              "additive_minus_mean_single_spearman_r": -0.014697802197802187,
+              "additive_minus_best_single_normalized_rmse": 1.1430524133079774
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-30",
+      "exposure_cycles": 3,
+      "attempted_records": 4,
+      "eligible_records": 4,
+      "exclusion_counts": {},
+      "exclusions": [],
+      "summaries": {
+        "raw_local_rate": {
+          "records": 4,
+          "mean_additive_spearman_r": 0.17710666188485089,
+          "mean_best_single_spearman_r": 0.14081589768807712,
+          "mean_additive_minus_best_single_spearman_r": 0.03629076419677376,
+          "positive_additive_minus_best_single_records": 4,
+          "mean_additive_normalized_rmse": 1.6914034308204404,
+          "mean_best_single_normalized_rmse": 1.2759893963048752
+        },
+        "global_rate_demeaned": {
+          "records": 4,
+          "mean_additive_spearman_r": 0.12985129120908728,
+          "mean_best_single_spearman_r": 0.13224795013217244,
+          "mean_additive_minus_best_single_spearman_r": -0.0023966589230851564,
+          "positive_additive_minus_best_single_records": 2,
+          "mean_additive_normalized_rmse": 1.6847571327760942,
+          "mean_best_single_normalized_rmse": 1.2808237993728186
+        }
+      },
+      "records": [
+        {
+          "query": "0_to_3__4_to_3",
+          "seam_a": [
+            0,
+            3
+          ],
+          "seam_b": [
+            4,
+            3
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 18,
+          "target_training_session_excluded": 8,
+          "training_state_environments": {
+            "OO": [
+              "square"
+            ],
+            "WO": [
+              "+",
+              "glenn"
+            ],
+            "OW": [
+              "l",
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1
+            ],
+            "WO": [
+              3,
+              5
+            ],
+            "OW": [
+              4,
+              2,
+              7
+            ]
+          },
+          "cells": 121,
+          "candidate_bins": 9,
+          "common_bins": 6,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.049682344451451206,
+                  "normalized_rmse": 2.20525616981574
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.015281195221332824,
+                  "normalized_rmse": 1.545642949557062
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.019378699051488424,
+                  "normalized_rmse": 1.399720186456115
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.030303645399962782,
+              "additive_minus_mean_single_spearman_r": 0.03235239731504058,
+              "additive_minus_best_single_normalized_rmse": 0.805535983359625
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": -0.0635618479880775,
+                  "normalized_rmse": 2.233864648388769
+                },
+                "wall_a_only": {
+                  "spearman_r": -0.06600731608183173,
+                  "normalized_rmse": 1.5618591066399354
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.049729034006232214,
+                  "normalized_rmse": 1.4362851615689407
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.013832813981845285,
+              "additive_minus_mean_single_spearman_r": -0.005693672944045526,
+              "additive_minus_best_single_normalized_rmse": 0.7975794868198283
+            }
+          }
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "seam_a": [
+            0,
+            1
+          ],
+          "seam_b": [
+            4,
+            1
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 18,
+          "target_training_session_excluded": 8,
+          "training_state_environments": {
+            "OO": [
+              "square",
+              "i",
+              "t"
+            ],
+            "WO": [
+              "+",
+              "glenn",
+              "rectangle"
+            ],
+            "OW": [
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1,
+              6,
+              10
+            ],
+            "WO": [
+              3,
+              5,
+              9
+            ],
+            "OW": [
+              2,
+              7
+            ]
+          },
+          "cells": 115,
+          "candidate_bins": 9,
+          "common_bins": 6,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.2704655204137213,
+                  "normalized_rmse": 2.1470699746625663
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.18199427043680017,
+                  "normalized_rmse": 1.619323951255132
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.22188574358394786,
+                  "normalized_rmse": 1.6151223718409204
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.048579776829773436,
+              "additive_minus_mean_single_spearman_r": 0.06852551340334728,
+              "additive_minus_best_single_normalized_rmse": 0.5319476028216459
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.24676526230076876,
+                  "normalized_rmse": 2.1413167906016635
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.22269830091241333,
+                  "normalized_rmse": 1.62161689182289
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.1281269788666954,
+                  "normalized_rmse": 1.6363102131226128
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.02406696138835543,
+              "additive_minus_mean_single_spearman_r": 0.0713526224112144,
+              "additive_minus_best_single_normalized_rmse": 0.5196998987787735
+            }
+          }
+        },
+        {
+          "query": "0_to_3__4_to_3",
+          "seam_a": [
+            0,
+            3
+          ],
+          "seam_b": [
+            4,
+            3
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "test_target_session": 28,
+          "target_training_session_excluded": 18,
+          "training_state_environments": {
+            "OO": [
+              "square"
+            ],
+            "WO": [
+              "+",
+              "glenn"
+            ],
+            "OW": [
+              "l",
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              11
+            ],
+            "WO": [
+              13,
+              15
+            ],
+            "OW": [
+              14,
+              12,
+              17
+            ]
+          },
+          "cells": 151,
+          "candidate_bins": 9,
+          "common_bins": 9,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.16760487788592698,
+                  "normalized_rmse": 1.0823858237437003
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.16497681208684073,
+                  "normalized_rmse": 0.9647384343713356
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.1560348340241719,
+                  "normalized_rmse": 0.9059126038671828
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.0026280657990862544,
+              "additive_minus_mean_single_spearman_r": 0.00709905483042067,
+              "additive_minus_best_single_normalized_rmse": 0.17647321987651754
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.158382711746253,
+                  "normalized_rmse": 1.0709772554038268
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.17849424886720108,
+                  "normalized_rmse": 0.9658105752768292
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.09095337308592952,
+                  "normalized_rmse": 0.899822608469832
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.02011153712094807,
+              "additive_minus_mean_single_spearman_r": 0.023658900769687713,
+              "additive_minus_best_single_normalized_rmse": 0.17115464693399485
+            }
+          }
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "seam_a": [
+            0,
+            1
+          ],
+          "seam_b": [
+            4,
+            1
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "test_target_session": 28,
+          "target_training_session_excluded": 18,
+          "training_state_environments": {
+            "OO": [
+              "square",
+              "i",
+              "t"
+            ],
+            "WO": [
+              "+",
+              "glenn",
+              "rectangle"
+            ],
+            "OW": [
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              11,
+              16,
+              20
+            ],
+            "WO": [
+              13,
+              15,
+              19
+            ],
+            "OW": [
+              12,
+              17
+            ]
+          },
+          "cells": 133,
+          "candidate_bins": 9,
+          "common_bins": 6,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.22067390478830406,
+                  "normalized_rmse": 1.3309017550597548
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.1570223360300315,
+                  "normalized_rmse": 1.2069546559720294
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.08469236148638695,
+                  "normalized_rmse": 1.1832024230552822
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.06365156875827258,
+              "additive_minus_mean_single_spearman_r": 0.09981655603009484,
+              "additive_minus_best_single_normalized_rmse": 0.1476993320044726
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.17781903877740485,
+                  "normalized_rmse": 1.2928698367101168
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.17752828475530755,
+                  "normalized_rmse": 1.1655705356296113
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.11468460840024076,
+                  "normalized_rmse": 1.1791453642797156
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.0002907540220973004,
+              "additive_minus_mean_single_spearman_r": 0.031712592199630685,
+              "additive_minus_best_single_normalized_rmse": 0.12729930108050547
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-50",
+      "exposure_cycles": 3,
+      "attempted_records": 4,
+      "eligible_records": 4,
+      "exclusion_counts": {},
+      "exclusions": [],
+      "summaries": {
+        "raw_local_rate": {
+          "records": 4,
+          "mean_additive_spearman_r": 0.28551160585860197,
+          "mean_best_single_spearman_r": 0.22448948849474393,
+          "mean_additive_minus_best_single_spearman_r": 0.061022117363858035,
+          "positive_additive_minus_best_single_records": 3,
+          "mean_additive_normalized_rmse": 1.2054620367519127,
+          "mean_best_single_normalized_rmse": 1.0497338948154469
+        },
+        "global_rate_demeaned": {
+          "records": 4,
+          "mean_additive_spearman_r": 0.3015655973677095,
+          "mean_best_single_spearman_r": 0.24794811696404873,
+          "mean_additive_minus_best_single_spearman_r": 0.053617480403660774,
+          "positive_additive_minus_best_single_records": 3,
+          "mean_additive_normalized_rmse": 1.170253503456997,
+          "mean_best_single_normalized_rmse": 1.0337292803437854
+        }
+      },
+      "records": [
+        {
+          "query": "0_to_3__4_to_3",
+          "seam_a": [
+            0,
+            3
+          ],
+          "seam_b": [
+            4,
+            3
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 13,
+          "target_training_session_excluded": 3,
+          "training_state_environments": {
+            "OO": [
+              "square"
+            ],
+            "WO": [
+              "+",
+              "glenn"
+            ],
+            "OW": [
+              "l",
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1
+            ],
+            "WO": [
+              2,
+              8
+            ],
+            "OW": [
+              10,
+              4,
+              5
+            ]
+          },
+          "cells": 65,
+          "candidate_bins": 9,
+          "common_bins": 8,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.17755493613714798,
+                  "normalized_rmse": 1.065567571175179
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.13142007809570022,
+                  "normalized_rmse": 0.9546361727733136
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.0006944188772148993,
+                  "normalized_rmse": 0.9908346520654776
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.04613485804144776,
+              "additive_minus_mean_single_spearman_r": 0.11219210652790532,
+              "additive_minus_best_single_normalized_rmse": 0.1109313984018655
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.2909527972027972,
+                  "normalized_rmse": 0.9606361440133261
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.0839597902097902,
+                  "normalized_rmse": 0.9346903554701014
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.15397727272727274,
+                  "normalized_rmse": 0.9412810271438923
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.13697552447552447,
+              "additive_minus_mean_single_spearman_r": 0.17198426573426573,
+              "additive_minus_best_single_normalized_rmse": 0.025945788543224713
+            }
+          }
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "seam_a": [
+            0,
+            1
+          ],
+          "seam_b": [
+            4,
+            1
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 13,
+          "target_training_session_excluded": 3,
+          "training_state_environments": {
+            "OO": [
+              "square",
+              "i",
+              "t"
+            ],
+            "WO": [
+              "+",
+              "glenn",
+              "rectangle"
+            ],
+            "OW": [
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1,
+              9,
+              6
+            ],
+            "WO": [
+              2,
+              8,
+              7
+            ],
+            "OW": [
+              4,
+              5
+            ]
+          },
+          "cells": 56,
+          "candidate_bins": 9,
+          "common_bins": 8,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.3842737832825938,
+                  "normalized_rmse": 1.0192338811072383
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.33150672931900566,
+                  "normalized_rmse": 0.9546086109680919
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.10169467160000761,
+                  "normalized_rmse": 0.9979523973341424
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.05276705396358816,
+              "additive_minus_mean_single_spearman_r": 0.16767308282308718,
+              "additive_minus_best_single_normalized_rmse": 0.06462527013914643
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.40984278879015723,
+                  "normalized_rmse": 1.012857135211701
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.36930963773069037,
+                  "normalized_rmse": 0.9471339777605152
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.11859193438140807,
+                  "normalized_rmse": 1.0321736586135888
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.040533151059466865,
+              "additive_minus_mean_single_spearman_r": 0.165892002734108,
+              "additive_minus_best_single_normalized_rmse": 0.06572315745118584
+            }
+          }
+        },
+        {
+          "query": "0_to_3__4_to_3",
+          "seam_a": [
+            0,
+            3
+          ],
+          "seam_b": [
+            4,
+            3
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "test_target_session": 23,
+          "target_training_session_excluded": 13,
+          "training_state_environments": {
+            "OO": [
+              "square"
+            ],
+            "WO": [
+              "+",
+              "glenn"
+            ],
+            "OW": [
+              "l",
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              11
+            ],
+            "WO": [
+              12,
+              18
+            ],
+            "OW": [
+              20,
+              14,
+              15
+            ]
+          },
+          "cells": 111,
+          "candidate_bins": 9,
+          "common_bins": 9,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.2660605649805134,
+                  "normalized_rmse": 1.600358614905263
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.0745524257999838,
+                  "normalized_rmse": 1.281614014503621
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.28535087091025446,
+                  "normalized_rmse": 1.230607993881821
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.01929030592974107,
+              "additive_minus_mean_single_spearman_r": 0.08610891662539427,
+              "additive_minus_best_single_normalized_rmse": 0.369750621023442
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.23799192258727547,
+                  "normalized_rmse": 1.5566150482410437
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.08416129379033456,
+                  "normalized_rmse": 1.267818532937634
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.29652574702981815,
+                  "normalized_rmse": 1.206173799273252
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.05853382444254268,
+              "additive_minus_mean_single_spearman_r": 0.04764840217719912,
+              "additive_minus_best_single_normalized_rmse": 0.3504412489677917
+            }
+          }
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "seam_a": [
+            0,
+            1
+          ],
+          "seam_b": [
+            4,
+            1
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "training_square_session": 11,
+          "test_square_session": 31,
+          "test_target_session": 23,
+          "target_training_session_excluded": 13,
+          "training_state_environments": {
+            "OO": [
+              "square",
+              "i",
+              "t"
+            ],
+            "WO": [
+              "+",
+              "glenn",
+              "rectangle"
+            ],
+            "OW": [
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              11,
+              19,
+              16
+            ],
+            "WO": [
+              12,
+              18,
+              17
+            ],
+            "OW": [
+              14,
+              15
+            ]
+          },
+          "cells": 86,
+          "candidate_bins": 9,
+          "common_bins": 8,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.31415713903415265,
+                  "normalized_rmse": 1.1366880798199699
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.14968027565401537,
+                  "normalized_rmse": 1.0590828016385605
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.14593881307881523,
+                  "normalized_rmse": 1.1409285308818526
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.16447686338013728,
+              "additive_minus_mean_single_spearman_r": 0.16634759466773735,
+              "additive_minus_best_single_normalized_rmse": 0.07760527818140939
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.26747488089060806,
+                  "normalized_rmse": 1.1509056863619174
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.17197981036841362,
+                  "normalized_rmse": 1.0469189888712733
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.13822350110854287,
+                  "normalized_rmse": 1.118170572567481
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.09549507052219444,
+              "additive_minus_mean_single_spearman_r": 0.11237322515212983,
+              "additive_minus_best_single_normalized_rmse": 0.10398669749064404
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-51",
+      "exposure_cycles": 2,
+      "attempted_records": 2,
+      "eligible_records": 2,
+      "exclusion_counts": {},
+      "exclusions": [],
+      "summaries": {
+        "raw_local_rate": {
+          "records": 2,
+          "mean_additive_spearman_r": 0.36541783456050686,
+          "mean_best_single_spearman_r": 0.2995413118547212,
+          "mean_additive_minus_best_single_spearman_r": 0.06587652270578563,
+          "positive_additive_minus_best_single_records": 1,
+          "mean_additive_normalized_rmse": 1.1491315942536864,
+          "mean_best_single_normalized_rmse": 0.9912178671456164
+        },
+        "global_rate_demeaned": {
+          "records": 2,
+          "mean_additive_spearman_r": 0.3567887667887668,
+          "mean_best_single_spearman_r": 0.36701465201465205,
+          "mean_additive_minus_best_single_spearman_r": -0.010225885225885245,
+          "positive_additive_minus_best_single_records": 0,
+          "mean_additive_normalized_rmse": 1.0849403486655722,
+          "mean_best_single_normalized_rmse": 0.9662586670529243
+        }
+      },
+      "records": [
+        {
+          "query": "0_to_3__4_to_3",
+          "seam_a": [
+            0,
+            3
+          ],
+          "seam_b": [
+            4,
+            3
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 15,
+          "target_training_session_excluded": 5,
+          "training_state_environments": {
+            "OO": [
+              "square"
+            ],
+            "WO": [
+              "+",
+              "glenn"
+            ],
+            "OW": [
+              "l",
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1
+            ],
+            "WO": [
+              7,
+              8
+            ],
+            "OW": [
+              3,
+              2,
+              4
+            ]
+          },
+          "cells": 27,
+          "candidate_bins": 9,
+          "common_bins": 9,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.45438057447662356,
+                  "normalized_rmse": 1.231246558445585
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.46437346437346433,
+                  "normalized_rmse": 1.160535668073204
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.027641277641277637,
+                  "normalized_rmse": 1.016013155715062
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.009992889896840773,
+              "additive_minus_mean_single_spearman_r": 0.20837320346925256,
+              "additive_minus_best_single_normalized_rmse": 0.21523340273052294
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.2643467643467644,
+                  "normalized_rmse": 1.1399195743124209
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.2655677655677656,
+                  "normalized_rmse": 1.1098777177523893
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.07875457875457877,
+                  "normalized_rmse": 1.0207620931062904
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.0012210012210012167,
+              "additive_minus_mean_single_spearman_r": 0.17094017094017097,
+              "additive_minus_best_single_normalized_rmse": 0.11915748120613046
+            }
+          }
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "seam_a": [
+            0,
+            1
+          ],
+          "seam_b": [
+            4,
+            1
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 15,
+          "target_training_session_excluded": 5,
+          "training_state_environments": {
+            "OO": [
+              "square",
+              "i",
+              "t"
+            ],
+            "WO": [
+              "+",
+              "glenn",
+              "rectangle"
+            ],
+            "OW": [
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1,
+              9,
+              10
+            ],
+            "WO": [
+              7,
+              8,
+              6
+            ],
+            "OW": [
+              2,
+              4
+            ]
+          },
+          "cells": 25,
+          "candidate_bins": 9,
+          "common_bins": 6,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.27645509464439016,
+                  "normalized_rmse": 1.0670166300617876
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.13470915933597813,
+                  "normalized_rmse": 0.9664225785761708
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.3387096774193548,
+                  "normalized_rmse": 1.1605362858233852
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.14174593530841204,
+              "additive_minus_mean_single_spearman_r": 0.3784553536860785,
+              "additive_minus_best_single_normalized_rmse": 0.10059405148561684
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.4492307692307692,
+                  "normalized_rmse": 1.0299611230187236
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.4684615384615385,
+                  "normalized_rmse": 0.9117552409995582
+                },
+                "wall_b_only": {
+                  "spearman_r": -0.16,
+                  "normalized_rmse": 1.1233561972132213
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.019230769230769273,
+              "additive_minus_mean_single_spearman_r": 0.295,
+              "additive_minus_best_single_normalized_rmse": 0.11820588201916538
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-56",
+      "exposure_cycles": 3,
+      "attempted_records": 4,
+      "eligible_records": 1,
+      "exclusion_counts": {
+        "insufficient_common_occupancy_bins": 3
+      },
+      "exclusions": [
+        {
+          "query": "0_to_1__4_to_1",
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 5,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 83
+        },
+        {
+          "query": "0_to_3__4_to_3",
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 5,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 97
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 3,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 95
+        }
+      ],
+      "summaries": {
+        "raw_local_rate": {
+          "records": 1,
+          "mean_additive_spearman_r": 0.18941218246638367,
+          "mean_best_single_spearman_r": 0.1671501361884802,
+          "mean_additive_minus_best_single_spearman_r": 0.022262046277903458,
+          "positive_additive_minus_best_single_records": 1,
+          "mean_additive_normalized_rmse": 1.4639303780182549,
+          "mean_best_single_normalized_rmse": 1.1590277252053036
+        },
+        "global_rate_demeaned": {
+          "records": 1,
+          "mean_additive_spearman_r": 0.11998539435248298,
+          "mean_best_single_spearman_r": 0.22422103213242459,
+          "mean_additive_minus_best_single_spearman_r": -0.1042356377799416,
+          "positive_additive_minus_best_single_records": 0,
+          "mean_additive_normalized_rmse": 1.4158981825770756,
+          "mean_best_single_normalized_rmse": 1.1100805280291626
+        }
+      },
+      "records": [
+        {
+          "query": "0_to_3__4_to_3",
+          "seam_a": [
+            0,
+            3
+          ],
+          "seam_b": [
+            4,
+            3
+          ],
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "training_square_session": 1,
+          "test_square_session": 21,
+          "test_target_session": 13,
+          "target_training_session_excluded": 3,
+          "training_state_environments": {
+            "OO": [
+              "square"
+            ],
+            "WO": [
+              "+",
+              "glenn"
+            ],
+            "OW": [
+              "l",
+              "o",
+              "u"
+            ]
+          },
+          "training_state_sessions": {
+            "OO": [
+              1
+            ],
+            "WO": [
+              7,
+              4
+            ],
+            "OW": [
+              2,
+              8,
+              9
+            ]
+          },
+          "cells": 79,
+          "candidate_bins": 9,
+          "common_bins": 8,
+          "scores": {
+            "raw_local_rate": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.18941218246638367,
+                  "normalized_rmse": 1.4639303780182549
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.1671501361884802,
+                  "normalized_rmse": 1.1590277252053036
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.15970469247824662,
+                  "normalized_rmse": 1.1763202785586444
+                }
+              },
+              "additive_minus_best_single_spearman_r": 0.022262046277903458,
+              "additive_minus_mean_single_spearman_r": 0.025984768133020253,
+              "additive_minus_best_single_normalized_rmse": 0.30490265281295126
+            },
+            "global_rate_demeaned": {
+              "predictors": {
+                "interaction_free_additive": {
+                  "spearman_r": 0.11998539435248298,
+                  "normalized_rmse": 1.4158981825770756
+                },
+                "wall_a_only": {
+                  "spearman_r": 0.22422103213242459,
+                  "normalized_rmse": 1.1286488262358028
+                },
+                "wall_b_only": {
+                  "spearman_r": 0.06779454722492699,
+                  "normalized_rmse": 1.1100805280291626
+                }
+              },
+              "additive_minus_best_single_spearman_r": -0.1042356377799416,
+              "additive_minus_mean_single_spearman_r": -0.0260223953261928,
+              "additive_minus_best_single_normalized_rmse": 0.305817654547913
+            }
+          }
+        }
+      ]
+    },
+    {
+      "animal": "QLAK-CA1-74",
+      "exposure_cycles": 3,
+      "attempted_records": 4,
+      "eligible_records": 0,
+      "exclusion_counts": {
+        "insufficient_common_occupancy_bins": 4
+      },
+      "exclusions": [
+        {
+          "query": "0_to_3__4_to_3",
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 1,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 55
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 1,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 43
+        },
+        {
+          "query": "0_to_3__4_to_3",
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 0,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 60
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 0,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 50
+        }
+      ],
+      "summaries": {
+        "raw_local_rate": {
+          "records": 0,
+          "mean_additive_spearman_r": null,
+          "mean_best_single_spearman_r": null,
+          "mean_additive_minus_best_single_spearman_r": null,
+          "positive_additive_minus_best_single_records": 0,
+          "mean_additive_normalized_rmse": null,
+          "mean_best_single_normalized_rmse": null
+        },
+        "global_rate_demeaned": {
+          "records": 0,
+          "mean_additive_spearman_r": null,
+          "mean_best_single_spearman_r": null,
+          "mean_additive_minus_best_single_spearman_r": null,
+          "positive_additive_minus_best_single_records": 0,
+          "mean_additive_normalized_rmse": null,
+          "mean_best_single_normalized_rmse": null
+        }
+      },
+      "records": []
+    },
+    {
+      "animal": "QLAK-CA1-75",
+      "exposure_cycles": 3,
+      "attempted_records": 4,
+      "eligible_records": 0,
+      "exclusion_counts": {
+        "insufficient_common_occupancy_bins": 4
+      },
+      "exclusions": [
+        {
+          "query": "0_to_3__4_to_3",
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 0,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 35
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "target_environment": "bit donut",
+          "training_exposure": 1,
+          "test_exposure": 2,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 0,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 24
+        },
+        {
+          "query": "0_to_3__4_to_3",
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 5,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 66
+        },
+        {
+          "query": "0_to_1__4_to_1",
+          "target_environment": "bit donut",
+          "training_exposure": 2,
+          "test_exposure": 3,
+          "reason": "insufficient_common_occupancy_bins",
+          "observed_bins": 2,
+          "required_bins": 6,
+          "candidate_bins": 9,
+          "cells": 54
+        }
+      ],
+      "summaries": {
+        "raw_local_rate": {
+          "records": 0,
+          "mean_additive_spearman_r": null,
+          "mean_best_single_spearman_r": null,
+          "mean_additive_minus_best_single_spearman_r": null,
+          "positive_additive_minus_best_single_records": 0,
+          "mean_additive_normalized_rmse": null,
+          "mean_best_single_normalized_rmse": null
+        },
+        "global_rate_demeaned": {
+          "records": 0,
+          "mean_additive_spearman_r": null,
+          "mean_best_single_spearman_r": null,
+          "mean_additive_minus_best_single_spearman_r": null,
+          "positive_additive_minus_best_single_records": 0,
+          "mean_additive_normalized_rmse": null,
+          "mean_best_single_normalized_rmse": null
+        }
+      },
+      "records": []
+    }
+  ],
+  "strongest_current_dataset_alternative": "Treat the two bit-donut corner queries as a narrow falsification of interaction-free addition, while retaining target-rate-heldout exact-location single-fragment recurrence as the identified reusable-profile analysis. A general compositional test requires new geometries that independently factor wall A and wall B across multiple WW shapes."
+}

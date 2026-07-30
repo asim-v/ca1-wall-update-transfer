@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this analysis, please cite the repository and the source datasets."
+title: "Limited spatial transfer of a reusable CA1 wall-related population update"
+type: software
+authors:
+  - family-names: "Bazan Sanchez"
+    given-names: "Javier Emilio"
+    affiliation: "Facultad de Ciencias, Universidad Nacional Autonoma de Mexico (UNAM)"
+    email: "bazan@ciencias.unam.mx"
+date-released: 2026-07-30
+version: "0.1.0"
+keywords:
+  - hippocampus
+  - CA1
+  - place cells
+  - boundaries
+  - remapping
+  - population coding

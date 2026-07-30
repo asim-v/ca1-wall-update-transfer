@@ -1,0 +1,744 @@
+{
+  "status": "coherent_cross_location_cell_identity_diagnostic",
+  "question": "Does exact-25-cm cross-location transfer depend on coherent registered-cell identity alignment?",
+  "design": {
+    "one_global_id_mapping_per_animal_draw": true,
+    "same_mapping_all_target_queries_and_rate_modes": true,
+    "training_source_profiles_fixed": true,
+    "target_residual_identities_permuted": true,
+    "query_common_cell_sets_preserved": true,
+    "source_and_target_neural_sessions_disjoint": true,
+    "aggregation_reproduced_each_draw": "source correlations within query, queries within animal",
+    "inferential_scope": "restricted cell-identity diagnostic, not population inference"
+  },
+  "settings": {
+    "minimum_seconds_per_common_bin": 0.5,
+    "minimum_common_bins": 6,
+    "minimum_common_cells": 20,
+    "permutations": 999,
+    "seed": 20260730
+  },
+  "cohort_descriptive": {
+    "raw_local_rate": {
+      "primary_same_normal_transfer": {
+        "animals": 7,
+        "positive_observed_animals": 7,
+        "animal_mean_observed": 0.13212637013672443,
+        "animals_observed_exceeds_all_draws": 2,
+        "animal_tail_fractions": {
+          "QLAK-CA1-08": 0.003,
+          "QLAK-CA1-30": 0.001,
+          "QLAK-CA1-50": 0.001,
+          "QLAK-CA1-51": 0.452,
+          "QLAK-CA1-56": 0.002,
+          "QLAK-CA1-74": 0.004,
+          "QLAK-CA1-75": 0.042
+        },
+        "maximum_animal_tail_fraction": 0.452
+      },
+      "same_minus_opposite_direction": {
+        "animals": 7,
+        "positive_observed_animals": 7,
+        "animal_mean_observed": 0.10604626557244044,
+        "animals_observed_exceeds_all_draws": 3,
+        "animal_tail_fractions": {
+          "QLAK-CA1-08": 0.15,
+          "QLAK-CA1-30": 0.001,
+          "QLAK-CA1-50": 0.001,
+          "QLAK-CA1-51": 0.143,
+          "QLAK-CA1-56": 0.025,
+          "QLAK-CA1-74": 0.001,
+          "QLAK-CA1-75": 0.501
+        },
+        "maximum_animal_tail_fraction": 0.501
+      }
+    },
+    "global_rate_demeaned": {
+      "primary_same_normal_transfer": {
+        "animals": 7,
+        "positive_observed_animals": 7,
+        "animal_mean_observed": 0.14766406504657636,
+        "animals_observed_exceeds_all_draws": 2,
+        "animal_tail_fractions": {
+          "QLAK-CA1-08": 0.007,
+          "QLAK-CA1-30": 0.001,
+          "QLAK-CA1-50": 0.001,
+          "QLAK-CA1-51": 0.069,
+          "QLAK-CA1-56": 0.005,
+          "QLAK-CA1-74": 0.002,
+          "QLAK-CA1-75": 0.06
+        },
+        "maximum_animal_tail_fraction": 0.069
+      },
+      "same_minus_opposite_direction": {
+        "animals": 7,
+        "positive_observed_animals": 7,
+        "animal_mean_observed": 0.10095348102264133,
+        "animals_observed_exceeds_all_draws": 2,
+        "animal_tail_fractions": {
+          "QLAK-CA1-08": 0.245,
+          "QLAK-CA1-30": 0.001,
+          "QLAK-CA1-50": 0.001,
+          "QLAK-CA1-51": 0.062,
+          "QLAK-CA1-56": 0.045,
+          "QLAK-CA1-74": 0.007,
+          "QLAK-CA1-75": 0.827
+        },
+        "maximum_animal_tail_fraction": 0.827
+      }
+    }
+  },
+  "animals": [
+    {
+      "animal": "QLAK-CA1-08",
+      "prepared_target_queries": 81,
+      "direction_contrast_queries": 79,
+      "common_cells_min_median_max": [
+        38,
+        45.0,
+        60
+      ],
+      "exchangeability": {
+        "animal_global_cells": 515,
+        "global_cells_used_by_queries": 84,
+        "membership_strata": 39,
+        "nontrivial_membership_strata": 7,
+        "cells_in_nontrivial_strata": 52,
+        "fraction_used_cells_in_nontrivial_strata": 0.6190476190476191,
+        "largest_membership_stratum": 24,
+        "fixed_point_fraction_among_used_ids_min_mean_max": [
+          0.38095238095238093,
+          0.46479813146479815,
+          0.5952380952380952
+        ],
+        "queries_with_identity_pairing_changed_min_mean_max": [
+          81,
+          81.0,
+          81
+        ],
+        "all_query_common_cell_sets_preserved_every_draw": true,
+        "same_global_mapping_used_for_all_queries_and_modes_per_draw": true
+      },
+      "modes": {
+        "raw_local_rate": {
+          "primary_same_normal_transfer": {
+            "observed": 0.07472031852008354,
+            "draws": 999,
+            "null_mean": 0.01846750725093238,
+            "null_standard_deviation": 0.01941151762923574,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.018288605730934732,
+              0.018899666589793664,
+              0.05557750565496542
+            ],
+            "one_sided_plus_one_tail_fraction": 0.003,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.014102041341306411,
+            "draws": 999,
+            "null_mean": -0.008902297489031409,
+            "null_standard_deviation": 0.02215545343119762,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.04965880824330996,
+              -0.008485812892263923,
+              0.03405362753848741
+            ],
+            "one_sided_plus_one_tail_fraction": 0.15,
+            "observed_exceeds_all_draws": false
+          }
+        },
+        "global_rate_demeaned": {
+          "primary_same_normal_transfer": {
+            "observed": 0.06724906071342264,
+            "draws": 999,
+            "null_mean": 0.019341261200566947,
+            "null_standard_deviation": 0.02066303356900499,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.0217549213008387,
+              0.019377927000544106,
+              0.05738263712131387
+            ],
+            "one_sided_plus_one_tail_fraction": 0.007,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.011865460148681362,
+            "draws": 999,
+            "null_mean": -0.00350482872193924,
+            "null_standard_deviation": 0.021229895861400346,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.04614190126348865,
+              -0.0033062286988832334,
+              0.03746223944125378
+            ],
+            "one_sided_plus_one_tail_fraction": 0.245,
+            "observed_exceeds_all_draws": false
+          }
+        }
+      },
+      "validation_reproduction_max_absolute_error": {
+        "raw_local_rate": 0.0,
+        "global_rate_demeaned": 1.214306433183765e-17
+      }
+    },
+    {
+      "animal": "QLAK-CA1-30",
+      "prepared_target_queries": 82,
+      "direction_contrast_queries": 80,
+      "common_cells_min_median_max": [
+        103,
+        116.0,
+        130
+      ],
+      "exchangeability": {
+        "animal_global_cells": 875,
+        "global_cells_used_by_queries": 198,
+        "membership_strata": 71,
+        "nontrivial_membership_strata": 22,
+        "cells_in_nontrivial_strata": 149,
+        "fraction_used_cells_in_nontrivial_strata": 0.7525252525252525,
+        "largest_membership_stratum": 62,
+        "fixed_point_fraction_among_used_ids_min_mean_max": [
+          0.2676767676767677,
+          0.35832296943408054,
+          0.4393939393939394
+        ],
+        "queries_with_identity_pairing_changed_min_mean_max": [
+          82,
+          82.0,
+          82
+        ],
+        "all_query_common_cell_sets_preserved_every_draw": true,
+        "same_global_mapping_used_for_all_queries_and_modes_per_draw": true
+      },
+      "modes": {
+        "raw_local_rate": {
+          "primary_same_normal_transfer": {
+            "observed": 0.1385401306596583,
+            "draws": 999,
+            "null_mean": 0.04116924959558711,
+            "null_standard_deviation": 0.012637947564604159,
+            "null_quantiles_0_025_0_5_0_975": [
+              0.016718956566256576,
+              0.04123061436157457,
+              0.06473501015347459
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.09393651783706068,
+            "draws": 999,
+            "null_mean": 0.02583885523188207,
+            "null_standard_deviation": 0.015482597671726644,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.0039750205416745725,
+              0.02603594606242086,
+              0.056422033751769546
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          }
+        },
+        "global_rate_demeaned": {
+          "primary_same_normal_transfer": {
+            "observed": 0.11494096683863748,
+            "draws": 999,
+            "null_mean": 0.024108935102343906,
+            "null_standard_deviation": 0.013067668975073228,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.002129017926827015,
+              0.024826348256821985,
+              0.04971792789372344
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.08713501046028485,
+            "draws": 999,
+            "null_mean": 0.022157371137574235,
+            "null_standard_deviation": 0.015491697198612394,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.008582672193512253,
+              0.022926220528936902,
+              0.05311808753143797
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          }
+        }
+      },
+      "validation_reproduction_max_absolute_error": {
+        "raw_local_rate": 1.3877787807814457e-17,
+        "global_rate_demeaned": 0.0
+      }
+    },
+    {
+      "animal": "QLAK-CA1-50",
+      "prepared_target_queries": 82,
+      "direction_contrast_queries": 80,
+      "common_cells_min_median_max": [
+        44,
+        63.0,
+        87
+      ],
+      "exchangeability": {
+        "animal_global_cells": 942,
+        "global_cells_used_by_queries": 154,
+        "membership_strata": 61,
+        "nontrivial_membership_strata": 19,
+        "cells_in_nontrivial_strata": 112,
+        "fraction_used_cells_in_nontrivial_strata": 0.7272727272727273,
+        "largest_membership_stratum": 27,
+        "fixed_point_fraction_among_used_ids_min_mean_max": [
+          0.3116883116883117,
+          0.39370539370539365,
+          0.487012987012987
+        ],
+        "queries_with_identity_pairing_changed_min_mean_max": [
+          82,
+          82.0,
+          82
+        ],
+        "all_query_common_cell_sets_preserved_every_draw": true,
+        "same_global_mapping_used_for_all_queries_and_modes_per_draw": true
+      },
+      "modes": {
+        "raw_local_rate": {
+          "primary_same_normal_transfer": {
+            "observed": 0.24480690187207182,
+            "draws": 999,
+            "null_mean": 0.0563316043095281,
+            "null_standard_deviation": 0.022676795767970815,
+            "null_quantiles_0_025_0_5_0_975": [
+              0.013152845356347746,
+              0.05608974860543038,
+              0.10257227671667757
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.22727136407179058,
+            "draws": 999,
+            "null_mean": 0.0648385467047897,
+            "null_standard_deviation": 0.02415475002337086,
+            "null_quantiles_0_025_0_5_0_975": [
+              0.01935662539364542,
+              0.06367947653827258,
+              0.11183046525176123
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          }
+        },
+        "global_rate_demeaned": {
+          "primary_same_normal_transfer": {
+            "observed": 0.2444201819655655,
+            "draws": 999,
+            "null_mean": 0.06529185043616338,
+            "null_standard_deviation": 0.021670997452678455,
+            "null_quantiles_0_025_0_5_0_975": [
+              0.02443552713381674,
+              0.06431183207791186,
+              0.10816190563735886
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.23465611226465438,
+            "draws": 999,
+            "null_mean": 0.06158213316247365,
+            "null_standard_deviation": 0.02376069356086673,
+            "null_quantiles_0_025_0_5_0_975": [
+              0.015531559380247303,
+              0.05993738966055749,
+              0.10838863854137548
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          }
+        }
+      },
+      "validation_reproduction_max_absolute_error": {
+        "raw_local_rate": 5.551115123125783e-17,
+        "global_rate_demeaned": 0.0
+      }
+    },
+    {
+      "animal": "QLAK-CA1-51",
+      "prepared_target_queries": 41,
+      "direction_contrast_queries": 40,
+      "common_cells_min_median_max": [
+        21,
+        23.0,
+        24
+      ],
+      "exchangeability": {
+        "animal_global_cells": 554,
+        "global_cells_used_by_queries": 29,
+        "membership_strata": 11,
+        "nontrivial_membership_strata": 3,
+        "cells_in_nontrivial_strata": 21,
+        "fraction_used_cells_in_nontrivial_strata": 0.7241379310344828,
+        "largest_membership_stratum": 17,
+        "fixed_point_fraction_among_used_ids_min_mean_max": [
+          0.27586206896551724,
+          0.376825100963032,
+          0.5517241379310345
+        ],
+        "queries_with_identity_pairing_changed_min_mean_max": [
+          41,
+          41.0,
+          41
+        ],
+        "all_query_common_cell_sets_preserved_every_draw": true,
+        "same_global_mapping_used_for_all_queries_and_modes_per_draw": true
+      },
+      "modes": {
+        "raw_local_rate": {
+          "primary_same_normal_transfer": {
+            "observed": 0.012628948288846347,
+            "draws": 999,
+            "null_mean": 0.004757191598431871,
+            "null_standard_deviation": 0.05237807213096964,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.10136576129716154,
+              0.007133018950470892,
+              0.10689043266959158
+            ],
+            "one_sided_plus_one_tail_fraction": 0.452,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.06586361859310325,
+            "draws": 999,
+            "null_mean": 0.0009451262938301711,
+            "null_standard_deviation": 0.060314092551630824,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.11902079572641085,
+              0.0016823477182104016,
+              0.11818042581315892
+            ],
+            "one_sided_plus_one_tail_fraction": 0.143,
+            "observed_exceeds_all_draws": false
+          }
+        },
+        "global_rate_demeaned": {
+          "primary_same_normal_transfer": {
+            "observed": 0.0890663030853911,
+            "draws": 999,
+            "null_mean": 0.013028246624923898,
+            "null_standard_deviation": 0.05198156583847257,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.09033387158970402,
+              0.016111562527257123,
+              0.10301368364756487
+            ],
+            "one_sided_plus_one_tail_fraction": 0.069,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.11457740447957838,
+            "draws": 999,
+            "null_mean": 0.02346578707448273,
+            "null_standard_deviation": 0.0589558630943532,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.0982528703180877,
+              0.02595807453416149,
+              0.13790531949934123
+            ],
+            "one_sided_plus_one_tail_fraction": 0.062,
+            "observed_exceeds_all_draws": false
+          }
+        }
+      },
+      "validation_reproduction_max_absolute_error": {
+        "raw_local_rate": 1.3877787807814457e-17,
+        "global_rate_demeaned": 0.0
+      }
+    },
+    {
+      "animal": "QLAK-CA1-56",
+      "prepared_target_queries": 82,
+      "direction_contrast_queries": 80,
+      "common_cells_min_median_max": [
+        63,
+        79.5,
+        99
+      ],
+      "exchangeability": {
+        "animal_global_cells": 862,
+        "global_cells_used_by_queries": 150,
+        "membership_strata": 72,
+        "nontrivial_membership_strata": 14,
+        "cells_in_nontrivial_strata": 92,
+        "fraction_used_cells_in_nontrivial_strata": 0.6133333333333333,
+        "largest_membership_stratum": 34,
+        "fixed_point_fraction_among_used_ids_min_mean_max": [
+          0.4,
+          0.4791658324991659,
+          0.56
+        ],
+        "queries_with_identity_pairing_changed_min_mean_max": [
+          82,
+          82.0,
+          82
+        ],
+        "all_query_common_cell_sets_preserved_every_draw": true,
+        "same_global_mapping_used_for_all_queries_and_modes_per_draw": true
+      },
+      "modes": {
+        "raw_local_rate": {
+          "primary_same_normal_transfer": {
+            "observed": 0.0624782489472159,
+            "draws": 999,
+            "null_mean": 0.012002277077660372,
+            "null_standard_deviation": 0.015850129269297665,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.019138359854863785,
+              0.011794963758819658,
+              0.043831430288904336
+            ],
+            "one_sided_plus_one_tail_fraction": 0.002,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.0447089752665938,
+            "draws": 999,
+            "null_mean": 0.010183022401453972,
+            "null_standard_deviation": 0.017555532763259947,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.024307474152980547,
+              0.010714589199130107,
+              0.044478973063168996
+            ],
+            "one_sided_plus_one_tail_fraction": 0.025,
+            "observed_exceeds_all_draws": false
+          }
+        },
+        "global_rate_demeaned": {
+          "primary_same_normal_transfer": {
+            "observed": 0.06205081356834277,
+            "draws": 999,
+            "null_mean": 0.0160752416705199,
+            "null_standard_deviation": 0.015219269344450193,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.013503638543220052,
+              0.01595198219570668,
+              0.04748500671658488
+            ],
+            "one_sided_plus_one_tail_fraction": 0.005,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.04347585857101485,
+            "draws": 999,
+            "null_mean": 0.012610977628160089,
+            "null_standard_deviation": 0.017400771678123806,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.02274519803097685,
+              0.012606955363835775,
+              0.04602314273092552
+            ],
+            "one_sided_plus_one_tail_fraction": 0.045,
+            "observed_exceeds_all_draws": false
+          }
+        }
+      },
+      "validation_reproduction_max_absolute_error": {
+        "raw_local_rate": 1.3877787807814457e-17,
+        "global_rate_demeaned": 1.3877787807814457e-17
+      }
+    },
+    {
+      "animal": "QLAK-CA1-74",
+      "prepared_target_queries": 10,
+      "direction_contrast_queries": 6,
+      "common_cells_min_median_max": [
+        39,
+        45.5,
+        56
+      ],
+      "exchangeability": {
+        "animal_global_cells": 713,
+        "global_cells_used_by_queries": 90,
+        "membership_strata": 33,
+        "nontrivial_membership_strata": 12,
+        "cells_in_nontrivial_strata": 69,
+        "fraction_used_cells_in_nontrivial_strata": 0.7666666666666667,
+        "largest_membership_stratum": 20,
+        "fixed_point_fraction_among_used_ids_min_mean_max": [
+          0.25555555555555554,
+          0.36637748859971075,
+          0.5
+        ],
+        "queries_with_identity_pairing_changed_min_mean_max": [
+          10,
+          10.0,
+          10
+        ],
+        "all_query_common_cell_sets_preserved_every_draw": true,
+        "same_global_mapping_used_for_all_queries_and_modes_per_draw": true
+      },
+      "modes": {
+        "raw_local_rate": {
+          "primary_same_normal_transfer": {
+            "observed": 0.25245688994134247,
+            "draws": 999,
+            "null_mean": 0.07497070320403885,
+            "null_standard_deviation": 0.0631649952122891,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.04638295370517183,
+              0.07844082699060037,
+              0.19930952658360704
+            ],
+            "one_sided_plus_one_tail_fraction": 0.004,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.2602337766390331,
+            "draws": 999,
+            "null_mean": 0.030503662604607143,
+            "null_standard_deviation": 0.06843663080860521,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.10811927447929591,
+              0.031748321794274274,
+              0.1610641127044958
+            ],
+            "one_sided_plus_one_tail_fraction": 0.001,
+            "observed_exceeds_all_draws": true
+          }
+        },
+        "global_rate_demeaned": {
+          "primary_same_normal_transfer": {
+            "observed": 0.31960792482569683,
+            "draws": 999,
+            "null_mean": 0.07662261338671303,
+            "null_standard_deviation": 0.07281385742316121,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.06978857525374482,
+              0.07649200126119347,
+              0.21263107895147595
+            ],
+            "one_sided_plus_one_tail_fraction": 0.002,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.16919739020810454,
+            "draws": 999,
+            "null_mean": 0.01651946156076684,
+            "null_standard_deviation": 0.06494768872572297,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.1080935435996993,
+              0.014808627965267046,
+              0.14633523897837422
+            ],
+            "one_sided_plus_one_tail_fraction": 0.007,
+            "observed_exceeds_all_draws": false
+          }
+        }
+      },
+      "validation_reproduction_max_absolute_error": {
+        "raw_local_rate": 5.551115123125783e-17,
+        "global_rate_demeaned": 0.0
+      }
+    },
+    {
+      "animal": "QLAK-CA1-75",
+      "prepared_target_queries": 27,
+      "direction_contrast_queries": 22,
+      "common_cells_min_median_max": [
+        20,
+        27.0,
+        54
+      ],
+      "exchangeability": {
+        "animal_global_cells": 952,
+        "global_cells_used_by_queries": 101,
+        "membership_strata": 46,
+        "nontrivial_membership_strata": 18,
+        "cells_in_nontrivial_strata": 73,
+        "fraction_used_cells_in_nontrivial_strata": 0.7227722772277227,
+        "largest_membership_stratum": 23,
+        "fixed_point_fraction_among_used_ids_min_mean_max": [
+          0.31683168316831684,
+          0.4565258327634566,
+          0.594059405940594
+        ],
+        "queries_with_identity_pairing_changed_min_mean_max": [
+          27,
+          27.0,
+          27
+        ],
+        "all_query_common_cell_sets_preserved_every_draw": true,
+        "same_global_mapping_used_for_all_queries_and_modes_per_draw": true
+      },
+      "modes": {
+        "raw_local_rate": {
+          "primary_same_normal_transfer": {
+            "observed": 0.13925315272785266,
+            "draws": 999,
+            "null_mean": 0.07545909641004457,
+            "null_standard_deviation": 0.03558763140131244,
+            "null_quantiles_0_025_0_5_0_975": [
+              0.0063182181135165594,
+              0.07541989450648831,
+              0.14543133707618092
+            ],
+            "one_sided_plus_one_tail_fraction": 0.042,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.03620756525819519,
+            "draws": 999,
+            "null_mean": 0.038076180406533565,
+            "null_standard_deviation": 0.0405363957233943,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.03618750072430191,
+              0.036263369600039924,
+              0.12286534153745557
+            ],
+            "one_sided_plus_one_tail_fraction": 0.501,
+            "observed_exceeds_all_draws": false
+          }
+        },
+        "global_rate_demeaned": {
+          "primary_same_normal_transfer": {
+            "observed": 0.1363132043289783,
+            "draws": 999,
+            "null_mean": 0.07778183432313289,
+            "null_standard_deviation": 0.037875084587547646,
+            "null_quantiles_0_025_0_5_0_975": [
+              0.0008424133834330907,
+              0.07797115963316138,
+              0.15163824618596708
+            ],
+            "one_sided_plus_one_tail_fraction": 0.06,
+            "observed_exceeds_all_draws": false
+          },
+          "same_minus_opposite_direction": {
+            "observed": 0.04576713102617092,
+            "draws": 999,
+            "null_mean": 0.09478024934731041,
+            "null_standard_deviation": 0.049631004343306806,
+            "null_quantiles_0_025_0_5_0_975": [
+              -0.002766716702924034,
+              0.09708004509902284,
+              0.1860816545881979
+            ],
+            "one_sided_plus_one_tail_fraction": 0.827,
+            "observed_exceeds_all_draws": false
+          }
+        }
+      },
+      "validation_reproduction_max_absolute_error": {
+        "raw_local_rate": 2.7755575615628914e-17,
+        "global_rate_demeaned": 2.0816681711721685e-17
+      }
+    }
+  ]
+}
