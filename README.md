@@ -27,6 +27,8 @@ former-barrier scar.
 ## Contents
 
 - `manuscript/` - LaTeX manuscript and bibliography.
+- `manuscript/ca1_wall_update_transfer_manuscript.pdf` - compiled working
+  manuscript.
 - `reports/local_wall_update_transfer.md` - full evidence and limitation
   ledger.
 - `reports/figures/` - manuscript-ready primary figure.

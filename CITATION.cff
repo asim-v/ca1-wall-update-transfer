@@ -9,6 +9,7 @@ authors:
     email: "bazan@ciencias.unam.mx"
 date-released: 2026-07-30
 version: "0.1.0"
+repository-code: "https://github.com/asim-v/ca1-wall-update-transfer"
 keywords:
   - hippocampus
   - CA1
