@@ -442,15 +442,20 @@ correlation near \(0.23\), a cross-location correlation near
 
 \section{Materials and methods}
 
-\subsection{Dataset and analysis cohort}
+\subsection{Dataset description}
 
 We reanalysed the public longitudinal dorsal-CA1 calcium-imaging dataset of
-\citet{LeeEtAl2025,LeeKeinathBrandon2024Dataset}. The tracked analysis cohort contains seven
-mice, 5,413 neurons, 207 sessions, a familiar outer square, and nine
-internal-wall geometries arranged on a common lattice. Cell identities were
-registered across sessions in the source dataset. The original study describes
-surgery, imaging, behavior, preprocessing, registration, and animal procedures.
-No new animal experiments were performed.
+\citet{LeeEtAl2025,LeeKeinathBrandon2024Dataset}. It contains seven mice, 5,413
+longitudinal cell identities, and 207 recording sessions. Each mouse foraged in
+the same familiar square outer arena and in nine internal-wall layouts defined
+on a common spatial lattice. The released data include position and sampling,
+spatial rate maps, geometry labels, and cell-registration identities across
+sessions. Six mice completed three exposure cycles (31 sessions each), and one
+completed two (21 sessions). Within every cycle, the nine wall layouts occurred
+in a fixed order between familiar-square sessions. Consequently, environment
+and sequence position were not independently varied. The original study
+describes surgery, imaging, behavioral procedures, preprocessing, and cell
+registration; no new animal experiments were performed here.
 
 \subsection{Spatial representation and oriented seams}
 
@@ -675,21 +680,18 @@ tables, audit reports, and manuscript sources are publicly available at
 excludes the original raw recordings, which remain available from their source
 archives.
 
-\section*{Acknowledgments}
-
+\paragraph*{Acknowledgments.}
 We thank the authors of the source studies for making their longitudinal
 datasets available.
 
-\section*{Author contributions}
-
+\paragraph*{Author contributions.}
 J.E.B.S. conceived the study, developed and performed the analyses, interpreted
 the results, prepared the visualizations, and wrote the manuscript.
 
-\section*{Competing interests}
-
+\paragraph*{Competing interests.}
 The author declares no competing interests.
 
-\balance
+\renewcommand{\bibfont}{\small}
 \bibliographystyle{plainnat}
 \bibliography{references}
 
