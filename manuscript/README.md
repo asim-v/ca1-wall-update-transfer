@@ -5,6 +5,9 @@ This directory contains the active working paper:
 > *Partial cross-location generalization of a CA1 wall-related population contrast:
 > an exploratory longitudinal reanalysis*
 
+The current build uses a compact two-column layout with full-width figures and
+evidence table.
+
 The manuscript follows the project's current evidence hierarchy. Its central
 claim is partial cross-location generalization of a cell-resolved CA1
 wall-related contrast. Spatially matched nulls constrain, but do not fully

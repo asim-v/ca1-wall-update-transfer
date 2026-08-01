@@ -348,13 +348,13 @@ def main() -> None:
         second,
         (
             "Exact\nlocation",
-            "Shifted\none step",
-            "Shifted +\nbehavior adj.",
+            "Source to target\n(25 cm)",
+            "Source to target +\nbehavior adj.",
             "Effect vs\ntrained open",
         ),
         animals,
         colors,
-        title="B  Partial spatial transfer",
+        title="B  Cross-location prediction",
         annotations=(
             "benchmark",
             "7/7 > 0",
