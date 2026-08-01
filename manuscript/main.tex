@@ -463,19 +463,24 @@ at defined distances from the seam. Analyses used only bins and registered
 cells satisfying the relevant occupancy, activity, and common-support gates.
 Source and target strips in the cross-location analysis shared no 5 cm bin.
 
-\subsection{Local response vectors and square residuals}
+\subsection{Local response vectors}
 
-Let \(r_{i,e,s}\) denote the local response estimate for registered cell \(i\)
-in environment \(e\) at seam \(s\), averaged over eligible spatial bins after
-the analysis-specific preprocessing. The corresponding bracketing-square
-estimate was \(r_{i,\square(e),s}\). The primary environment-specific response
-was
-\[
-  \delta_{i,e,s}=r_{i,e,s}-r_{i,\square(e),s}.
-\]
-For globally demeaned variants, each vector's common-cell mean was removed
-before correlation. This suppresses population-wide rate shifts and makes the
-score depend on relative cell identities.
+For registered cell \(i\), environment \(e\), and seam \(s\), let
+\(r_{i,e,s}\) be activity averaged over the eligible local bins. Let \(b(e)\)
+denote the paired familiar-square session. We subtract that square baseline and
+collect the changes across the \(n\) shared cells:
+\begin{equation}
+\begin{aligned}
+  \delta_{i,e,s}
+    &= r_{i,e,s}-r_{i,b(e),s},\\
+  \boldsymbol{\delta}_{e,s}
+    &= \bigl(\delta_{1,e,s},\ldots,\delta_{n,e,s}\bigr)^{\mathsf T}.
+\end{aligned}
+\label{eq:local-response-vector}
+\end{equation}
+For globally demeaned analyses, the vector mean was removed before correlation.
+The resulting score depends on relative cell-specific changes rather than a
+population-wide rate shift.
 
 \subsection{Training profiles and held-out scoring}
 
