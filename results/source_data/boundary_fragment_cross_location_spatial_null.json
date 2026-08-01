@@ -1,0 +1,266 @@
+{
+  "status": "cross_location_spatial_null_calibration",
+  "question": "Does the observed wall-related transfer exceed empirical controls that retain spatially smooth CA1 maps and the observed source-target lag while breaking the correct wall relation?",
+  "design": {
+    "independent_unit": "animal",
+    "calibration": "complete enumeration of all 2^N animal-level sign assignments for each paired spatial-control contrast",
+    "exact_midpoint_wrong_orientation_null": {
+      "preserved": [
+        "observed neural maps and place-field smoothness",
+        "held-out target response and registered-cell identities",
+        "25 cm source-target seam-midpoint distance",
+        "query construction and within-animal aggregation"
+      ],
+      "broken": "correct signed relation between source and target wall",
+      "limitation": "pooled normal and tangential strata differ in nearest-strip distance and overlap"
+    },
+    "tangential_five_cm_strip_lag_null": {
+      "preserved": [
+        "observed neural maps and place-field smoothness",
+        "held-out target response and registered-cell identities",
+        "tangential translation axis",
+        "25 cm midpoint distance and 5 cm nearest-strip lag"
+      ],
+      "broken": "correct signed relation between source and target wall",
+      "limitation": "only six animals have eligible paired support"
+    },
+    "same_session_reflected_open_null": {
+      "preserved": [
+        "source predictor",
+        "held-out target session",
+        "25 cm source distance and translation axis",
+        "one-to-one relative bins and occupancy support",
+        "registered cells"
+      ],
+      "broken": "wall versus reflected open target state",
+      "limitation": "only demeaned tangential translations in five animals support the strict result"
+    },
+    "interpretation": "tail fractions are descriptive cohort calibrations; the study was exploratory and repeated queries are not independent"
+  },
+  "modes": {
+    "raw_local_rate": {
+      "exact_midpoint_wrong_orientation_null": {
+        "animals": 7,
+        "positive_animals": 7,
+        "animal_values": {
+          "QLAK-CA1-08": 0.014102041341306411,
+          "QLAK-CA1-30": 0.09393651783706067,
+          "QLAK-CA1-50": 0.22727136407179058,
+          "QLAK-CA1-51": 0.06586361859310326,
+          "QLAK-CA1-56": 0.04470897526659379,
+          "QLAK-CA1-74": 0.260233776639033,
+          "QLAK-CA1-75": 0.0362075652581952
+        },
+        "observed_animal_mean": 0.10604626557244042,
+        "sign_assignments": 128,
+        "one_sided_tail_fraction": 0.0078125,
+        "two_sided_tail_fraction": 0.015625,
+        "null_mean_minimum": -0.10604626557244042,
+        "null_mean_maximum": 0.10604626557244042,
+        "leave_one_animal_out_means": {
+          "QLAK-CA1-08": 0.12137030294429609,
+          "QLAK-CA1-30": 0.10806455686167038,
+          "QLAK-CA1-50": 0.08584208248921539,
+          "QLAK-CA1-51": 0.11274337340232994,
+          "QLAK-CA1-56": 0.11626914729008153,
+          "QLAK-CA1-74": 0.08034834706134164,
+          "QLAK-CA1-75": 0.11768604895814794
+        },
+        "leave_one_animal_out_minimum": 0.08034834706134164
+      },
+      "tangential_five_cm_strip_lag_null": {
+        "animals": 6,
+        "positive_animals": 3,
+        "animal_values": {
+          "QLAK-CA1-08": -0.03204693637950964,
+          "QLAK-CA1-30": 0.11099329250470862,
+          "QLAK-CA1-50": 0.20853931890483896,
+          "QLAK-CA1-51": -0.1668215374007298,
+          "QLAK-CA1-56": 0.048642937358326595,
+          "QLAK-CA1-75": -0.020897221758893008
+        },
+        "observed_animal_mean": 0.024734975538123625,
+        "sign_assignments": 64,
+        "one_sided_tail_fraction": 0.34375,
+        "two_sided_tail_fraction": 0.6875,
+        "null_mean_minimum": -0.0979902073845011,
+        "null_mean_maximum": 0.0979902073845011,
+        "leave_one_animal_out_means": {
+          "QLAK-CA1-08": 0.036091357921650274,
+          "QLAK-CA1-30": 0.00748331214480662,
+          "QLAK-CA1-50": -0.012025893135219446,
+          "QLAK-CA1-51": 0.0630462781258943,
+          "QLAK-CA1-56": 0.01995338317408303,
+          "QLAK-CA1-75": 0.03386141499752695
+        },
+        "leave_one_animal_out_minimum": -0.012025893135219446
+      },
+      "normal_axis_wrong_orientation_null": {
+        "animals": 7,
+        "positive_animals": 7,
+        "animal_values": {
+          "QLAK-CA1-08": 0.03475864887429718,
+          "QLAK-CA1-30": 0.09846337842480854,
+          "QLAK-CA1-50": 0.2627566316532931,
+          "QLAK-CA1-51": 0.2062729549894923,
+          "QLAK-CA1-56": 0.10077937917112825,
+          "QLAK-CA1-74": 0.260233776639033,
+          "QLAK-CA1-75": 0.03464481776200332
+        },
+        "observed_animal_mean": 0.14255851250200796,
+        "sign_assignments": 128,
+        "one_sided_tail_fraction": 0.0078125,
+        "two_sided_tail_fraction": 0.015625,
+        "null_mean_minimum": -0.14255851250200796,
+        "null_mean_maximum": 0.14255851250200796,
+        "leave_one_animal_out_means": {
+          "QLAK-CA1-08": 0.16052515643995977,
+          "QLAK-CA1-30": 0.14990770151487454,
+          "QLAK-CA1-50": 0.12252549264346042,
+          "QLAK-CA1-51": 0.1319394387540939,
+          "QLAK-CA1-56": 0.1495217013904879,
+          "QLAK-CA1-74": 0.12294596847917044,
+          "QLAK-CA1-75": 0.16054412829200873
+        },
+        "leave_one_animal_out_minimum": 0.12252549264346042
+      },
+      "same_session_reflected_open_null": {
+        "animals": 5,
+        "positive_animals": 3,
+        "animal_values": {
+          "QLAK-CA1-08": 0.09849703036003779,
+          "QLAK-CA1-30": 0.13776276996505515,
+          "QLAK-CA1-50": 0.23880661983578397,
+          "QLAK-CA1-51": -0.0715607396877631,
+          "QLAK-CA1-56": -0.0073307837685097355
+        },
+        "observed_animal_mean": 0.0792349793409208,
+        "sign_assignments": 32,
+        "one_sided_tail_fraction": 0.125,
+        "two_sided_tail_fraction": 0.25,
+        "null_mean_minimum": -0.11079158872342994,
+        "null_mean_maximum": 0.11079158872342994,
+        "leave_one_animal_out_means": {
+          "QLAK-CA1-08": 0.07441946658614157,
+          "QLAK-CA1-30": 0.06460303168488724,
+          "QLAK-CA1-50": 0.03934206921720503,
+          "QLAK-CA1-51": 0.11693390909809179,
+          "QLAK-CA1-56": 0.10087642011827845
+        },
+        "leave_one_animal_out_minimum": 0.03934206921720503
+      }
+    },
+    "global_rate_demeaned": {
+      "exact_midpoint_wrong_orientation_null": {
+        "animals": 7,
+        "positive_animals": 7,
+        "animal_values": {
+          "QLAK-CA1-08": 0.011865460148681374,
+          "QLAK-CA1-30": 0.08713501046028485,
+          "QLAK-CA1-50": 0.23465611226465438,
+          "QLAK-CA1-51": 0.11457740447957838,
+          "QLAK-CA1-56": 0.04347585857101485,
+          "QLAK-CA1-74": 0.16919739020810454,
+          "QLAK-CA1-75": 0.04576713102617094
+        },
+        "observed_animal_mean": 0.10095348102264133,
+        "sign_assignments": 128,
+        "one_sided_tail_fraction": 0.0078125,
+        "two_sided_tail_fraction": 0.015625,
+        "null_mean_minimum": -0.10095348102264133,
+        "null_mean_maximum": 0.10095348102264133,
+        "leave_one_animal_out_means": {
+          "QLAK-CA1-08": 0.11580148450163465,
+          "QLAK-CA1-30": 0.10325655944970075,
+          "QLAK-CA1-50": 0.07866970914897248,
+          "QLAK-CA1-51": 0.09868282711315181,
+          "QLAK-CA1-56": 0.11053308476457907,
+          "QLAK-CA1-74": 0.08957949615839746,
+          "QLAK-CA1-75": 0.11015120602205307
+        },
+        "leave_one_animal_out_minimum": 0.07866970914897248
+      },
+      "tangential_five_cm_strip_lag_null": {
+        "animals": 6,
+        "positive_animals": 3,
+        "animal_values": {
+          "QLAK-CA1-08": -0.02866535980896293,
+          "QLAK-CA1-30": 0.09770070252946705,
+          "QLAK-CA1-50": 0.2398818610593788,
+          "QLAK-CA1-51": -0.0563139223725235,
+          "QLAK-CA1-56": 0.037383834423982264,
+          "QLAK-CA1-75": -0.04854700854700853
+        },
+        "observed_animal_mean": 0.04024001788072219,
+        "sign_assignments": 64,
+        "one_sided_tail_fraction": 0.25,
+        "two_sided_tail_fraction": 0.5,
+        "null_mean_minimum": -0.08474878145688718,
+        "null_mean_maximum": 0.08474878145688718,
+        "leave_one_animal_out_means": {
+          "QLAK-CA1-08": 0.054021093418659204,
+          "QLAK-CA1-30": 0.028747880950973227,
+          "QLAK-CA1-50": 0.000311649244990872,
+          "QLAK-CA1-51": 0.05955080593137133,
+          "QLAK-CA1-56": 0.04081125457207018,
+          "QLAK-CA1-75": 0.05799742316626834
+        },
+        "leave_one_animal_out_minimum": 0.000311649244990872
+      },
+      "normal_axis_wrong_orientation_null": {
+        "animals": 7,
+        "positive_animals": 7,
+        "animal_values": {
+          "QLAK-CA1-08": 0.0292826254626256,
+          "QLAK-CA1-30": 0.09048321482437505,
+          "QLAK-CA1-50": 0.24903352930092787,
+          "QLAK-CA1-51": 0.27129655024064964,
+          "QLAK-CA1-56": 0.1066109151360773,
+          "QLAK-CA1-74": 0.16919739020810454,
+          "QLAK-CA1-75": 0.04859999953667262
+        },
+        "observed_animal_mean": 0.13778631781563325,
+        "sign_assignments": 128,
+        "one_sided_tail_fraction": 0.0078125,
+        "two_sided_tail_fraction": 0.015625,
+        "null_mean_minimum": -0.13778631781563325,
+        "null_mean_maximum": 0.13778631781563325,
+        "leave_one_animal_out_means": {
+          "QLAK-CA1-08": 0.1558702665411345,
+          "QLAK-CA1-30": 0.14567016831417626,
+          "QLAK-CA1-50": 0.11924511590141745,
+          "QLAK-CA1-51": 0.11553461241146383,
+          "QLAK-CA1-56": 0.14298221826222587,
+          "QLAK-CA1-74": 0.13255113908355468,
+          "QLAK-CA1-75": 0.15265070419546
+        },
+        "leave_one_animal_out_minimum": 0.11553461241146383
+      },
+      "same_session_reflected_open_null": {
+        "animals": 5,
+        "positive_animals": 5,
+        "animal_values": {
+          "QLAK-CA1-08": 0.10073010547429784,
+          "QLAK-CA1-30": 0.11171263719188947,
+          "QLAK-CA1-50": 0.3328526221240829,
+          "QLAK-CA1-51": 0.01748870694522868,
+          "QLAK-CA1-56": 0.006202867467742429
+        },
+        "observed_animal_mean": 0.11379738784064826,
+        "sign_assignments": 32,
+        "one_sided_tail_fraction": 0.03125,
+        "two_sided_tail_fraction": 0.0625,
+        "null_mean_minimum": -0.11379738784064826,
+        "null_mean_maximum": 0.11379738784064826,
+        "leave_one_animal_out_means": {
+          "QLAK-CA1-08": 0.11706420843223586,
+          "QLAK-CA1-30": 0.11431857550283797,
+          "QLAK-CA1-50": 0.0590335792697896,
+          "QLAK-CA1-51": 0.13787455806450316,
+          "QLAK-CA1-56": 0.1406960179338747
+        },
+        "leave_one_animal_out_minimum": 0.0590335792697896
+      }
+    }
+  }
+}

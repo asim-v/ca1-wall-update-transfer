@@ -1,4 +1,4 @@
-# Local reuse and limited transfer in CA1 wall-related remapping
+# Partial cross-location generalization in CA1 wall-related remapping
 
 ## Verdict
 
@@ -7,16 +7,15 @@ theory and earlier recordings already anticipate that—nor a fully portable
 wall symbol. The data instead support a narrower, empirically testable
 organization:
 
-> A cell-resolved wall-minus-open rate-change pattern learned from other
-> environments can recur in a held-out environment and can partially transfer
-> to a nearby, non-overlapping wall location.  The transfer is weaker than
-> exact-location reuse, and the available two-wall counterfactual does not
-> support linear composition.
+> A cell-resolved wall-minus-open rate-change pattern estimated from other
+> environments recurs in a held-out environment and partially generalizes to
+> a nearby, non-overlapping wall location. The cross-location prediction is
+> consistent across animals but weaker than exact-location prediction.
 
-This is **limited reuse of a local map update**, not compositional scene
-construction.  It constrains what kind of structure is hidden inside CA1
-remapping: the changes are neither arbitrary across environments nor cleanly
-factorized into portable, additive wall components.
+This is **partial cross-location generalization with strong spatial
+dependence**. It constrains what kind of structure is hidden inside CA1
+remapping: responses are neither independent across locations nor fully
+location invariant.
 
 All results are exploratory reanalyses.  Animals are the biological units;
 cells, seams, target queries, and permutations are estimator internals.
@@ -166,7 +165,22 @@ an additive nuisance control, not local trajectory matching. Target-session
 neural outcomes estimate that session's nuisance coefficients before
 evaluation, but never enter source profile training.
 
-### 5. A mirror-open control narrows the spatial-continuity alternative
+### 5. An explicit empirical spatial null is positive but heterogeneous
+
+The first null retains the observed neural maps, registered-cell identities,
+held-out target response, and 25 cm seam-midpoint lag, while replacing the
+correct source-wall relation with an incorrectly oriented source. The pooled
+correct-minus-incorrect advantage is 0.101 and positive in 7/7 animals. Exact
+enumeration of all animal-level sign assignments gives an upper-tail fraction
+of 1/128, and every leave-one-animal-out mean remains positive.
+
+The result is not uniform across spatial strata. Restricting to tangential
+translations with the same 5 cm nearest-strip lag gives an advantage of 0.040,
+positive in only 3/6 animals, with a sign-flip tail fraction of 0.25. The pooled
+null therefore rules out an arbitrary equal-midpoint match but does not remove
+smooth spatial continuity from the strictest distance-matched stratum.
+
+### 6. A mirror-open control narrows the spatial-continuity alternative
 
 Before reading its neural outcome, a stronger control was frozen for every
 geometrically eligible source/target relation: reflect the wall target across
@@ -186,13 +200,15 @@ the wall tangent. After the control-specific paired wall/open support gates,
 - Source correlation with the direct within-session wall-minus-open vector:
   mean \(r=0.077\), positive in 4/5.
 - The raw-rate primary contrast is positive in only 3/5.
+- The exact animal-level sign-flip fraction for the demeaned advantage is
+  1/32, and all leave-one-animal-out means are positive.
 
 Thus purely symmetric nearby population continuity is disfavored for the
 covered, demeaned tangential subset. It is not eliminated for the full result:
 absolute transfer is weak in two covered animals, two animals lack support,
 and no exact mirror control is possible for normal-axis translations.
 
-### 6. Registered-cell alignment matters, but not uniformly
+### 7. Registered-cell alignment matters, but not uniformly
 
 A 999-draw identity diagnostic uses one coherent global cell-ID mapping per
 animal and draw, shared across all target queries and rate modes while

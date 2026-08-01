@@ -1,4 +1,4 @@
-# Limited spatial transfer of a CA1 wall-related population update
+# Partial cross-location generalization of a CA1 wall-related population contrast
 
 This repository contains the manuscript, analysis code, derived source data,
 and audit reports for an exploratory longitudinal reanalysis of dorsal CA1
@@ -6,7 +6,7 @@ calcium-imaging data.
 
 ## Main finding
 
-A registered-cell wall-minus-open response learned from training geometries
+A registered-cell wall-minus-open response estimated from training geometries
 predicts a later wall response:
 
 - At the same physical seam, the context-matched wall-open correlation
@@ -18,11 +18,14 @@ predicts a later wall response:
   shifted-minus-exact penalty of -0.082.
 - Behavior-adjusted shifted prediction remains positive in 7/7 animals at
   mean correlation 0.119.
+- Correctly oriented sources beat a pooled equal-midpoint wrong-orientation
+  control by 0.101 in 7/7 animals, while a fully strip-matched tangential
+  sensitivity is positive in only 3/6.
 
-The supported interpretation is limited spatial transfer of a cell-resolved
-CA1 wall-related update. The data do not establish a location-invariant wall
-primitive, linear composition, learning, innateness, or a persistent
-former-barrier scar.
+The supported interpretation is partial, spatially dependent cross-location
+generalization of a cell-resolved CA1 wall-related contrast. The data establish
+the phenomenon more strongly than its mechanism: they do not distinguish a
+wall-specific computation from every form of smooth spatial deformation.
 
 ## Contents
 
@@ -69,5 +72,5 @@ Facultad de Ciencias, Universidad Nacional Autonoma de Mexico (UNAM)
 
 ## Status
 
-Working scientific release, July 30, 2026. The analysis is exploratory and
+Working scientific release, August 1, 2026. The analysis is exploratory and
 internally held out, not preregistered or independently replicated.

@@ -2,13 +2,13 @@
 
 This directory contains the active working paper:
 
-> *Limited spatial transfer of a reusable CA1 wall-related population update:
+> *Partial cross-location generalization of a CA1 wall-related population contrast:
 > an exploratory longitudinal reanalysis*
 
 The manuscript follows the project's current evidence hierarchy. Its central
-claim is limited cross-location reuse of a cell-resolved CA1 wall-related
-update. It does not claim a location-invariant primitive, linear composition,
-experience-dependent stabilization, or innateness.
+claim is partial cross-location generalization of a cell-resolved CA1
+wall-related contrast. Spatially matched nulls constrain, but do not fully
+eliminate, explanations based on smooth place-field structure.
 
 ## Contents
 
@@ -21,8 +21,7 @@ experience-dependent stabilization, or innateness.
   complete limitation ledger.
 
 The previous boundary-normal manuscript remains recoverable from Git history
-through milestone `milestone-manuscript-2026-07-29`. Funding and the CRediT
-statement remain placeholders.
+through milestone `milestone-manuscript-2026-07-29`.
 
 ## Build
 
@@ -58,6 +57,9 @@ output/pdf/ca1_wall_update_transfer_manuscript.pdf
 - The cross-location audit matches query/session/seam identities and support
   counts; it does not hash full cell-ID or bin-coordinate arrays.
 - The mirror-open control covers five animals and tangential translation only.
+- The fully distance-matched tangential wrong-orientation comparison is
+  heterogeneous (3/6 positive); pooled spatial-null evidence must not be
+  described as eliminating smooth spatial continuity.
 - Design locks recorded in local Git are process-declared, not independently
   timestamped preregistrations.
 - The data do not identify experience effects or innateness.

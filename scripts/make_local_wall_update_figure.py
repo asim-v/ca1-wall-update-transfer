@@ -1,4 +1,4 @@
-"""Plot the evidence and claim boundary for local CA1 wall-update reuse."""
+"""Plot evidence for partial generalization of a CA1 wall contrast."""
 
 from __future__ import annotations
 
@@ -383,15 +383,14 @@ def main() -> None:
     axes[0].set_ylabel("Spearman correlation or correlation advantage")
     axes[2].set_ylabel("Spearman correlation or correlation advantage")
     figure.suptitle(
-        "CA1 wall-related remapping: local reuse, limited transport",
+        "CA1 wall-related remapping: exact reuse and partial generalization",
         fontsize=13.5,
         fontweight="bold",
     )
     figure.supxlabel(
         (
-            "Points are animals; black bars are equal-weight animal means. "
-            "General direction selectivity and additive composition did not "
-            "survive their decisive controls."
+            "Same-color points denote animals; black bars are equal-weight "
+            "animal means."
         ),
         fontsize=8,
         color="#4f565d",
