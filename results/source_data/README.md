@@ -119,6 +119,9 @@ compositional wall component.
 - `blair_barrier_scar.json` — independently locked former-barrier scar test.
 - `local_wall_update_transfer_figure.csv` — exact values plotted in
   `reports/figures/local_wall_update_transfer.png`.
+- `partial_generalization_explainer.csv` — exact animal-level values plotted
+  in `reports/figures/partial_generalization_explainer.png`, including the
+  exact-versus-cross-location comparison and spatial-control boundaries.
 
 Regenerate the surviving boundary-component results with:
 
@@ -180,6 +183,8 @@ Regenerate the stronger-claim package with:
 .venv\Scripts\python.exe scripts\run_blair_barrier_scar.py
 
 .venv\Scripts\python.exe scripts\make_local_wall_update_figure.py
+
+.venv\Scripts\python.exe scripts\make_partial_generalization_explainer.py
 ```
 
 The restricted cell-permutation draws probe dependence on registered-cell

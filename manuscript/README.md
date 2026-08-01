@@ -18,7 +18,11 @@ eliminate, explanations based on smooth place-field structure.
 - `main.tex` - complete working manuscript.
 - `references.bib` - DOI-checked bibliography.
 - `../reports/figures/local_wall_update_transfer.png` - tracked primary figure.
+- `../reports/figures/partial_generalization_explainer.png` - conceptual and
+  paired-data explanation of the main result and its spatial limits.
 - `../results/source_data/local_wall_update_transfer_figure.csv` - primary
+  figure source data.
+- `../results/source_data/partial_generalization_explainer.csv` - explanatory
   figure source data.
 - `../reports/local_wall_update_transfer.md` - scientific source of truth and
   complete limitation ledger.

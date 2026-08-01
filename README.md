@@ -34,7 +34,7 @@ wall-specific computation from every form of smooth spatial deformation.
   manuscript.
 - `reports/local_wall_update_transfer.md` - full evidence and limitation
   ledger.
-- `reports/figures/` - manuscript-ready primary figure.
+- `reports/figures/` - manuscript-ready primary and explanatory figures.
 - `results/source_data/` - tracked derived result tables and JSON audits.
 - `scripts/` - analysis and audit entry points used by the active result.
 - `src/ca1_geometry/` - reusable analysis implementation.
