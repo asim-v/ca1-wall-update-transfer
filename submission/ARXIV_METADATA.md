@@ -48,7 +48,7 @@ behavior-independent update operator.
 
 ## Comments
 
-13 pages, 5 figures, 1 table. Two longitudinal reanalyses. Boundary analysis
+12 pages, 5 figures, 1 table. Two longitudinal reanalyses. Boundary analysis
 code, derived source data, and audit reports:
 https://github.com/asim-v/ca1-wall-update-transfer
 

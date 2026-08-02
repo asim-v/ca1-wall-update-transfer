@@ -24,9 +24,9 @@ submission/ca1_reusable_population_updates_arxiv.zip
 ```
 
 - Entries: 7 files plus the `figures/` directory.
-- Size: 1,141,988 bytes.
-- SHA-256: `BA49D3B2771F744F8B8C492D57276E5D616F8FECAF6BCE9417B2E2432F6FC59E`.
-- Validation build: 13 letter-size pages, 5 figures, and 1 evidence table.
+- Size: 1,141,803 bytes.
+- SHA-256: `12260E50DB54CF36C3AAD054681EF7CCA6053AD4A7134A33EA55494FF2F649A1`.
+- Validation build: 12 letter-size pages, 5 figures, and 1 evidence table.
 
 The `neuroemi` arXiv account and institutional-email verification were
 previously completed. Login, author declarations, category endorsement,

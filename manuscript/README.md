@@ -13,7 +13,7 @@ effect is pooled across datasets.
 
 - `main.tex` - complete working manuscript.
 - `references.bib` - DOI-checked bibliography.
-- `ca1_reusable_population_updates_manuscript.pdf` - compiled 13-page paper.
+- `ca1_reusable_population_updates_manuscript.pdf` - compiled 12-page paper.
 - `../reports/figures/` - the five manuscript figures.
 - `../results/source_data/` - boundary figure source data and audits.
 - `../reports/local_wall_update_transfer.md` - boundary evidence ledger.

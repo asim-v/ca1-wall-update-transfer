@@ -36,7 +36,9 @@ innateness, or a universal hippocampal primitive.
 ## Build verification
 
 - Compiler: Tectonic 0.16.9.
-- Layout: letter paper, two columns, 13 pages.
+- Layout: letter paper, two columns, 12 pages.
+- Front matter: abstract and keywords proceed directly to the Introduction;
+  the separate Significance statement has been removed.
 - Contents: 5 figures and 1 full-width evidence table.
 - Bibliography: 12 entries; all citations and cross-references resolved.
 - Visual audit: all 13 rendered pages inspected; no clipped figures, tables,
@@ -45,7 +47,7 @@ innateness, or a universal hippocampal primitive.
 - Regression suites: 150 boundary-repository tests passed, one was skipped by
   design, and all 47 reward-repository tests passed.
 - PDF SHA-256:
-  `CB01CEE1BB9077A5F28A862405FE1F7D02CB10A768A71613CDE496E5240AE197`.
+  `7152BB184859F782B829F87C917D700B5B1C4FE8F220F1B5372A62BD18FFB7B4`.
 
 Tectonic reports narrow-column underfull-box diagnostics and a 1.25 pt final
 balanced-column vbox diagnostic. The rendered pages show no overlap or clipping.
@@ -62,12 +64,12 @@ The ZIP contains only:
 6. `figures/adversarial_controls_v1.png`
 7. `figures/trial_behavior_model_v1.png`
 
-Package size: 1,141,988 bytes.
+Package size: 1,141,803 bytes.
 
 Package SHA-256:
-`BA49D3B2771F744F8B8C492D57276E5D616F8FECAF6BCE9417B2E2432F6FC59E`.
+`12260E50DB54CF36C3AAD054681EF7CCA6053AD4A7134A33EA55494FF2F649A1`.
 
-The package compiled locally to the same 13-page PDF. Generated PDF, AUX, and
+The package compiled locally to the same 12-page PDF. Generated PDF, AUX, and
 OUT files are excluded from the ZIP. The earlier wall-only ZIP remains in
 `submission/` as a recoverable backup.
 
