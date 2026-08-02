@@ -1,19 +1,21 @@
 cff-version: 1.2.0
 message: "If you use this analysis, please cite the repository and the source datasets."
-title: "Partial cross-location generalization of a CA1 wall-related population contrast"
+title: "Reusable CA1 population-update directions during boundary and reward changes"
 type: software
 authors:
   - family-names: "Bazan Sanchez"
     given-names: "Javier Emilio"
     affiliation: "Facultad de Ciencias, Universidad Nacional Autonoma de Mexico (UNAM)"
     email: "bazan@ciencias.unam.mx"
-date-released: 2026-08-01
-version: "0.2.0"
+date-released: 2026-08-02
+version: "0.3.0"
 repository-code: "https://github.com/asim-v/ca1-wall-update-transfer"
 keywords:
   - hippocampus
   - CA1
   - place cells
   - boundaries
+  - reward
+  - generalization
   - remapping
   - population coding
