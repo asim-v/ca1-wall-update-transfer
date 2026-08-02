@@ -111,7 +111,7 @@
     },
     {
       "sentence_id": "A5",
-      "text": "Among every geometry- and support-admissible source exactly 25 cm from each target, the correct wall relation had mean animal-level percentile rank 0.612 (seven of seven above chance; descriptive exact tail 1/128), although it did not reliably beat the best alternative and a strict tangential subset remained heterogeneous.",
+      "text": "Against all admissible sources at the same 25 cm distance, the correct wall relation had mean animal-level percentile rank 0.612 (seven of seven above chance; descriptive exact tail 1/128), but did not reliably beat the best alternative, and the strict tangential subset remained heterogeneous.",
       "quantitative_claims": [
         {
           "claim": "mean correct-relation percentile rank",
@@ -146,10 +146,10 @@
     },
     {
       "sentence_id": "A6",
-      "text": "Behavior-adjusted cross-location prediction remained positive (rho=0.119; seven of seven), whereas a same-session mirror-open control was estimable in only five animals.",
+      "text": "Measured-covariate-adjusted cross-location prediction remained positive (rho=0.119; seven of seven), whereas a same-session mirror-open control was estimable in only five animals.",
       "quantitative_claims": [
         {
-          "claim": "behavior-adjusted cross-location correlation",
+          "claim": "measured-covariate-adjusted cross-location correlation",
           "displayed_value": 0.119,
           "source_value": 0.11923918295548344,
           "source_file": "results/source_data/boundary_fragment_cross_location_behavior_adjusted.json",
@@ -215,7 +215,7 @@
     },
     {
       "sentence_id": "A8",
-      "text": "Nonlinear out-of-fold adjustment for speed and licking reduced this statistic to S=0.0238 (seven of eight; p=0.0117) while improving total held-out trial mean-squared error by only 1.03%.",
+      "text": "After nonlinear out-of-fold adjustment for speed and licking, the statistic was S=0.0238 (seven of eight; p=0.0117), with only a 1.03% improvement in total held-out trial mean-squared error.",
       "quantitative_claims": [
         {
           "claim": "primary nonlinear residual dF/F specificity",
@@ -259,7 +259,7 @@
     },
     {
       "sentence_id": "A9",
-      "text": "CA1 remapping therefore shows partial cell-resolved transfer across repeated spatial relations, weaker than exact-location recurrence and constrained by position and behavioral state.",
+      "text": "CA1 remapping therefore shows partial cell-resolved transfer across repeated spatial relations that is weaker than exact-location recurrence, spatially constrained, and partly coupled to speed and licking.",
       "quantitative_claims": []
     }
   ],
