@@ -662,7 +662,7 @@ visual environment changed together. Primary cell selection used only
 cross-day registration and training-only measurement reliability; published
 reward-relative labels did not select cells.
 
-\subsection{Spatial representation and oriented seams}
+\subsection{Boundary representation and primary estimators}
 
 The arena was expressed in a common allocentric coordinate system. A candidate
 internal-wall location was represented as an oriented seam \(s=(p\rightarrow
@@ -673,7 +673,7 @@ at defined distances from the seam. Analyses used only bins and registered
 cells satisfying the relevant occupancy, activity, and common-support gates.
 Source and target strips in the cross-location analysis shared no 5 cm bin.
 
-\subsection{Local response vectors}
+\paragraph{Local response vectors.}
 
 For registered cell \(i\), environment \(e\), and seam \(s\), let
 \(r_{i,e,s}\) be activity averaged over the eligible local bins. Let \(b(e)\)
@@ -692,7 +692,7 @@ For globally demeaned analyses, the vector mean was removed before correlation.
 The resulting score depends on relative cell-specific changes rather than a
 population-wide rate shift.
 
-\subsection{Training profiles and held-out scoring}
+\paragraph{Training profiles and held-out scoring.}
 
 For a target query \((e^\ast,s^\ast)\), training environments were selected
 without using the neural response of \(e^\ast\). At a source seam \(s\), the
@@ -719,7 +719,7 @@ balanced between the wall and open profiles. The reported exact-location
 benchmark for cross-location prediction was recomputed on the exact queries, sessions,
 cells, and local supports eligible for the shifted analysis.
 
-\subsection{Single-tile counterfactual}
+\paragraph{Single-tile counterfactual.}
 
 The \(u\) and \(o\) geometries differed at one lattice tile: \(u\) blocked
 tiles \(\{4,5\}\), whereas \(o\) blocked only tile \(\{4\}\). We formed the
@@ -730,7 +730,7 @@ difference is descriptive. For the order-placebo analysis, we formed
 later-minus-earlier contrasts at unchanged seams with the same processing and
 compared their signs with the actual \(u-o\) contrast.
 
-\subsection{Cross-location prediction}
+\paragraph{Cross-location prediction.}
 
 For each eligible target seam, the source seam was a non-overlapping lattice
 seam 25 cm away with the same signed wall normal and admissible wall/open
@@ -751,7 +751,7 @@ source pairs, including their session and seam identities and their counts of
 common cells and bins. That audit did not hash the complete cell-ID or
 bin-coordinate arrays.
 
-\subsection{Measured-covariate-adjusted response estimates}
+\paragraph{Measured-covariate-adjusted response estimates.}
 
 We estimated activity jointly with spatial-bin indicators and nuisance
 covariates for instantaneous speed, sine and cosine of heading, second heading
@@ -762,7 +762,9 @@ covariates. Target-session activity was used to estimate nuisance coefficients
 for that target map, but target neural outcomes never entered source-profile
 training.
 
-\subsection{Same-session mirror-open control}
+\subsection{Boundary controls and adjudication}
+
+\paragraph{Same-session mirror-open control.}
 
 The mirror-open seam was specified before its neural endpoint was inspected.
 For each target wall, it lay in the same target session and matched
@@ -773,7 +775,7 @@ geometric pairing. Primary scoring used globally demeaned source and target
 vectors. Eligibility required a complete source, wall-target, and open-target
 triplet on common support.
 
-\subsection{Spatial-null calibration}
+\paragraph{Spatial-null calibration.}
 
 We calibrated two empirical spatial controls at the animal level. The first
 compared correctly oriented source seams with incorrectly oriented sources at
@@ -786,7 +788,7 @@ sign assignments and calculated the fraction of null means at least as large
 as the observed mean. These are descriptive exact sign-flip calibrations, not
 confirmatory population \(p\)-values.
 
-\subsection{Fully enumerated empirical spatial baseline}
+\paragraph{Fully enumerated empirical spatial baseline.}
 
 The empirical baseline was frozen in a committed protocol before its target
 neural endpoint was inspected. It inherited the 405 target queries and 658
@@ -820,7 +822,7 @@ outer pair and all seven animals: six animals had three exposure cycles and one
 had two. The predeclared stopping rule was therefore applied before any fitted-
 model target endpoint was calculated.
 
-\subsection{Cell-identity permutation}
+\paragraph{Cell-identity permutation.}
 
 For each animal, we generated 999 coherent random mappings of source-cell
 identities while preserving query geometry, target vectors, support sizes, and
@@ -830,7 +832,7 @@ and registration constraints limit exchangeability; the fractions were used
 as identity-specificity diagnostics rather than inferential population
 \(p\)-values.
 
-\subsection{Direction, composition, and experience analyses}
+\paragraph{Direction, composition, and experience analyses.}
 
 Direction controls compared eligible source-target pairs with same or opposite
 signed wall normals while documenting translation axis, distance, overlap, and
@@ -849,7 +851,7 @@ difference-in-differences variants. Because geometry, order, and exposure were
 not independently randomized, these estimates were treated as exploratory
 sensitivity analyses and not as evidence for learning.
 
-\subsection{Independent former-barrier analysis}
+\paragraph{Independent former-barrier analysis.}
 
 We used the public neutral-barrier data from \citet{BlairEtAl2023}
 to test whether the former barrier center retained an excess neural similarity
@@ -859,7 +861,9 @@ center-minus-control contrast. Its definition was written before the neural
 endpoint was run in the local project workflow. Spearman scoring and
 leave-one-animal-out summaries were sensitivities.
 
-\subsection{Reward-aligned population updates}
+\subsection{Reward-transition analysis and controls}
+
+\paragraph{Registered-cell update fields.}
 
 For each reward-switch session, neural activity had dimensions trial by
 position by cell. We used 45 circular 10 cm bins and cells registered across
@@ -887,7 +891,7 @@ blocks with all their position bins for a descriptive interval. Confirmatory
 inference used the eight mouse means in a complete one-sided $2^8$ sign-flip
 test.
 
-\subsection{Reward-update drift and null controls}
+\paragraph{Drift, null, and robustness controls.}
 
 Registered pre-switch drift split each session's pre trials into chronological
 halves, formed late-minus-early maps, and applied the same three-transition
@@ -909,7 +913,7 @@ their spatial bins together; recomputed leave-one-mouse-out means; and applied
 27 grids over minimum common-cell count, image correlation, and median ROI
 intersection-over-union.
 
-\subsection{Trial-level nonlinear speed-and-lick model}
+\paragraph{Trial-level nonlinear speed-and-lick model.}
 
 Upstream speed and lick profiles were centered separately on the old and new
 reward. We reordered their circular bins and translated every post-switch

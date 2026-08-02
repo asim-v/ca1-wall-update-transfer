@@ -26,8 +26,8 @@ submission/ca1_reusable_population_updates_arxiv.zip
 ```
 
 - Entries: 8 files, including 5 raster figures.
-- Size: 1,436,188 bytes.
-- SHA-256: `2034732CDE24A099348D9C77152D260B9382BD0A545AD400B0208E9A791002D9`.
+- Size: 1,436,222 bytes.
+- SHA-256: `707473E068A48B7B357EB60A6C49AB4EB884817B6D4CDADA8046B14933D6BC51`.
 - Validation build: 14 letter-size pages, 6 numbered figures, and 1 evidence
   table.
 
