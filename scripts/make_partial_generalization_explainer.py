@@ -415,7 +415,7 @@ def main() -> None:
     axes[1, 1].set_ylabel("source-pattern correlation", fontsize=8.8)
 
     figure.suptitle(
-        "Partial generalization: the pattern crosses locations but remains place-bound",
+        "Partial transfer: the pattern crosses locations but remains place-bound",
         fontsize=14,
         fontweight="bold",
         color=TEXT,

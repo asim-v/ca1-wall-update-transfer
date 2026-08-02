@@ -340,7 +340,7 @@ def main() -> None:
         ("Local context\nmatched", "One-tile\nedit", "+ behavior\nadjustment"),
         animals,
         colors,
-        title="A  Held-out local reuse",
+        title="A  Held-out local recurrence",
         annotations=("7/7 > 0", "7/7 > 0", "7/7 > 0"),
     )
     _plot_paired_panel(
@@ -383,7 +383,7 @@ def main() -> None:
     axes[0].set_ylabel("Spearman correlation or correlation advantage")
     axes[2].set_ylabel("Spearman correlation or correlation advantage")
     figure.suptitle(
-        "CA1 wall-related remapping: exact reuse and partial generalization",
+        "CA1 wall-related remapping: exact recurrence and partial transfer",
         fontsize=13.5,
         fontweight="bold",
     )

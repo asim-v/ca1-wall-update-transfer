@@ -1,0 +1,941 @@
+{
+  "schema": "confirmatory-specificity-v1",
+  "eligible_mice": [
+    "m3",
+    "m4",
+    "m7",
+    "m12",
+    "m13",
+    "m14",
+    "m15",
+    "m19"
+  ],
+  "cell_bootstrap": 2000,
+  "mouse_bootstrap": 10000,
+  "seed": 20260801,
+  "primary_signal": "activity_dff",
+  "environments": [
+    {
+      "mouse": "m3",
+      "environment_index": 1,
+      "registration_reference_day": 3,
+      "days": [
+        3,
+        5,
+        7
+      ],
+      "short_days": [
+        5,
+        7
+      ],
+      "long_day": 3,
+      "common_cells": 501,
+      "scores": [
+        {
+          "n_cells": 501,
+          "same_displacement_correlation": 0.05362608731122086,
+          "first_short_long_correlation": 0.03196792063675476,
+          "long_second_short_correlation": 0.07124804937864546,
+          "specificity_delta": 0.002018102303520751,
+          "bootstrap_mean": 0.002488311599162986,
+          "bootstrap_ci95_low": -0.030370696437948964,
+          "bootstrap_ci95_high": 0.03418353883186977,
+          "bootstrap_p_lower": 0.43728135932033985,
+          "signal": "activity_dff",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        },
+        {
+          "n_cells": 501,
+          "same_displacement_correlation": 0.01960501880239795,
+          "first_short_long_correlation": 0.006361877124019726,
+          "long_second_short_correlation": 0.04171662720503289,
+          "specificity_delta": -0.004434233362128361,
+          "bootstrap_mean": -0.00394745023663107,
+          "bootstrap_ci95_low": -0.021658650536939796,
+          "bootstrap_ci95_high": 0.01625584682776993,
+          "bootstrap_p_lower": 0.6811594202898551,
+          "signal": "events",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        }
+      ]
+    },
+    {
+      "mouse": "m3",
+      "environment_index": 2,
+      "registration_reference_day": 10,
+      "days": [
+        10,
+        12,
+        14
+      ],
+      "short_days": [
+        10,
+        14
+      ],
+      "long_day": 12,
+      "common_cells": 557,
+      "scores": [
+        {
+          "n_cells": 557,
+          "same_displacement_correlation": 0.08132898906858077,
+          "first_short_long_correlation": 0.07193470509397777,
+          "long_second_short_correlation": 0.04527856109427884,
+          "specificity_delta": 0.022722355974452463,
+          "bootstrap_mean": 0.022875300888903834,
+          "bootstrap_ci95_low": -0.014759868952557322,
+          "bootstrap_ci95_high": 0.061814127505978374,
+          "bootstrap_p_lower": 0.127936031984008,
+          "signal": "activity_dff",
+          "first_short_transition": "BA",
+          "long_transition": "AC",
+          "second_short_transition": "CB"
+        },
+        {
+          "n_cells": 557,
+          "same_displacement_correlation": 0.057551195434842044,
+          "first_short_long_correlation": 0.05022174391099999,
+          "long_second_short_correlation": 0.015429108940439536,
+          "specificity_delta": 0.02472576900912228,
+          "bootstrap_mean": 0.025405890055275503,
+          "bootstrap_ci95_low": -0.005630536325868959,
+          "bootstrap_ci95_high": 0.06064413068691422,
+          "bootstrap_p_lower": 0.062468765617191405,
+          "signal": "events",
+          "first_short_transition": "BA",
+          "long_transition": "AC",
+          "second_short_transition": "CB"
+        }
+      ]
+    },
+    {
+      "mouse": "m4",
+      "environment_index": 1,
+      "registration_reference_day": 3,
+      "days": [
+        3,
+        5,
+        7
+      ],
+      "short_days": [
+        3,
+        7
+      ],
+      "long_day": 5,
+      "common_cells": 530,
+      "scores": [
+        {
+          "n_cells": 530,
+          "same_displacement_correlation": 0.08572297693648591,
+          "first_short_long_correlation": 0.053193597154308825,
+          "long_second_short_correlation": 0.05675449419647093,
+          "specificity_delta": 0.030748931261096027,
+          "bootstrap_mean": 0.030508044394514412,
+          "bootstrap_ci95_low": -0.002207831626974521,
+          "bootstrap_ci95_high": 0.06375015937378273,
+          "bootstrap_p_lower": 0.0384807596201899,
+          "signal": "activity_dff",
+          "first_short_transition": "BA",
+          "long_transition": "AC",
+          "second_short_transition": "CB"
+        },
+        {
+          "n_cells": 530,
+          "same_displacement_correlation": 0.0609843111241999,
+          "first_short_long_correlation": 0.03269930979128294,
+          "long_second_short_correlation": 0.03820216067431988,
+          "specificity_delta": 0.025533575891398493,
+          "bootstrap_mean": 0.025134697491579636,
+          "bootstrap_ci95_low": -0.0022088985155233037,
+          "bootstrap_ci95_high": 0.05163533688656351,
+          "bootstrap_p_lower": 0.035982008995502246,
+          "signal": "events",
+          "first_short_transition": "BA",
+          "long_transition": "AC",
+          "second_short_transition": "CB"
+        }
+      ]
+    },
+    {
+      "mouse": "m4",
+      "environment_index": 2,
+      "registration_reference_day": 10,
+      "days": [
+        10,
+        12,
+        14
+      ],
+      "short_days": [
+        12,
+        14
+      ],
+      "long_day": 10,
+      "common_cells": 516,
+      "scores": [
+        {
+          "n_cells": 516,
+          "same_displacement_correlation": 0.08115443512811192,
+          "first_short_long_correlation": 0.07288558070555261,
+          "long_second_short_correlation": 0.06474333938145066,
+          "specificity_delta": 0.01233997508461028,
+          "bootstrap_mean": 0.012121988789324637,
+          "bootstrap_ci95_low": -0.018928543638915434,
+          "bootstrap_ci95_high": 0.0440992083302292,
+          "bootstrap_p_lower": 0.21639180409795103,
+          "signal": "activity_dff",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        },
+        {
+          "n_cells": 516,
+          "same_displacement_correlation": 0.06366085569915725,
+          "first_short_long_correlation": 0.04277618282938729,
+          "long_second_short_correlation": 0.051839028077816304,
+          "specificity_delta": 0.01635325024555545,
+          "bootstrap_mean": 0.01632896656406612,
+          "bootstrap_ci95_low": -0.0073629881563751385,
+          "bootstrap_ci95_high": 0.038680241751101165,
+          "bootstrap_p_lower": 0.09045477261369315,
+          "signal": "events",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        }
+      ]
+    },
+    {
+      "mouse": "m7",
+      "environment_index": 1,
+      "registration_reference_day": 3,
+      "days": [
+        3,
+        5,
+        7
+      ],
+      "short_days": [
+        5,
+        7
+      ],
+      "long_day": 3,
+      "common_cells": 601,
+      "scores": [
+        {
+          "n_cells": 601,
+          "same_displacement_correlation": 0.0805096505018461,
+          "first_short_long_correlation": 0.06483180008455876,
+          "long_second_short_correlation": 0.036087341451109735,
+          "specificity_delta": 0.030050079734011845,
+          "bootstrap_mean": 0.029980441173995905,
+          "bootstrap_ci95_low": -0.007778342210415698,
+          "bootstrap_ci95_high": 0.06948358684863551,
+          "bootstrap_p_lower": 0.05647176411794103,
+          "signal": "activity_dff",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        },
+        {
+          "n_cells": 601,
+          "same_displacement_correlation": 0.052487619911998934,
+          "first_short_long_correlation": 0.048858819591592315,
+          "long_second_short_correlation": 0.024857825573818177,
+          "specificity_delta": 0.01562929732929369,
+          "bootstrap_mean": 0.015005857502441128,
+          "bootstrap_ci95_low": -0.012902374732299821,
+          "bootstrap_ci95_high": 0.04172747897035924,
+          "bootstrap_p_lower": 0.14942528735632185,
+          "signal": "events",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        }
+      ]
+    },
+    {
+      "mouse": "m7",
+      "environment_index": 2,
+      "registration_reference_day": 10,
+      "days": [
+        10,
+        12,
+        14
+      ],
+      "short_days": [
+        10,
+        14
+      ],
+      "long_day": 12,
+      "common_cells": 547,
+      "scores": [
+        {
+          "n_cells": 547,
+          "same_displacement_correlation": 0.11317195094408507,
+          "first_short_long_correlation": 0.12641466187598252,
+          "long_second_short_correlation": 0.1242756935150661,
+          "specificity_delta": -0.01217322675143924,
+          "bootstrap_mean": -0.012068032424364496,
+          "bootstrap_ci95_low": -0.04827847171286621,
+          "bootstrap_ci95_high": 0.02537434755333728,
+          "bootstrap_p_lower": 0.7361319340329835,
+          "signal": "activity_dff",
+          "first_short_transition": "BC",
+          "long_transition": "CA",
+          "second_short_transition": "AB"
+        },
+        {
+          "n_cells": 547,
+          "same_displacement_correlation": 0.09076274188799995,
+          "first_short_long_correlation": 0.0913068335286294,
+          "long_second_short_correlation": 0.08270453600183393,
+          "specificity_delta": 0.0037570571227682897,
+          "bootstrap_mean": 0.0037021134838392438,
+          "bootstrap_ci95_low": -0.0264081058040151,
+          "bootstrap_ci95_high": 0.032040119408944495,
+          "bootstrap_p_lower": 0.39730134932533734,
+          "signal": "events",
+          "first_short_transition": "BC",
+          "long_transition": "CA",
+          "second_short_transition": "AB"
+        }
+      ]
+    },
+    {
+      "mouse": "m12",
+      "environment_index": 1,
+      "registration_reference_day": 3,
+      "days": [
+        3,
+        5,
+        7
+      ],
+      "short_days": [
+        3,
+        7
+      ],
+      "long_day": 5,
+      "common_cells": 665,
+      "scores": [
+        {
+          "n_cells": 665,
+          "same_displacement_correlation": 0.13843386134454452,
+          "first_short_long_correlation": 0.05962888830912718,
+          "long_second_short_correlation": 0.06394996017167336,
+          "specificity_delta": 0.07664443710414426,
+          "bootstrap_mean": 0.07541695070880296,
+          "bootstrap_ci95_low": 0.037128037902051464,
+          "bootstrap_ci95_high": 0.11431220202094068,
+          "bootstrap_p_lower": 0.0004997501249375312,
+          "signal": "activity_dff",
+          "first_short_transition": "BC",
+          "long_transition": "CA",
+          "second_short_transition": "AB"
+        },
+        {
+          "n_cells": 665,
+          "same_displacement_correlation": 0.08781487474208152,
+          "first_short_long_correlation": 0.04963670427242032,
+          "long_second_short_correlation": 0.03631963534506464,
+          "specificity_delta": 0.04483670493333904,
+          "bootstrap_mean": 0.044671528420988905,
+          "bootstrap_ci95_low": 0.012849887563092617,
+          "bootstrap_ci95_high": 0.07520177262611187,
+          "bootstrap_p_lower": 0.0014992503748125937,
+          "signal": "events",
+          "first_short_transition": "BC",
+          "long_transition": "CA",
+          "second_short_transition": "AB"
+        }
+      ]
+    },
+    {
+      "mouse": "m12",
+      "environment_index": 2,
+      "registration_reference_day": 10,
+      "days": [
+        10,
+        12,
+        14
+      ],
+      "short_days": [
+        12,
+        14
+      ],
+      "long_day": 10,
+      "common_cells": 698,
+      "scores": [
+        {
+          "n_cells": 698,
+          "same_displacement_correlation": 0.20855822090935464,
+          "first_short_long_correlation": 0.06211872459511603,
+          "long_second_short_correlation": 0.06911736650439115,
+          "specificity_delta": 0.14294017535960105,
+          "bootstrap_mean": 0.1442690926876402,
+          "bootstrap_ci95_low": 0.10682076546802169,
+          "bootstrap_ci95_high": 0.18426201380339477,
+          "bootstrap_p_lower": 0.0004997501249375312,
+          "signal": "activity_dff",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        },
+        {
+          "n_cells": 698,
+          "same_displacement_correlation": 0.16142337336684867,
+          "first_short_long_correlation": 0.03493665275711463,
+          "long_second_short_correlation": 0.05401441867402931,
+          "specificity_delta": 0.1169478376512767,
+          "bootstrap_mean": 0.11782430540211075,
+          "bootstrap_ci95_low": 0.08458780720474583,
+          "bootstrap_ci95_high": 0.15437977034661365,
+          "bootstrap_p_lower": 0.0004997501249375312,
+          "signal": "events",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        }
+      ]
+    },
+    {
+      "mouse": "m13",
+      "environment_index": 1,
+      "registration_reference_day": 3,
+      "days": [
+        3,
+        5,
+        7
+      ],
+      "short_days": [
+        3,
+        5
+      ],
+      "long_day": 7,
+      "common_cells": 371,
+      "scores": [
+        {
+          "n_cells": 371,
+          "same_displacement_correlation": 0.036436195650185965,
+          "first_short_long_correlation": 0.047876141119649336,
+          "long_second_short_correlation": 0.05979638716064705,
+          "specificity_delta": -0.017400068489962228,
+          "bootstrap_mean": -0.0161709233415117,
+          "bootstrap_ci95_low": -0.05995993713627869,
+          "bootstrap_ci95_high": 0.03210543005816779,
+          "bootstrap_p_lower": 0.7561219390304847,
+          "signal": "activity_dff",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        },
+        {
+          "n_cells": 371,
+          "same_displacement_correlation": 0.019148786196733034,
+          "first_short_long_correlation": 0.020451481826249764,
+          "long_second_short_correlation": 0.032723065301409685,
+          "specificity_delta": -0.00743848736709669,
+          "bootstrap_mean": -0.007017770995185089,
+          "bootstrap_ci95_low": -0.03365591111139649,
+          "bootstrap_ci95_high": 0.020680881386639857,
+          "bootstrap_p_lower": 0.6896551724137931,
+          "signal": "events",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        }
+      ]
+    },
+    {
+      "mouse": "m13",
+      "environment_index": 2,
+      "registration_reference_day": 10,
+      "days": [
+        10,
+        12,
+        14
+      ],
+      "short_days": [
+        10,
+        12
+      ],
+      "long_day": 14,
+      "common_cells": 383,
+      "scores": [
+        {
+          "n_cells": 383,
+          "same_displacement_correlation": 0.13404265079390693,
+          "first_short_long_correlation": 0.08642379359053096,
+          "long_second_short_correlation": 0.04719762370746772,
+          "specificity_delta": 0.06723194214490759,
+          "bootstrap_mean": 0.06869749318849194,
+          "bootstrap_ci95_low": 0.02433577796632439,
+          "bootstrap_ci95_high": 0.11661269965940291,
+          "bootstrap_p_lower": 0.0014992503748125937,
+          "signal": "activity_dff",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        },
+        {
+          "n_cells": 383,
+          "same_displacement_correlation": 0.10866625447264582,
+          "first_short_long_correlation": 0.061102277082006926,
+          "long_second_short_correlation": 0.034296975840269854,
+          "specificity_delta": 0.06096662801150743,
+          "bootstrap_mean": 0.061444672814502145,
+          "bootstrap_ci95_low": 0.02308034660249786,
+          "bootstrap_ci95_high": 0.10164731222550111,
+          "bootstrap_p_lower": 0.0009995002498750624,
+          "signal": "events",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        }
+      ]
+    },
+    {
+      "mouse": "m14",
+      "environment_index": 1,
+      "registration_reference_day": 3,
+      "days": [
+        3,
+        5,
+        7
+      ],
+      "short_days": [
+        3,
+        5
+      ],
+      "long_day": 7,
+      "common_cells": 371,
+      "scores": [
+        {
+          "n_cells": 371,
+          "same_displacement_correlation": 0.10981623913013261,
+          "first_short_long_correlation": 0.0789967304185703,
+          "long_second_short_correlation": 0.03778861196063596,
+          "specificity_delta": 0.05142356794052948,
+          "bootstrap_mean": 0.04996519787034237,
+          "bootstrap_ci95_low": -0.010946213823692439,
+          "bootstrap_ci95_high": 0.10630656313178212,
+          "bootstrap_p_lower": 0.050474762618690654,
+          "signal": "activity_dff",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        },
+        {
+          "n_cells": 371,
+          "same_displacement_correlation": 0.07624308679238456,
+          "first_short_long_correlation": 0.0372240268671362,
+          "long_second_short_correlation": 0.02023123558259299,
+          "specificity_delta": 0.04751545556751997,
+          "bootstrap_mean": 0.047860056993084515,
+          "bootstrap_ci95_low": 0.013180075892833761,
+          "bootstrap_ci95_high": 0.08467368569363869,
+          "bootstrap_p_lower": 0.005997001499250375,
+          "signal": "events",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        }
+      ]
+    },
+    {
+      "mouse": "m14",
+      "environment_index": 2,
+      "registration_reference_day": 10,
+      "days": [
+        10,
+        12,
+        14
+      ],
+      "short_days": [
+        10,
+        12
+      ],
+      "long_day": 14,
+      "common_cells": 369,
+      "scores": [
+        {
+          "n_cells": 369,
+          "same_displacement_correlation": 0.24759470335890477,
+          "first_short_long_correlation": 0.06102274029744844,
+          "long_second_short_correlation": 0.11264058184683982,
+          "specificity_delta": 0.16076304228676064,
+          "bootstrap_mean": 0.16073383852500564,
+          "bootstrap_ci95_low": 0.102667280345127,
+          "bootstrap_ci95_high": 0.22153509158337856,
+          "bootstrap_p_lower": 0.0004997501249375312,
+          "signal": "activity_dff",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        },
+        {
+          "n_cells": 369,
+          "same_displacement_correlation": 0.22359280757858208,
+          "first_short_long_correlation": 0.05527787354912672,
+          "long_second_short_correlation": 0.0995695792974913,
+          "specificity_delta": 0.14616908115527305,
+          "bootstrap_mean": 0.14662919847283873,
+          "bootstrap_ci95_low": 0.09571905514203151,
+          "bootstrap_ci95_high": 0.20143743844353282,
+          "bootstrap_p_lower": 0.0004997501249375312,
+          "signal": "events",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        }
+      ]
+    },
+    {
+      "mouse": "m15",
+      "environment_index": 1,
+      "registration_reference_day": 3,
+      "days": [
+        3,
+        5,
+        7
+      ],
+      "short_days": [
+        5,
+        7
+      ],
+      "long_day": 3,
+      "common_cells": 796,
+      "scores": [
+        {
+          "n_cells": 796,
+          "same_displacement_correlation": 0.06246739826414332,
+          "first_short_long_correlation": 0.07138138627283189,
+          "long_second_short_correlation": 0.02043588640643343,
+          "specificity_delta": 0.01655876192451066,
+          "bootstrap_mean": 0.01708072034054592,
+          "bootstrap_ci95_low": -0.014715001023888653,
+          "bootstrap_ci95_high": 0.05072393015655906,
+          "bootstrap_p_lower": 0.14392803598200898,
+          "signal": "activity_dff",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        },
+        {
+          "n_cells": 796,
+          "same_displacement_correlation": 0.03433698784762634,
+          "first_short_long_correlation": 0.036869464444192125,
+          "long_second_short_correlation": 0.005545390415932797,
+          "specificity_delta": 0.013129560417563874,
+          "bootstrap_mean": 0.013490097419637715,
+          "bootstrap_ci95_low": -0.009221215346671847,
+          "bootstrap_ci95_high": 0.037579055313282886,
+          "bootstrap_p_lower": 0.13993003498250875,
+          "signal": "events",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        }
+      ]
+    },
+    {
+      "mouse": "m15",
+      "environment_index": 2,
+      "registration_reference_day": 10,
+      "days": [
+        10,
+        12,
+        14
+      ],
+      "short_days": [
+        10,
+        14
+      ],
+      "long_day": 12,
+      "common_cells": 711,
+      "scores": [
+        {
+          "n_cells": 711,
+          "same_displacement_correlation": 0.22845195779478217,
+          "first_short_long_correlation": 0.12292341550402731,
+          "long_second_short_correlation": 0.11009601177135314,
+          "specificity_delta": 0.11194224415709195,
+          "bootstrap_mean": 0.11188932366094358,
+          "bootstrap_ci95_low": 0.06450306027315605,
+          "bootstrap_ci95_high": 0.1650283731859656,
+          "bootstrap_p_lower": 0.0004997501249375312,
+          "signal": "activity_dff",
+          "first_short_transition": "BC",
+          "long_transition": "CA",
+          "second_short_transition": "AB"
+        },
+        {
+          "n_cells": 711,
+          "same_displacement_correlation": 0.1770689531044813,
+          "first_short_long_correlation": 0.07936728769917405,
+          "long_second_short_correlation": 0.06631214222336343,
+          "specificity_delta": 0.10422923814321258,
+          "bootstrap_mean": 0.10359772685680863,
+          "bootstrap_ci95_low": 0.0570217715117207,
+          "bootstrap_ci95_high": 0.16212272924140214,
+          "bootstrap_p_lower": 0.0004997501249375312,
+          "signal": "events",
+          "first_short_transition": "BC",
+          "long_transition": "CA",
+          "second_short_transition": "AB"
+        }
+      ]
+    },
+    {
+      "mouse": "m19",
+      "environment_index": 1,
+      "registration_reference_day": 3,
+      "days": [
+        3,
+        5,
+        7
+      ],
+      "short_days": [
+        3,
+        5
+      ],
+      "long_day": 7,
+      "common_cells": 291,
+      "scores": [
+        {
+          "n_cells": 291,
+          "same_displacement_correlation": 0.04935127185130408,
+          "first_short_long_correlation": 0.02842359718239916,
+          "long_second_short_correlation": 0.03161332057760678,
+          "specificity_delta": 0.019332812971301107,
+          "bootstrap_mean": 0.024630454619228134,
+          "bootstrap_ci95_low": -0.0171132745772875,
+          "bootstrap_ci95_high": 0.07220836033182032,
+          "bootstrap_p_lower": 0.13943028485757122,
+          "signal": "activity_dff",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        },
+        {
+          "n_cells": 291,
+          "same_displacement_correlation": 0.017200674275213854,
+          "first_short_long_correlation": 0.0033696022061240165,
+          "long_second_short_correlation": 0.021847608266338303,
+          "specificity_delta": 0.0045920690389826945,
+          "bootstrap_mean": 0.006772525444771246,
+          "bootstrap_ci95_low": -0.02586984754788881,
+          "bootstrap_ci95_high": 0.04632874802587988,
+          "bootstrap_p_lower": 0.3868065967016492,
+          "signal": "events",
+          "first_short_transition": "CB",
+          "long_transition": "AC",
+          "second_short_transition": "BA"
+        }
+      ]
+    },
+    {
+      "mouse": "m19",
+      "environment_index": 2,
+      "registration_reference_day": 10,
+      "days": [
+        10,
+        12,
+        14
+      ],
+      "short_days": [
+        10,
+        12
+      ],
+      "long_day": 14,
+      "common_cells": 314,
+      "scores": [
+        {
+          "n_cells": 314,
+          "same_displacement_correlation": 0.213296993719623,
+          "first_short_long_correlation": 0.09938742427412979,
+          "long_second_short_correlation": 0.2176699335003728,
+          "specificity_delta": 0.054768314832371684,
+          "bootstrap_mean": 0.05542967507502532,
+          "bootstrap_ci95_low": 0.013288579828755568,
+          "bootstrap_ci95_high": 0.09819032638521344,
+          "bootstrap_p_lower": 0.004997501249375313,
+          "signal": "activity_dff",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        },
+        {
+          "n_cells": 314,
+          "same_displacement_correlation": 0.13212135871797157,
+          "first_short_long_correlation": 0.06506191321831906,
+          "long_second_short_correlation": 0.14197362302493813,
+          "specificity_delta": 0.028603590596342973,
+          "bootstrap_mean": 0.028784366440775862,
+          "bootstrap_ci95_low": -0.006407252801714357,
+          "bootstrap_ci95_high": 0.06681101295027514,
+          "bootstrap_p_lower": 0.05997001499250375,
+          "signal": "events",
+          "first_short_transition": "AB",
+          "long_transition": "CA",
+          "second_short_transition": "BC"
+        }
+      ]
+    }
+  ],
+  "mouse_scores": [
+    {
+      "mouse": "m3",
+      "activity_dff": {
+        "environment_values": [
+          0.002018102303520751,
+          0.022722355974452463
+        ],
+        "mean_specificity": 0.012370229138986607
+      },
+      "events": {
+        "environment_values": [
+          -0.004434233362128361,
+          0.02472576900912228
+        ],
+        "mean_specificity": 0.01014576782349696
+      }
+    },
+    {
+      "mouse": "m4",
+      "activity_dff": {
+        "environment_values": [
+          0.030748931261096027,
+          0.01233997508461028
+        ],
+        "mean_specificity": 0.021544453172853154
+      },
+      "events": {
+        "environment_values": [
+          0.025533575891398493,
+          0.01635325024555545
+        ],
+        "mean_specificity": 0.02094341306847697
+      }
+    },
+    {
+      "mouse": "m7",
+      "activity_dff": {
+        "environment_values": [
+          0.030050079734011845,
+          -0.01217322675143924
+        ],
+        "mean_specificity": 0.008938426491286303
+      },
+      "events": {
+        "environment_values": [
+          0.01562929732929369,
+          0.0037570571227682897
+        ],
+        "mean_specificity": 0.00969317722603099
+      }
+    },
+    {
+      "mouse": "m12",
+      "activity_dff": {
+        "environment_values": [
+          0.07664443710414426,
+          0.14294017535960105
+        ],
+        "mean_specificity": 0.10979230623187265
+      },
+      "events": {
+        "environment_values": [
+          0.04483670493333904,
+          0.1169478376512767
+        ],
+        "mean_specificity": 0.08089227129230787
+      }
+    },
+    {
+      "mouse": "m13",
+      "activity_dff": {
+        "environment_values": [
+          -0.017400068489962228,
+          0.06723194214490759
+        ],
+        "mean_specificity": 0.02491593682747268
+      },
+      "events": {
+        "environment_values": [
+          -0.00743848736709669,
+          0.06096662801150743
+        ],
+        "mean_specificity": 0.026764070322205367
+      }
+    },
+    {
+      "mouse": "m14",
+      "activity_dff": {
+        "environment_values": [
+          0.05142356794052948,
+          0.16076304228676064
+        ],
+        "mean_specificity": 0.10609330511364506
+      },
+      "events": {
+        "environment_values": [
+          0.04751545556751997,
+          0.14616908115527305
+        ],
+        "mean_specificity": 0.0968422683613965
+      }
+    },
+    {
+      "mouse": "m15",
+      "activity_dff": {
+        "environment_values": [
+          0.01655876192451066,
+          0.11194224415709195
+        ],
+        "mean_specificity": 0.06425050304080131
+      },
+      "events": {
+        "environment_values": [
+          0.013129560417563874,
+          0.10422923814321258
+        ],
+        "mean_specificity": 0.05867939928038823
+      }
+    },
+    {
+      "mouse": "m19",
+      "activity_dff": {
+        "environment_values": [
+          0.019332812971301107,
+          0.054768314832371684
+        ],
+        "mean_specificity": 0.03705056390183639
+      },
+      "events": {
+        "environment_values": [
+          0.0045920690389826945,
+          0.028603590596342973
+        ],
+        "mean_specificity": 0.016597829817662835
+      }
+    }
+  ],
+  "primary_inference": {
+    "n_mice": 8,
+    "mean_specificity": 0.04811946548984427,
+    "mouse_bootstrap_ci95": [
+      0.023442186896793345,
+      0.07573367137223243
+    ],
+    "exact_sign_flip_p_upper": 0.00390625,
+    "positive_mice": 8
+  },
+  "event_robustness": {
+    "mean_specificity": 0.04006977464899572,
+    "exact_sign_flip_p_upper": 0.00390625,
+    "positive_mice": 8,
+    "positive_environments": 14
+  }
+}

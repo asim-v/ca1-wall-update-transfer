@@ -1,0 +1,272 @@
+{
+  "schema": "abstract_quantitative_claim_traceability_v1",
+  "manuscript_source": "manuscript/main.tex",
+  "record_date": "2026-08-02",
+  "biological_unit": "animal",
+  "source_repositories": {
+    "boundary_and_manuscript": {
+      "local_root": ".",
+      "public_url": "https://github.com/asim-v/ca1-wall-update-transfer"
+    },
+    "reward": {
+      "local_root": "project2-goal-update-transfer",
+      "public_url": "https://github.com/asim-v/ca1-goal-update-transfer",
+      "source_commit": "2d97ee7262d540595019217d98c26ae8701a64e2",
+      "source_file_sha256": {
+        "results/confirmatory_specificity_v1.json": "4C9A85B130B22E6E0428CD9F0F9D3586F62A89ED4A799ECB36D70A1AF1E1C47E",
+        "results/trial_behavior_model_v1.json": "36C2C813467F9158C47993D33F9640351DC97BC6FFE456247E68A67743855B12"
+      }
+    }
+  },
+  "abstract_sentences": [
+    {
+      "sentence_id": "A1",
+      "text": "Hippocampal activity is structured relative to boundaries and rewards, but it is unclear whether the registered-cell direction of change estimated at one coordinate predicts a related change elsewhere.",
+      "quantitative_claims": []
+    },
+    {
+      "sentence_id": "A2",
+      "text": "We reanalysed two public longitudinal CA1 calcium-imaging datasets.",
+      "quantitative_claims": []
+    },
+    {
+      "sentence_id": "A3",
+      "text": "In an internal-wall arena (seven mice), a wall-minus-open source pattern predicted a non-overlapping wall response 25 cm away (mean Spearman rho=0.148; seven of seven animals positive).",
+      "quantitative_claims": [
+        {
+          "claim": "seven mice",
+          "displayed_value": 7,
+          "source_file": "results/source_data/boundary_fragment_cross_location_transfer.json",
+          "json_pointer": "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_source_effect_r_to_target_residual/animals",
+          "transformation": "none",
+          "analysis_classification": "exploratory"
+        },
+        {
+          "claim": "source-target midpoint distance",
+          "displayed_value_cm": 25,
+          "source_file": "results/source_data/boundary_fragment_cross_location_transfer.json",
+          "json_pointer": "/settings/primary_source_midpoint_distance_cm",
+          "transformation": "none",
+          "analysis_classification": "exploratory"
+        },
+        {
+          "claim": "mean cross-location Spearman correlation",
+          "displayed_value": 0.148,
+          "source_value": 0.14766406504657636,
+          "source_file": "results/source_data/boundary_fragment_cross_location_transfer.json",
+          "json_pointer": "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_source_effect_r_to_target_residual/animal_mean",
+          "transformation": "rounded to three decimals",
+          "analysis_classification": "exploratory"
+        },
+        {
+          "claim": "animals with positive cross-location prediction",
+          "displayed_value": "7/7",
+          "source_file": "results/source_data/boundary_fragment_cross_location_transfer.json",
+          "json_pointers": [
+            "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_source_effect_r_to_target_residual/positive_animals",
+            "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_source_effect_r_to_target_residual/animals"
+          ],
+          "transformation": "positive_animals/animals",
+          "analysis_classification": "exploratory"
+        }
+      ]
+    },
+    {
+      "sentence_id": "A4",
+      "text": "The query-matched exact-location prediction was stronger (rho=0.230; shifted-minus-exact=-0.082; one of seven animals favoured the shifted predictor).",
+      "quantitative_claims": [
+        {
+          "claim": "mean query-matched exact-location correlation",
+          "displayed_value": 0.230,
+          "source_value": 0.22975011666270706,
+          "source_file": "results/source_data/boundary_fragment_cross_location_transfer.json",
+          "json_pointers": [
+            "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_source_effect_r_to_target_residual/animal_mean",
+            "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_minus_exact_location_effect_r_to_target_residual/animal_mean"
+          ],
+          "transformation": "cross_location - shifted_minus_exact, rounded to three decimals",
+          "analysis_classification": "exploratory benchmark"
+        },
+        {
+          "claim": "mean shifted-minus-exact correlation",
+          "displayed_value": -0.082,
+          "source_value": -0.0820860516161307,
+          "source_file": "results/source_data/boundary_fragment_cross_location_transfer.json",
+          "json_pointer": "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_minus_exact_location_effect_r_to_target_residual/animal_mean",
+          "transformation": "rounded to three decimals",
+          "analysis_classification": "exploratory benchmark"
+        },
+        {
+          "claim": "animals favouring shifted over exact",
+          "displayed_value": "1/7",
+          "source_file": "results/source_data/boundary_fragment_cross_location_transfer.json",
+          "json_pointers": [
+            "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_minus_exact_location_effect_r_to_target_residual/positive_animals",
+            "/cohort_descriptive/global_rate_demeaned/one_grid_step_same_direction_minus_exact_location_effect_r_to_target_residual/animals"
+          ],
+          "transformation": "positive_animals/animals",
+          "analysis_classification": "exploratory benchmark"
+        }
+      ]
+    },
+    {
+      "sentence_id": "A5",
+      "text": "Among every geometry- and support-admissible source exactly 25 cm from each target, the correct wall relation had mean animal-level percentile rank 0.612 (seven of seven above chance; descriptive exact tail 1/128), although it did not reliably beat the best alternative and a strict tangential subset remained heterogeneous.",
+      "quantitative_claims": [
+        {
+          "claim": "mean correct-relation percentile rank",
+          "displayed_value": 0.612,
+          "source_value": 0.6117822802197802,
+          "source_file": "results/positive_model_spatial_rank_v1.json",
+          "json_pointer": "/cohort/tier1_exact_25cm/global_rate_demeaned/centered_percentile_rank/observed_animal_mean",
+          "transformation": "add 0.5 and round to three decimals",
+          "analysis_classification": "frozen-local empirical positive baseline"
+        },
+        {
+          "claim": "animals above chance rank",
+          "displayed_value": "7/7",
+          "source_file": "results/positive_model_spatial_rank_v1.json",
+          "json_pointers": [
+            "/cohort/tier1_exact_25cm/global_rate_demeaned/centered_percentile_rank/positive_animals",
+            "/cohort/tier1_exact_25cm/global_rate_demeaned/centered_percentile_rank/animals"
+          ],
+          "transformation": "positive_animals/animals",
+          "analysis_classification": "frozen-local empirical positive baseline"
+        },
+        {
+          "claim": "descriptive exact animal-level tail",
+          "displayed_value": "1/128",
+          "source_value": 0.0078125,
+          "source_file": "results/positive_model_spatial_rank_v1.json",
+          "json_pointer": "/cohort/tier1_exact_25cm/global_rate_demeaned/centered_percentile_rank/one_sided_tail_fraction",
+          "transformation": "expressed as exact fraction",
+          "analysis_classification": "frozen-local empirical positive baseline"
+        }
+      ]
+    },
+    {
+      "sentence_id": "A6",
+      "text": "Behavior-adjusted cross-location prediction remained positive (rho=0.119; seven of seven), whereas a same-session mirror-open control was estimable in only five animals.",
+      "quantitative_claims": [
+        {
+          "claim": "behavior-adjusted cross-location correlation",
+          "displayed_value": 0.119,
+          "source_value": 0.11923918295548344,
+          "source_file": "results/source_data/boundary_fragment_cross_location_behavior_adjusted.json",
+          "json_pointer": "/cohort_descriptive/speed_movement_direction_time/source_effect_r_to_target_residual/animal_mean",
+          "transformation": "rounded to three decimals",
+          "analysis_classification": "exploratory sensitivity"
+        },
+        {
+          "claim": "animals with positive behavior-adjusted prediction",
+          "displayed_value": "7/7",
+          "source_file": "results/source_data/boundary_fragment_cross_location_behavior_adjusted.json",
+          "json_pointers": [
+            "/cohort_descriptive/speed_movement_direction_time/source_effect_r_to_target_residual/positive_animals",
+            "/cohort_descriptive/speed_movement_direction_time/source_effect_r_to_target_residual/animals"
+          ],
+          "transformation": "positive_animals/animals",
+          "analysis_classification": "exploratory sensitivity"
+        },
+        {
+          "claim": "animals eligible for mirror-open control",
+          "displayed_value": 5,
+          "source_file": "results/source_data/boundary_fragment_cross_location_mirror_open.json",
+          "json_pointer": "/cohort_descriptive/animals_with_eligible_queries",
+          "transformation": "none",
+          "analysis_classification": "frozen-local support-limited control"
+        }
+      ]
+    },
+    {
+      "sentence_id": "A7",
+      "text": "In a virtual-track reward task, repeated 120 cm transition classes produced more aligned registered-cell update fields than the 240 cm return transition (S=0.0481; eight of eight confirmatory mice; exact p=0.003906).",
+      "quantitative_claims": [
+        {
+          "claim": "confirmatory reward-transition specificity",
+          "displayed_value": 0.0481,
+          "source_value": 0.04811946548984427,
+          "source_file": "project2-goal-update-transfer/results/confirmatory_specificity_v1.json",
+          "json_pointer": "/primary_inference/mean_specificity",
+          "transformation": "rounded to four decimals",
+          "analysis_classification": "confirmatory relative to declared local workflow"
+        },
+        {
+          "claim": "confirmatory mice with positive specificity",
+          "displayed_value": "8/8",
+          "source_file": "project2-goal-update-transfer/results/confirmatory_specificity_v1.json",
+          "json_pointers": [
+            "/primary_inference/positive_mice",
+            "/primary_inference/n_mice"
+          ],
+          "transformation": "positive_mice/n_mice",
+          "analysis_classification": "confirmatory relative to declared local workflow"
+        },
+        {
+          "claim": "exact one-sided animal sign-flip p-value",
+          "displayed_value": 0.003906,
+          "source_value": 0.00390625,
+          "source_file": "project2-goal-update-transfer/results/confirmatory_specificity_v1.json",
+          "json_pointer": "/primary_inference/exact_sign_flip_p_upper",
+          "transformation": "rounded to six decimals",
+          "analysis_classification": "confirmatory relative to declared local workflow"
+        }
+      ]
+    },
+    {
+      "sentence_id": "A8",
+      "text": "Nonlinear out-of-fold adjustment for speed and licking reduced this statistic to S=0.0238 (seven of eight; p=0.0117) while improving total held-out trial mean-squared error by only 1.03%.",
+      "quantitative_claims": [
+        {
+          "claim": "primary nonlinear residual dF/F specificity",
+          "displayed_value": 0.0238,
+          "source_value": 0.023834519641240365,
+          "source_file": "project2-goal-update-transfer/results/trial_behavior_model_v1.json",
+          "json_pointer": "/nonlinear_residual_specificity/activity_dff/1.0/mean",
+          "transformation": "rounded to four decimals",
+          "analysis_classification": "frozen trial-level behavior analysis"
+        },
+        {
+          "claim": "mice with positive nonlinear residual",
+          "displayed_value": "7/8",
+          "source_file": "project2-goal-update-transfer/results/trial_behavior_model_v1.json",
+          "json_pointers": [
+            "/nonlinear_residual_specificity/activity_dff/1.0/positive_mice",
+            "/nonlinear_residual_specificity/activity_dff/1.0/mouse_values"
+          ],
+          "transformation": "positive_mice/count(mouse_values)",
+          "analysis_classification": "frozen trial-level behavior analysis"
+        },
+        {
+          "claim": "exact one-sided residual sign-flip p-value",
+          "displayed_value": 0.0117,
+          "source_value": 0.01171875,
+          "source_file": "project2-goal-update-transfer/results/trial_behavior_model_v1.json",
+          "json_pointer": "/nonlinear_residual_specificity/activity_dff/1.0/exact_sign_flip_p_upper",
+          "transformation": "rounded to four decimals",
+          "analysis_classification": "frozen trial-level behavior analysis"
+        },
+        {
+          "claim": "pooled held-out dF/F mean-squared-error improvement",
+          "displayed_value_percent": 1.03,
+          "source_value_fraction": 0.010301429187593802,
+          "source_file": "project2-goal-update-transfer/results/trial_behavior_model_v1.json",
+          "json_pointer": "/prediction_diagnostics/activity_dff/1.0/pooled_fractional_mse_improvement",
+          "transformation": "multiply by 100 and round to two decimals",
+          "analysis_classification": "frozen trial-level behavior analysis"
+        }
+      ]
+    },
+    {
+      "sentence_id": "A9",
+      "text": "CA1 remapping therefore shows partial cell-resolved transfer across repeated spatial relations, weaker than exact-location recurrence and constrained by position and behavioral state.",
+      "quantitative_claims": []
+    }
+  ],
+  "significance_statement": {
+    "present": false,
+    "quantitative_claims": [],
+    "reason": "Removed by explicit author decision in commit fa84fe5; not reintroduced during this revision."
+  },
+  "all_abstract_quantitative_claims_machine_traceable": true
+}

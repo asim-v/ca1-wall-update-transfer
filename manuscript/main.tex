@@ -30,7 +30,7 @@
 \definecolor{softgray}{HTML}{666666}
 
 \hypersetup{
-  pdftitle={Reusable CA1 population-update directions during boundary and reward changes},
+  pdftitle={Partial transfer of cell-resolved CA1 remapping directions across boundary and reward changes},
   pdfauthor={Javier Emilio Bazan Sanchez},
   pdfsubject={Longitudinal CA1 population coding}
 }
@@ -42,68 +42,71 @@
     \parbox[c][2.15cm][c]{0.205\textwidth}{%
       \centering\small\textbf{\color{navy}#1}\par\vspace{0.45em}#2}}}
 
-\title{\textbf{Reusable CA1 population-update directions during boundary and reward changes}\\
-\large Convergent evidence from two longitudinal datasets}
+\title{\textbf{Partial transfer of cell-resolved CA1 remapping directions across boundary and reward changes}}
 \author{Javier Emilio Bazan Sanchez\\
 \small Facultad de Ciencias, Universidad Nacional Aut\'onoma de M\'exico
 (UNAM)\\
 \small\href{mailto:bazan@ciencias.unam.mx}{bazan@ciencias.unam.mx}}
-\date{Working manuscript -- August 1, 2026}
+\date{Working manuscript -- August 2, 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Hippocampal maps change when boundaries or goals change, but these population
-updates need not be constructed independently at every location. We tested
-whether the cell-resolved direction of one CA1 change predicts another in two
-public longitudinal calcium-imaging datasets. In an internal-wall arena (5,413
-neurons, seven mice), a wall-minus-open contrast predicted later activity at
-the same seam (mean correlation advantage $0.184$) and at a non-overlapping
-seam 25 cm away ($\meanrho=0.148$); both effects were positive in every animal.
-Prediction at the new seam remained after behavioral adjustment
-($\meanrho=0.119$), but was lower than a query-matched same-seam benchmark
-($\meanrho=0.230$). In a virtual-track reward task, two same-signed 120 cm goal
-relocations at different absolute positions produced more similar registered-
-cell update fields than either produced with an opposite-signed 240 cm return
-move (specificity $S=0.0481$, eight of eight confirmatory mice, exact
-$p=0.003906$). Deconvolved events, drift controls, trial and transition-label
-nulls, preprocessing variants, cell subsamples, and registration sensitivities
-preserved this result. Speed and licking showed stronger displacement-specific
-structure than CA1. A nonlinear out-of-fold trial model reduced CA1 specificity
-by about half, yet the residual remained positive in seven of eight mice
-($S=0.0238$, $p=0.0117$; event residual $S=0.0153$, $p=0.0195$). Across two
-independent tasks, CA1 population changes therefore preserve cell-resolved
-direction across locations, while remaining spatially graded and partly shared
-with behavior. The results support structured reuse, not a coordinate-free or
-behavior-independent update operator.
+Hippocampal activity is structured relative to boundaries and rewards, but it
+is unclear whether the registered-cell direction of change estimated at one
+coordinate predicts a related change elsewhere. We reanalysed two public
+longitudinal CA1 calcium-imaging datasets. In an internal-wall arena (seven
+mice), a wall-minus-open source pattern
+predicted a non-overlapping wall response 25 cm away (mean Spearman
+$\meanrho=0.148$; seven of seven animals positive). The query-matched
+exact-location prediction was stronger ($\meanrho=0.230$;
+shifted-minus-exact $=-0.082$; one of seven animals favoured the shifted
+predictor). Among every geometry- and support-admissible source exactly 25 cm
+from each target, the correct wall relation had mean animal-level percentile
+rank $0.612$ (seven of seven above chance; descriptive exact tail $1/128$),
+although it did not reliably beat the best alternative and a strict tangential
+subset remained heterogeneous. Behavior-adjusted cross-location prediction
+remained positive ($\meanrho=0.119$; seven of seven), whereas a same-session
+mirror-open control was estimable in only five animals. In a virtual-track
+reward task, repeated 120 cm transition classes produced more aligned
+registered-cell update fields than the 240 cm return transition
+($S=0.0481$; eight of eight confirmatory mice; exact $p=0.003906$). Nonlinear
+out-of-fold adjustment for speed and licking reduced this statistic to
+$S=0.0238$ (seven of eight; $p=0.0117$) while improving total held-out trial
+mean-squared error by only $1.03\%$. CA1 remapping therefore shows partial
+cell-resolved transfer across repeated spatial relations, weaker than
+exact-location recurrence and constrained by position and behavioral state.
 \end{abstract}
 
 \noindent\textbf{Keywords:} hippocampus; CA1; place cells; boundaries;
-reward; population code; generalization; remapping; cognitive map
+reward; population code; partial transfer; remapping; cognitive map
 
 \section{Introduction}
 
-Place cells relate an animal's position to a distributed hippocampal activity
-pattern, yet a cognitive map is not only a catalogue of positions. It must also
-change when a wall appears, a route closes, or a goal moves. These changes can
-be described as vectors: for the same registered cells, which responses rise,
-which fall, and where along the represented space those changes occur. If two
-related events produce aligned vectors, the second update contains structure
-already present in the first. If they do not, each event is represented by an
-independent remapping.
+Place fields are organized by environmental geometry and often occur at
+characteristic distances and directions from boundaries
+\citep{OKeefeBurgess1996,HartleyEtAl2000,BarryEtAl2006,LeverEtAl2009}. Inserted
+barriers can produce local fields, duplicate fields, and reshape excitatory and
+inhibitory boundary responses
+\citep{RivardEtAl2004,WangMonacoKnierim2020,MuessigEtAl2024}. Reward likewise
+organizes a subset of hippocampal responses, and place fields may remain tied
+to the track, shift with the goal, or occupy intermediate reference frames
+\citep{GauthierTank2018,QianEtAl2025,SosaEtAl2025,YaghoubiEtAl2026}. Relative
+coding of boundaries and rewards is therefore established background, not the
+phenomenon introduced here.
 
-Environmental boundaries and goals provide complementary tests of this idea.
-Place fields are anchored by geometry and often occur at characteristic
-distances and directions from walls
-\citep{OKeefeBurgess1996,HartleyEtAl2000,BarryEtAl2006,LeverEtAl2009}. A wall-
-related response may therefore recur when the wall relation is instantiated at
-another coordinate. Reward-relative CA1 fields likewise generalize across
-reward locations \citep{SosaEtAl2025}, but shared coordinates do not imply that
-the full cell-by-position change evoked by one reward move reappears during a
-later move. Both questions require longitudinal cell identity and held-out
-comparisons; population-average firing or separately recorded cells are not
-enough.
+The narrower question concerns changes rather than static representations.
+For the same longitudinally registered cells, a boundary insertion or reward
+relocation defines a direction: which cells increase, which decrease, and
+where those changes occur. A shared reference frame can generate aligned
+directions, but it does not guarantee that a direction estimated at one
+absolute coordinate predicts activity at another. Conversely, aligned
+directions need not imply an invariant transformation; their strength may
+decline when moved. Related population-geometric questions have revealed
+parallel coding directions and abstract variables in hippocampal tasks
+\citep{BernardiEtAl2020,CourellisEtAl2024}. Here longitudinal identity permits a
+cell-resolved test across physical coordinates.
 
 We reanalysed two public longitudinal dorsal-CA1 datasets. The first followed
 seven mice through repeated layouts built from internal walls on a common
@@ -116,18 +119,17 @@ locations; a 240 cm return move provided a distinct comparison. We froze the
 reward endpoint after a separate development mouse and tested it in eight
 confirmatory animals.
 
-The two analyses converge on the same organization. Wall-related changes
-predicted a different physical location but were more accurate at the original
-location. Reward-related changes with the same signed displacement were more
-aligned than the return update in every confirmatory mouse. Trial-level speed
-and licking accounted for substantial reward specificity, while a smaller CA1
-component remained after nonlinear out-of-fold conditioning. Thus related
-spatial events share a population-update direction, with limits set by physical
-location and behavior.
+The possible outcomes were graded: no cross-location prediction, partial
+prediction weaker than exact-location recurrence, or position-independent
+prediction. The wall data supported the middle outcome. The reward analysis
+provided conceptual convergence, but measured speed and licking carried still
+stronger transition-class structure and attenuated the neural statistic.
+Together, the analyses test whether a cell-resolved remapping direction crosses
+locations and make its spatial and behavioral limits part of the result.
 
 \section{Results}
 
-\subsection{Two tests of reusable population-change directions}
+\subsection{Two tests of cell-resolved cross-location transfer}
 
 The two datasets differ in task, geometry, and estimator, so their effect sizes
 were not pooled. They implement the same logical test (Fig.~\ref{fig:design}).
@@ -136,7 +138,7 @@ Second, the same spatial relation is found at another absolute coordinate.
 Third, alignment with the later change is compared with a matched alternative.
 In the wall task the change is wall minus open and the alternative is an exact-
 location or spatial control. In the reward task the change is post minus pre;
-two same-signed 120 cm moves are compared with an opposite-signed 240 cm move.
+the two repeated 120 cm transition classes are compared with a 240 cm return.
 
 \subsection{A held-out test of cell-resolved wall contrasts}
 
@@ -178,7 +180,7 @@ alternative.}
 \textbf{\color{navy}Boundary dataset} &
 \textbf{\color{navy}Reward dataset}\\[0.25em]
 Wall-minus-open pattern tested at the same seam and 25 cm away &
-Two same-signed 120 cm updates compared with a 240 cm return\\
+Two 120 cm transition-class updates compared with a 240 cm return\\
 Seven mice; two-dimensional arena &
 Eight confirmatory mice; circular virtual track
 \end{tabularx}
@@ -191,7 +193,7 @@ estimators and numerical scales differ and are analysed separately.}
 
 \subsection{A local wall-open contrast recurs across global geometries}
 
-For exact-location reuse, the broader wall context was matched between training
+For exact-location recurrence, the broader wall context was matched between training
 and held-out comparisons. Across 252 held-out predictions,
 the wall-derived profile correlated more strongly with later wall responses
 than did the open-derived profile. The mean wall-minus-open correlation
@@ -203,41 +205,10 @@ This is more specific than a population-average increase near walls. The
 predictor is indexed by registered cell identity: cells with positive or
 negative values in the estimated local contrast tended to retain those signs
 when the same seam appeared in another global geometry. Because the seam was
-unchanged, this result addresses recurrence at one location, not
-generalization across locations.
+unchanged, this result addresses recurrence at one location, not prediction
+across locations.
 
-\subsection{A one-tile counterfactual sharpens exact-location reuse}
-
-Two environments in the sequence, denoted \(u\) and \(o\), differed only in
-whether one lattice tile was blocked. Their contrast therefore isolates one
-local wall state more cleanly than comparisons among complex layouts. We
-estimated the \(u-o\) cell-wise contrast at that focal seam and tested it in
-held-out \(i\), \(l\), and \(t\) geometries that independently instantiated
-wall or open states there.
-
-Across 46 held-out predictions, the estimated vector correlated with wall
-outcomes (\(\meanrho=0.197\)) but not open outcomes
-(\(\meanrho=-0.028\)), giving an advantage of \(0.225\), positive in all seven
-animals (Fig.~\ref{fig:main}A). The raw-rate version gave a similar advantage
-(\(0.243\)). A model that adjusted local bin estimates for speed, heading,
-elapsed time, and occupancy retained the result, both with time included
-(\(0.225\)) and omitted (\(0.229\)).
-
-The effect was more evident in the nearest independently eligible distance
-band, 2.5--7.5 cm from the seam (mean advantage \(0.233\), seven of seven
-animals), than in a 17.5--22.5 cm band (\(0.069\), six of seven;
-Fig.~\ref{fig:main}D). These bands had separately defined supports, making the
-near--far comparison descriptive rather than paired.
-
-The sequence was fixed: \(u\) always followed \(o\).
-A generic same-seam, unchanged-state later-minus-earlier placebo was opposite
-in sign (mean \(-0.042\), zero of seven positive), whereas the actual \(u-o\)
-contrast was positive (mean \(0.195\), seven of seven) and remained so after
-the nuisance adjustment (mean \(0.212\)). This argues against a generic drift
-explanation, but it cannot remove an environment-specific order effect because
-wall state and order were never randomized.
-
-\subsection{A wall-related population contrast generalizes across locations}
+\subsection{A wall-related population contrast predicts a distinct location}
 
 For each eligible target, a wall-minus-open vector was estimated at a distinct
 source seam with the same signed wall
@@ -247,7 +218,7 @@ session. The nearest source-target bins were 5 cm apart for tangential
 translations and 15 cm apart for normal-axis translations. The test used a
 separate multi-geometry estimator rather than the \(u-o\) contrast.
 
-The translated source vector predicted the later target-wall residual with
+The shifted source vector predicted the later target-wall residual with
 mean correlation \(0.148\), positive in all seven animals
 (Fig.~\ref{fig:main}B). It also outperformed a source-open predictor by
 \(0.152\), and was more aligned with the target-wall response than with a
@@ -259,13 +230,13 @@ response at another.
 The exact-location benchmark was higher. On the same queries, cells, and
 support, it predicted the target response with mean correlation \(0.230\).
 Cross-location prediction was lower by \(0.082\), and only one of seven animals
-favored the shifted predictor. The response pattern generalizes, but remains
-strongly tied to its original coordinate.
+favored the shifted predictor. Thus part of the cell-resolved pattern crossed
+locations, but a stronger component remained tied to its original coordinate.
 
 \begin{figure*}[t!]
 \centering
 \includegraphics[width=0.95\textwidth]{local_wall_update_transfer.png}
-\caption{\textbf{Exact reuse, cross-location prediction, and key controls.}
+\caption{\textbf{Exact recurrence, cross-location prediction, and key controls.}
 \textbf{A}, same-seam wall-minus-open prediction under three estimators.
 \textbf{B}, matched exact-location and source-to-target predictions, including
 behavioral adjustment and the target-open comparison.
@@ -286,23 +257,58 @@ than with a training-derived target-open profile, and it exceeded a source-open
 predictor by \(0.138\); both differences were positive in all seven animals.
 Omitting elapsed time changed these values by less than \(0.003\).
 
-An empirical spatial control replaced the correctly oriented source with
-source seams at the same 25 cm target-midpoint distance but with an incorrect
-signed wall normal. It retains the observed neural maps, registered-cell
-identities, target response, and source-target lag while breaking the correct
-wall relation. The correct-minus-incorrect advantage was \(0.101\), positive in
-all seven animals. Complete enumeration of the \(2^7\) animal-level sign
-assignments placed the observed mean in the upper \(1/128\) of that descriptive
-null. The result remained positive in every leave-one-animal-out summary.
+A frozen-local empirical baseline then replaced the single selected spatial
+control with full enumeration. For every target, we scored all non-target
+source seams that met the precommitted exact 25 cm distance, wall/open training,
+non-overlap, common-cell, common-bin, and occupancy requirements. Sources were
+selected by geometry and support, never by target neural similarity. The score
+for the predicted wall-normal relation was ranked among all admissible source
+scores and averaged within exposure pair and animal before cohort summaries.
 
-This pooled comparison does not eliminate spatial continuity. When restricted
-to tangential translations with both a 25 cm midpoint distance and a 5 cm
-nearest-strip lag, the correct-orientation advantage was only \(0.040\),
-positive in three of six animals (sign-flip tail fraction \(0.25\)). Both
-correctly and incorrectly oriented tangential sources predicted the target.
-The pooled effect is therefore not an arbitrary equal-midpoint match. The most
-tightly distance-matched stratum, however, does not support a general
-orientation-specific rule.
+The mean animal-level percentile rank was \(0.612\), above the chance value of
+\(0.5\) in all seven animals (descriptive exact sign-flip tail \(1/128\);
+Fig.~\ref{fig:spatial-rank}B). The correct relation exceeded the mean
+alternative correlation by \(0.102\), again positive in seven of seven animals.
+It exceeded the best alternative by \(0.059\), but this comparison was positive
+in only five of seven (tail fraction \(0.078\); Fig.~\ref{fig:spatial-rank}C).
+Raw-rate scoring reproduced the rank and mean-alternative results. Thus the
+effect does not depend on choosing one convenient wrong orientation, but the
+correct relation is not uniquely strongest for every animal.
+
+The fully enumerated control does not eliminate spatial continuity. Restricting
+the candidates to tangential translations also matches the 5 cm nearest-strip
+lag, but leaves only six animals and as few as three queries in one animal. The
+mean percentile rank was \(0.571\), positive in four of six animals (tail
+fraction \(0.078\)); the correct-minus-mean-alternative correlation was
+\(0.040\), positive in three of six (tail fraction \(0.25\);
+Fig.~\ref{fig:spatial-rank}D). The most tightly distance-matched stratum
+therefore remains heterogeneous.
+
+\begin{figure*}[t!]
+\centering
+\includegraphics[width=0.96\textwidth]{positive_model_spatial_rank_v1.png}
+\caption{\textbf{The correct wall relation against fully enumerated empirical
+spatial alternatives.} \textbf{A}, schematic of the matching logic; positions
+are illustrative rather than measured seam coordinates. Every admissible
+source at the exact target-midpoint distance was retained without neural
+selection. \textbf{B}, animal-level percentile rank of the correct-relation
+score among all admissible source scores. \textbf{C}, correct-relation score
+minus the mean or best alternative. \textbf{D}, centered percentile rank for
+all exact-distance sources and the support-limited tangential subset. Lines in
+C and D connect animal estimates; horizontal bars mark cohort means. Exact
+tails are descriptive animal-level sign-flip calibrations.}
+\label{fig:spatial-rank}
+\end{figure*}
+
+A stronger fitted-model comparison was also frozen before target scoring but
+could not be estimated under its leakage barrier. The combined model required
+its empirical-update weight to be calibrated on an exposure pair sharing no
+neural session with the outer test pair. Six animals had only three exposure
+cycles, and one had two, so no valid calibration set existed for every animal
+and outer pair. No partial fitted-model endpoint was inspected. Consequently,
+the enumeration addresses selected-control bias but does not show that the
+source pattern adds information beyond a fitted boundary-relative or smooth
+place-field model.
 
 Generic nearby place-field structure could still be shared by the source and
 target strips. A stricter within-session control was specified before its
@@ -335,14 +341,16 @@ Section~\ref{sec:supplementary} rather
 than treated as tests of the central phenomenon.
 
 Across animal-level comparisons, cross-location prediction was consistently
-positive but lower than exact-location prediction. Spatial specificity was
-clear in the pooled orientation and mirror-open comparisons, but not in the
-strict tangential match (Fig.~\ref{fig:explain}).
+positive but lower than exact-location prediction. The correct relation ranked
+above the full exact-distance candidate set, and the restricted mirror-open
+comparison favored wall targets, but the strict tangential match remained
+heterogeneous (Fig.~\ref{fig:explain}).
 
 \begin{figure*}[t!]
 \centering
 \includegraphics[width=0.97\textwidth]{partial_generalization_explainer.png}
-\caption{\textbf{The central result and its spatial limits.}
+\caption{\textbf{The cell-resolved pattern crosses locations but loses
+predictive strength.}
 \textbf{A}, schematic of a source wall-related cell pattern tested at a target
 seam 25 cm away. Filled and open circles denote schematic signed cell responses,
 not additional measurements. \textbf{B}, paired exact-location and
@@ -354,7 +362,7 @@ globally demeaned animal-level estimates.}
 \label{fig:explain}
 \end{figure*}
 
-\subsection{Repeated reward displacements reproduce a CA1 update direction}
+\subsection{Repeated reward-transition classes align CA1 remapping directions}
 
 The reward dataset provides an independent test in a different geometry. Each
 confirmatory mouse contributed two three-day sequences, one in each visual
@@ -378,16 +386,16 @@ $0.073$ for the two short--long pairs. Their difference was $S=0.0481$
 (mouse-bootstrap 95\% interval $[0.0234,0.0757]$), positive in all eight
 confirmatory mice (exact one-sided sign-flip $p=0.003906$). Fourteen of the 16
 mouse--environment values were positive. Deconvolved events gave
-$S=0.0401$, again positive in eight of eight mice ($p=0.003906$). Thus a
-same-signed reward move produced a reproducible update direction after the
-absolute start and end positions changed.
+$S=0.0401$, again positive in eight of eight mice ($p=0.003906$). Thus the two
+120 cm transitions produced preferentially aligned update directions after
+their absolute start and end positions changed.
 
 The comparison identifies the relation represented in the available design:
 the control move differs in both sign and distance. It therefore does not
 separate displacement direction from step length, and it tests the direction
 of the population update rather than whether its amplitude can be copied.
 
-\subsection{Reward-update specificity survives drift, null, and parameter tests}
+\subsection{Reward-transition specificity survives drift, null, and parameter tests}
 
 A pseudo-update constructed before each reward switch used the same mice,
 days, environments, registered cells, and transition schedule. Its mean
@@ -417,7 +425,7 @@ thresholds without changing the frozen biological unit.
 \begin{figure*}[t!]
 \centering
 \includegraphics[width=0.94\textwidth]{adversarial_controls_v1.png}
-\caption{\textbf{Controls for reward-displacement specificity.}
+\caption{\textbf{Controls for reward-transition specificity.}
 \textbf{A}, the original registered-cell endpoint, a corrected aggregate
 speed-and-lick residual, and pre-switch drift; points are mouse means.
 \textbf{B}, the observed cohort value and 95\% intervals from trial-membership
@@ -429,7 +437,7 @@ Fig.~\ref{fig:trial-behavior}.}
 \label{fig:reward-controls}
 \end{figure*}
 
-\subsection{Reward-update geometry is shared with behavior}
+\subsection{Reward-transition geometry is shared with behavior}
 
 After post-switch speed and licking were translated into the neural old-reward
 frame, both behaviors carried strong displacement-specific structure. The
@@ -481,7 +489,7 @@ and regularization value; black bars show pooled values.}
 \label{fig:trial-behavior}
 \end{figure*}
 
-\subsection{Convergence across paradigms}
+\subsection{Convergence and non-equivalence across paradigms}
 
 The wall and reward analyses are not replications of an identical statistic.
 One predicts a local wall-related response across seams; the other compares
@@ -491,12 +499,13 @@ at one absolute location predicts a related change elsewhere, in seven of
 seven and eight of eight primary-animal summaries, respectively
 (Table~\ref{tab:evidence}). The differences are equally informative. Wall
 prediction declined across physical distance, and measured behavior accounted
-for about half of reward specificity. The shared phenomenon is structured
-reuse under a repeated spatial relation, not invariance to location or task.
+for about half of reward specificity. Their conceptual intersection is partial
+transfer under a repeated spatial relation, not invariance to location or task.
 
 \begin{table*}[t!]
 \centering
-\caption{\textbf{Evidence for reusable CA1 population-change directions.}
+\caption{\textbf{Evidence and limits for partial transfer of CA1 remapping
+directions.}
 Values are means across animal-level estimates within each dataset. Numerical
 scales differ across estimators and are not pooled.}
 \label{tab:evidence}
@@ -509,18 +518,18 @@ Dataset & Test & Mean & Sign & Supported interpretation\\
 \midrule
 Wall & Context-matched exact seam & \(0.184\) & \(7/7\) &
 Local wall-open population contrast recurs across layouts.\\
-Wall & Single-tile exact seam & \(0.225\) & \(7/7\) &
-Exact-location reuse remains in a cleaner local counterfactual.\\
 Wall & Cross-location source effect & \(0.148\) & \(7/7\) &
 A cell-resolved wall contrast predicts a different location.\\
 Wall & Query-matched exact effect & \(0.230\) & \(7/7\) &
 Same-location prediction is stronger.\\
+Wall & Exact-distance source rank & \(0.612\) & \(7/7\) &
+Correct relation ranks above chance across all admissible sources.\\
 Wall & Behavior-adjusted cross-location effect & \(0.119\) & \(7/7\) &
 The cross-location result remains after behavioral adjustment.\\
 Wall & Mirror-open advantage & \(0.114\) & \(5/5\) &
 Demeaned tangential subset favors a wall over an equally displaced open seam.\\
 Reward & Original dF/F specificity & \(0.0481\) & \(8/8\) &
-Same-signed 120 cm moves share more update direction than the return move.\\
+Repeated 120 cm transitions align more than either aligns with the return.\\
 Reward & Deconvolved-event specificity & \(0.0401\) & \(8/8\) &
 The result is preserved in an independently processed signal.\\
 Reward & Nonlinear dF/F residual & \(0.0238\) & \(7/8\) &
@@ -533,74 +542,78 @@ The displacement relation strongly structures behavior.\\
 
 \section{Discussion}
 
-Two independent longitudinal datasets show that CA1 population changes are
-related across absolute locations. In the boundary task, a cell-resolved wall
-contrast estimated at one seam predicted a later response 25 cm away. In the
-reward task, two same-signed relocations generated more aligned cell-by-position
-updates than a distinct return move. The effects were positive in every animal
-under each primary endpoint. This convergence extends the idea of a structured
-cognitive map from shared locations or average tuning to the direction in which
-a registered population changes.
+Across two longitudinal datasets, a registered-cell direction estimated at one
+absolute location predicted a related CA1 change elsewhere. What transferred
+was a correlation structure over the identities of cells that rose and fell;
+neither its full strength nor its amplitude transferred. In the wall task,
+cross-location prediction was $0.148$ compared with $0.230$ on the same target
+support at the exact seam. Registered identity is essential to this statement:
+an average increase near two walls would not predict which particular cells
+change together. The reward result provided independent conceptual convergence,
+while also showing that transition-class geometry is substantially shared with
+behavior. The common result is therefore partial cell-resolved transfer, not a
+position- or behavior-independent transformation.
 
-The boundary result connects naturally to models in which place fields inherit
-distance- and direction-sensitive boundary inputs
-\citep{HartleyEtAl2000,BarryEtAl2006}. Barrier studies have shown local field
-formation, duplication, and geometry-dependent remapping
-\citep{RivardEtAl2004,LeeEtAl2025}. Here the key observation is cell-resolved
-and predictive: the signed wall-minus-open pattern at a source coordinate
-anticipates which of the same cells rise or fall at a later target coordinate.
-The target correlation of $0.148$ was substantial but lower than the matched
-same-seam value of $0.230$. The reusable component therefore coexists with a
-larger location-bound component.
+Stable relative tuning is a direct mechanistic explanation for the wall
+result. Boundary-vector and place-field models predict responses from distance,
+direction, and environmental geometry
+\citep{HartleyEtAl2000,BarryEtAl2006,MuessigEtAl2024}; the source study further
+showed that local boundary features predict representational similarity in
+these same recordings \citep{LeeEtAl2025}. Subtracting open from wall states can
+turn such stable tuning into a reproducible population difference vector. The
+present contribution is not an additional boundary code, but a longitudinal
+measurement of that difference: the source pattern predicts a distinct seam,
+and the exact-versus-shifted comparison measures how much prediction is lost
+under translation.
 
-The reward result adds a temporally separated form of reuse. Reward-relative
-fields can generalize across locations \citep{SosaEtAl2025}; our analysis shows
-that the full update field produced by one relocation is preferentially aligned
-with the update from a second matching relocation. Its controls are important
-because any ordered sequence of recording days can produce apparent similarity.
-Registered pre-switch changes, fixed-session drift, permuted trials, and
-permuted transition labels did not reproduce the effect, and the result did not
-depend on one normalization, spatial resolution, cell sample, or registration
-threshold.
+The fully enumerated baseline sharpens this descriptive result. The correct
+wall relation ranked above all exact-distance admissible sources on average in
+every animal and exceeded the mean alternative in every animal. It did not
+reliably exceed the best alternative, and the strict tangential subset was
+heterogeneous. The precommitted fitted boundary-model comparison could not be
+calibrated without neural-session leakage because too few independent exposure
+cycles were available. Thus selected-control bias is less plausible, but a
+boundary-relative or smooth-place model may still exhaust the observed
+cross-location alignment. Additional independently usable exposure cycles or a
+separate development cohort are needed to distinguish these possibilities.
 
-Behavior is part of the reward-related geometry. Speed and licking had much
-larger specificity values than the neural population, and nonlinear trial-level
-conditioning reduced neural specificity in every mouse. The remaining dF/F and
-event effects show that measured speed and licking do not exhaust the
-registered-cell relation. They do not establish a behavior-independent neural
-operation. Running and licking can be causes, consequences, or parallel readouts
-of a latent task-state change, and unmeasured variables such as pupil state,
-reward consumption, acceleration, and engagement remain possible.
+The reward result adds a temporally separated test. Reward-linked cells and
+mixtures of track- and goal-referenced fields are established
+\citep{GauthierTank2018,QianEtAl2025,SosaEtAl2025}, and predictive models can
+generate learning-dependent reward representations \citep{YaghoubiEtAl2026}.
+Here, full registered-cell update fields from the two 120 cm transitions were
+preferentially aligned. Registered pre-switch changes, fixed-session drift,
+permuted trials, and permuted transition labels did not reproduce the effect,
+and it was stable across declared preprocessing, cell-sampling, and registration
+sensitivities. The design nevertheless confounds displacement sign with
+distance, so the result identifies a repeated transition class without
+isolating displacement direction from step length.
 
-The two datasets place complementary limits on the interpretation. Smooth or
-repeated place fields can correlate at nearby wall seams. Non-overlapping strips,
-square residuals, target-open specificity, an equal-midpoint orientation null,
-and a mirror-open target constrain this explanation, but the fully distance-
-matched tangential comparison was heterogeneous and the mirror control covered
-only five animals. The wall sequence was fixed rather than randomized. In the
-reward task, the available comparison confounds displacement sign with distance,
-and the fixed-condition animals lack public cross-day cell identities. Both
-reanalyses select cells stable enough to be registered longitudinally. Finally,
-the wall and reward statistics have different scales; their agreement is
-conceptual and cross-dataset, not a quantitative replication of one endpoint.
+Behavior is part of this reward-related geometry. Speed and licking had larger
+specificity values than CA1, and nonlinear out-of-fold conditioning attenuated
+the neural specificity statistic in every mouse. A smaller dF/F and event
+relation remained, but the primary behavior model improved total held-out trial
+mean-squared error by only $1.03\%$ and $0.65\%$, respectively. Accordingly,
+``about half'' refers to attenuation of the chosen dF/F specificity statistic,
+not to variance in CA1 activity. Running and licking may be causes,
+consequences, or parallel readouts of a latent task state; pupil, posture,
+acceleration, consumption, and engagement were not measured jointly.
 
-These observations define a middle level of organization. CA1 updates are not
-independent every time a related event occurs, yet the same vector cannot be
-applied unchanged anywhere. The data support reusable directions of population
-change whose expression depends on spatial position and behavioral state. They
-do not establish a symbolic map operation, portable update amplitude,
-composition, innateness, or a universal hippocampal primitive.
+Several limits remain dataset-specific. The mirror-open wall control covered
+five animals and only tangential translations, the wall sequence was fixed, and
+the analyses select cells stable enough to register longitudinally. The reward
+fixed-condition animals lack public cross-day identities. The wall and reward
+statistics also differ in scale and estimand; they are not pooled numerical
+replications. These restrictions preserve the distinction among same-location
+recurrence, partial cross-location transfer, and an invariant transformation.
 
-A direct prospective test could manipulate boundaries and goals independently
-within the same animals. In a counterbalanced arena, a wall and a hidden goal
-would each move with repeated signed displacements at different absolute
-locations, while matched no-change, opposite-direction, and same-distance open
-conditions are interleaved. Longitudinal CA1 imaging plus trial-level movement,
-licking, eye, and posture measurements would reveal whether boundary and goal
-changes occupy separable, additive, or interacting directions in the same
-population geometry. The present estimates provide realistic targets for its
-power analysis without assuming that the two existing effect sizes are
-numerically interchangeable.
+A prospective test should counterbalance wall and goal changes across absolute
+locations while interleaving no-change, opposite-direction, and same-distance
+open conditions. Additional exposure cycles would permit leakage-free model
+calibration, and simultaneous movement, licking, eye, and posture measurements
+would separate neural residuals from measured task state. The present estimates
+provide power-analysis targets without equating the two dataset-specific
+effects.
 
 \section{Materials and methods}
 
@@ -767,6 +780,40 @@ sign assignments and calculated the fraction of null means at least as large
 as the observed mean. These are descriptive exact sign-flip calibrations, not
 confirmatory population \(p\)-values.
 
+\subsection{Fully enumerated empirical spatial baseline}
+
+The empirical baseline was frozen in a committed protocol before its target
+neural endpoint was inspected. It inherited the 405 target queries and 658
+correct-relation source pairs in the audited cross-location ledger, while also
+enumerating geometry- and support-admissible alternatives. The source ledger's
+SHA-256 digest and expected counts were fixed in advance. Each candidate source
+had an exact 25 cm target-midpoint distance, wall and open training states,
+non-overlapping target support, disjoint source-training and target neural
+sessions, at least 20 common cells, at least six common bins, and at least
+0.5 s occupancy per common bin. Target neural similarity did not enter source
+eligibility.
+
+Within a query, every candidate source produced the same Spearman prediction
+score used in the primary shifted analysis. If more than one source had the
+predicted signed wall-normal relation, their scores were averaged with equal
+weight. The primary endpoint was the empirical midrank of this relation mean
+among all finite candidate-source scores, minus the chance rank of 0.5.
+Secondary endpoints were the correct-relation mean minus the mean alternative,
+minus the best alternative, and the centered indicator that the correct mean
+beat every alternative. Queries were averaged within exposure pair, exposure
+pairs within animal, and animals within cohort. Exact animal-level sign flips
+were enumerated. The primary rate mode removed each local vector's global mean;
+raw local rates were a fixed sensitivity. A support-limited tier retained only
+tangential sources, thereby additionally matching the nearest-strip lag.
+
+The same protocol specified fitted spatial/place, boundary-relative, empirical-
+update, and combined models. The combined model's empirical-update coefficient
+had to be calibrated on a training-only pseudoquery that reused neither neural
+session in the outer test pair. No such calibration pair existed for every
+outer pair and all seven animals: six animals had three exposure cycles and one
+had two. The predeclared stopping rule was therefore applied before any fitted-
+model target endpoint was calculated.
+
 \subsection{Cell-identity permutation}
 
 For each animal, we generated 999 coherent random mappings of source-cell
@@ -908,6 +955,25 @@ test was computed.
 
 \section{Supplementary exploratory analyses}
 \label{sec:supplementary}
+
+\subsection{Single-tile counterfactual and sequence control}
+
+Two geometries, denoted \(u\) and \(o\), differed only in whether one lattice
+tile was blocked. A \(u-o\) registered-cell contrast at the focal seam was
+tested in held-out \(i\), \(l\), and \(t\) geometries. Across 46 predictions,
+the contrast correlated with wall outcomes (\(\meanrho=0.197\)) but not open
+outcomes (\(\meanrho=-0.028\)), an advantage of \(0.225\) that was positive in
+all seven animals. Raw-rate and behavior-adjusted variants gave advantages of
+\(0.243\) and \(0.225\), respectively. A separately eligible near band had mean
+advantage \(0.233\) (seven of seven), whereas a far band had mean \(0.069\) (six
+of seven); because supports differed, this contrast is descriptive.
+
+The environment sequence was fixed, with \(u\) always following \(o\). A
+same-seam unchanged-state later-minus-earlier placebo was negative (mean
+\(-0.042\), zero of seven positive), whereas the actual \(u-o\) contrast was
+positive (mean \(0.195\), seven of seven) and remained positive after nuisance
+adjustment (\(0.212\)). This weakens a generic drift account but cannot remove
+an environment-specific order effect.
 
 \subsection{Direction and two-wall composition}
 
