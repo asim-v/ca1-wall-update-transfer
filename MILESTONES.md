@@ -422,7 +422,7 @@ The validated arXiv ZIP is 1,141,803 bytes with SHA-256
 - [x] Add sentence-level machine traceability for every quantitative abstract
       claim and record the absence of a Significance statement.
 - [x] Rebuild and visually verify the active PDF and extracted arXiv source.
-- [ ] Commit the final manuscript revision and publish the validated release
+- [x] Commit the final manuscript revision and publish the validated release
       directly to public `main`.
 
 **Exit gate:** The paper must distinguish descriptive registered-cell transfer
@@ -431,11 +431,14 @@ must report the exhaustive empirical baseline without hiding the strongest-
 alternative and tangential failures, and every abstract number must resolve to
 a tracked result.
 
-**Current gate result:** Scientific and build validation pass; public release
-commit pending.
+**Current gate result:** Pass. Manuscript commit
+`565e1b2e415fc1caca7b56843100d2cdd4e74241` was released directly to public
+`main` in commit `03eaaf71937a8683e9ec6be29817e0cb42441b63`.
 The correct wall relation has mean percentile rank 0.612 among all admissible
 exact-distance sources and is above chance in 7/7 animals. It exceeds the mean
 alternative in 7/7 but the best alternative in only 5/7; the tangential tier is
 positive in 4/6. The fitted comparison is not identifiable leakage-free with
 the available exposure cycles. The revised claim remains descriptive partial
 transfer, with a smaller reward relation after behavioral conditioning.
+The public clone passes 156 tests with one raw-data-dependent test skipped, and
+all 20 quantitative abstract claims resolve to pinned machine-readable files.

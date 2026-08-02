@@ -13,6 +13,10 @@ Positive-model implementation commits: `bf7d438`, `d992fe6`, and `ef1208a`
 
 Frozen result commit: `cbccce7`
 
+Manuscript revision commit: `565e1b2`
+
+Public release commit: `03eaaf7`
+
 ## Central claim
 
 Previous rhetorical center:

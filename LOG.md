@@ -412,3 +412,13 @@
 - Renamed the reward robustness plot to transition-class language and pushed
   companion commit `61d76a5` directly to public `main`; numerical results were
   unchanged.
+
+## 2026-08-02 - Milestone 15 published
+
+- Committed the specificity-centered manuscript revision as `565e1b2`.
+- Published the complete audit, frozen protocol, positive-model implementation
+  and results, manuscript, PDF, figures, traceability ledger, and arXiv ZIP
+  directly to public `main` as `03eaaf7`.
+- Verified the standalone public clone: 156 tests passed, one raw-data test was
+  skipped, all 20 quantitative abstract claims resolved, and the PDF and ZIP
+  hashes matched the audited release.
